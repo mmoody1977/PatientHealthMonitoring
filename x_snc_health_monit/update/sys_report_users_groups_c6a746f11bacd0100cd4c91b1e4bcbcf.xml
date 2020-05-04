@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_report_users_groups">
+    <sys_report_users_groups action="INSERT_OR_UPDATE">
+        <group_id/>
+        <report_id display_value="Total Confirmed Infected with Covid-19">71a746f11bacd0100cd4c91b1e4bcbcf</report_id>
+        <sys_class_name>sys_report_users_groups</sys_class_name>
+        <sys_created_by>mmoody</sys_created_by>
+        <sys_created_on>2020-05-04 00:03:04</sys_created_on>
+        <sys_id>c6a746f11bacd0100cd4c91b1e4bcbcf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>71a746f11bacd0100cd4c91b1e4bcbcf</sys_name>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sys_report_users_groups_c6a746f11bacd0100cd4c91b1e4bcbcf</sys_update_name>
+        <sys_updated_by>mmoody</sys_updated_by>
+        <sys_updated_on>2020-05-04 00:03:04</sys_updated_on>
+        <user_id display_value="Mike Moody">831257811b2450100cd4c91b1e4bcbf3</user_id>
+    </sys_report_users_groups>
+</record_update>

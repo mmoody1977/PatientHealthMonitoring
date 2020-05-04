@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_units" label="UNITS" language="en" table="x_snc_health_monit_import_observations">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_units</element>
+            <help/>
+            <hint/>
+            <label>UNITS</label>
+            <language>en</language>
+            <name>x_snc_health_monit_import_observations</name>
+            <plural>UNITSs</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>rlochan</sys_created_by>
+            <sys_created_on>2020-05-02 09:40:12</sys_created_on>
+            <sys_id>a89875dd1b2c50100cd4c91b1e4bcb5e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>UNITS</sys_name>
+            <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_health_monit_import_observations_u_units_en</sys_update_name>
+            <sys_updated_by>rlochan</sys_updated_by>
+            <sys_updated_on>2020-05-02 09:40:12</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Code" max_length="40" name="x_snc_health_monit_code" sizeclass="289" type="collection">
+        <element attributes="edge_encryption_enabled=true" display="true" label="Code" max_length="40" name="code" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Description" max_length="40" name="description" type="string"/>
+        <index name="index">
+            <element name="code"/>
+        </index>
+    </element>
+</database>

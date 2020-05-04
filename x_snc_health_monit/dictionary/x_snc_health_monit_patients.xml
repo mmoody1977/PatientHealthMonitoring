@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="sys_import_set_row" label="Patients" max_length="40" name="x_snc_health_monit_patients" sizeclass="1171" type="collection">
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=ADDRESS" label="ADDRESS" max_length="40" name="u_address" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=BIRTHDATE" label="BIRTHDATE" max_length="40" name="u_birthdate" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=BIRTHPLACE" label="BIRTHPLACE" max_length="80" name="u_birthplace" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=CITY" label="CITY" max_length="40" name="u_city" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=COUNTY" label="COUNTY" max_length="40" name="u_county" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=DEATHDATE" label="DEATHDATE" max_length="40" name="u_deathdate" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=DRIVERS" label="DRIVERS" max_length="40" name="u_drivers" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=ETHNICITY" label="ETHNICITY" max_length="40" name="u_ethnicity" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=FIRST" label="FIRST" max_length="40" name="u_first" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=GENDER" label="GENDER" max_length="40" name="u_gender" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=HEALTHCARE_COVERAGE" label="HEALTHCARE_COVERAGE" max_length="40" name="u_healthcare_coverage" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=HEALTHCARE_EXPENSES" label="HEALTHCARE_EXPENSES" max_length="40" name="u_healthcare_expenses" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Id" label="Id" max_length="40" name="u_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=LAST" label="LAST" max_length="40" name="u_last" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=LAT" label="LAT" max_length="40" name="u_lat" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=LON" label="LON" max_length="40" name="u_lon" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=MAIDEN" label="MAIDEN" max_length="40" name="u_maiden" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=MARITAL" label="MARITAL" max_length="40" name="u_marital" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=PASSPORT" label="PASSPORT" max_length="40" name="u_passport" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=PREFIX" label="PREFIX" max_length="40" name="u_prefix" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=RACE" label="RACE" max_length="40" name="u_race" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=SSN" label="SSN" max_length="40" name="u_ssn" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=STATE" label="STATE" max_length="40" name="u_state" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=SUFFIX" label="SUFFIX" max_length="40" name="u_suffix" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=ZIP" label="ZIP" max_length="40" name="u_zip" type="string"/>
+    </element>
+</database>

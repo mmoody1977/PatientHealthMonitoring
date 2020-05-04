@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_report_users_groups">
+    <sys_report_users_groups action="INSERT_OR_UPDATE">
+        <group_id/>
+        <report_id display_value="Total Confirmed Infected with Covid-19 Mortality Risk Between  1-50%">016512b51becd0100cd4c91b1e4bcb8d</report_id>
+        <sys_class_name>sys_report_users_groups</sys_class_name>
+        <sys_created_by>rlochan</sys_created_by>
+        <sys_created_on>2020-05-04 01:03:05</sys_created_on>
+        <sys_id>856512b51becd0100cd4c91b1e4bcb8d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>016512b51becd0100cd4c91b1e4bcb8d</sys_name>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sys_report_users_groups_856512b51becd0100cd4c91b1e4bcb8d</sys_update_name>
+        <sys_updated_by>rlochan</sys_updated_by>
+        <sys_updated_on>2020-05-04 01:03:05</sys_updated_on>
+        <user_id display_value="Rajeev Lochan">b8b29b811b2450100cd4c91b1e4bcb1d</user_id>
+    </sys_report_users_groups>
+</record_update>

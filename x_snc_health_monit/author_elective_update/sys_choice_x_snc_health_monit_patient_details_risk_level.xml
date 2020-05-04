@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="risk_level" table="x_snc_health_monit_patient_details" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>risk_level</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>High</label>
+            <language>en</language>
+            <name>x_snc_health_monit_patient_details</name>
+            <sequence>0</sequence>
+            <sys_created_by>rlochan</sys_created_by>
+            <sys_created_on>2020-05-02 09:00:56</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9d9f69dd1be850100cd4c91b1e4bcbe8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rlochan</sys_updated_by>
+            <sys_updated_on>2020-05-02 09:00:56</sys_updated_on>
+            <value>High</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>risk_level</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Medium</label>
+            <language>en</language>
+            <name>x_snc_health_monit_patient_details</name>
+            <sequence>1</sequence>
+            <sys_created_by>rlochan</sys_created_by>
+            <sys_created_on>2020-05-02 09:00:56</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>159fa9dd1be850100cd4c91b1e4bcbef</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rlochan</sys_updated_by>
+            <sys_updated_on>2020-05-02 09:00:56</sys_updated_on>
+            <value>Medium</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>risk_level</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Low</label>
+            <language>en</language>
+            <name>x_snc_health_monit_patient_details</name>
+            <sequence>2</sequence>
+            <sys_created_by>rlochan</sys_created_by>
+            <sys_created_on>2020-05-02 09:00:56</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e19fa9dd1be850100cd4c91b1e4bcbf0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rlochan</sys_updated_by>
+            <sys_updated_on>2020-05-02 09:00:56</sys_updated_on>
+            <value>Low</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>risk_level</element>
+            <name>x_snc_health_monit_patient_details</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>rlochan</sys_created_by>
+            <sys_created_on>2020-05-02 09:00:56</sys_created_on>
+            <sys_id>d99fa9dd1be850100cd4c91b1e4bcbee</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>risk_level</sys_name>
+            <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+            <sys_update_name>sys_choice_x_snc_health_monit_patient_details_risk_level</sys_update_name>
+            <sys_updated_by>rlochan</sys_updated_by>
+            <sys_updated_on>2020-05-02 09:00:56</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

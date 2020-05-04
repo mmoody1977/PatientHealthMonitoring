@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_page">
+    <sp_page action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <css/>
+        <draft>false</draft>
+        <dynamic_title_structure/>
+        <id>patient_health_details</id>
+        <internal>false</internal>
+        <public>false</public>
+        <roles/>
+        <short_description/>
+        <sys_class_name>sp_page</sys_class_name>
+        <sys_created_by>mmoody</sys_created_by>
+        <sys_created_on>2020-05-02 06:51:33</sys_created_on>
+        <sys_id>4de199191b6850100cd4c91b1e4bcbb1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>patient_health_details</sys_name>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sp_page_4de199191b6850100cd4c91b1e4bcbb1</sys_update_name>
+        <sys_updated_by>mmoody</sys_updated_by>
+        <sys_updated_on>2020-05-02 06:51:33</sys_updated_on>
+        <title>Patient Health Details</title>
+    </sp_page>
+    <sys_translated_text action="delete_multiple" query="documentkey=4de199191b6850100cd4c91b1e4bcbb1"/>
+</record_update>

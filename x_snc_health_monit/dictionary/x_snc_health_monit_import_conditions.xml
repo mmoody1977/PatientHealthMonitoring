@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="sys_import_set_row" label="Import Conditions" max_length="40" name="x_snc_health_monit_import_conditions" sizeclass="68205" type="collection">
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=CODE" label="CODE" max_length="40" name="u_code" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=DESCRIPTION" label="DESCRIPTION" max_length="80" name="u_description" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=ENCOUNTER" label="ENCOUNTER" max_length="40" name="u_encounter" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=PATIENT" label="PATIENT" max_length="40" name="u_patient" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=START" label="START" max_length="40" name="u_start" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=STOP" label="STOP" max_length="40" name="u_stop" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Type" max_length="40" name="u_type" type="string"/>
+    </element>
+</database>

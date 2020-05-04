@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_suffix" label="SUFFIX" language="en" table="x_snc_health_monit_patients">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_suffix</element>
+            <help/>
+            <hint/>
+            <label>SUFFIX</label>
+            <language>en</language>
+            <name>x_snc_health_monit_patients</name>
+            <plural>SUFFIXs</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>rlochan</sys_created_by>
+            <sys_created_on>2020-05-01 23:41:40</sys_created_on>
+            <sys_id>3c9f2b011b6450100cd4c91b1e4bcbaa</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>SUFFIX</sys_name>
+            <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_health_monit_patients_u_suffix_en</sys_update_name>
+            <sys_updated_by>rlochan</sys_updated_by>
+            <sys_updated_on>2020-05-01 23:41:40</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

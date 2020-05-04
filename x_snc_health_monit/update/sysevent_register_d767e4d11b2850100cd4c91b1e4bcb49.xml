@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysevent_register">
+    <sysevent_register action="INSERT_OR_UPDATE">
+        <caller_access/>
+        <description/>
+        <event_name>x_snc_health_monit.code</event_name>
+        <fired_by>Custom auto-generated BRs create from Transaction Subscription table used for ServerSent</fired_by>
+        <queue/>
+        <suffix>code</suffix>
+        <sys_class_name>sysevent_register</sys_class_name>
+        <sys_created_by>mmoody</sys_created_by>
+        <sys_created_on>2020-05-02 03:45:40</sys_created_on>
+        <sys_id>d767e4d11b2850100cd4c91b1e4bcb49</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_health_monit.code</sys_name>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sysevent_register_d767e4d11b2850100cd4c91b1e4bcb49</sys_update_name>
+        <sys_updated_by>mmoody</sys_updated_by>
+        <sys_updated_on>2020-05-02 03:45:40</sys_updated_on>
+        <table>x_snc_health_monit_code</table>
+    </sysevent_register>
+</record_update>

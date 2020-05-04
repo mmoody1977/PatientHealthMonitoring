@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Patient Details" max_length="40" name="x_snc_health_monit_patient_details" sizeclass="1171" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Address" max_length="100" name="address" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="City" max_length="40" name="city" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Abington" sequence="0" value="Abington"/>
+                <element inactive_on_update="false" label="Acton" sequence="0" value="Acton"/>
+                <element inactive_on_update="false" label="Acushnet" sequence="0" value="Acushnet"/>
+                <element inactive_on_update="false" label="Adams" sequence="0" value="Adams"/>
+                <element inactive_on_update="false" label="Agawam" sequence="0" value="Agawam"/>
+                <element inactive_on_update="false" label="Amesbury" sequence="0" value="Amesbury"/>
+                <element inactive_on_update="false" label="Amherst" sequence="0" value="Amherst"/>
+                <element inactive_on_update="false" label="Andover" sequence="0" value="Andover"/>
+                <element inactive_on_update="false" label="Arlington" sequence="0" value="Arlington"/>
+                <element inactive_on_update="false" label="Ashburnham" sequence="0" value="Ashburnham"/>
+                <element inactive_on_update="false" label="Ashland" sequence="0" value="Ashland"/>
+                <element inactive_on_update="false" label="Athol" sequence="0" value="Athol"/>
+                <element inactive_on_update="false" label="Attleboro" sequence="0" value="Attleboro"/>
+                <element inactive_on_update="false" label="Auburn" sequence="0" value="Auburn"/>
+                <element inactive_on_update="false" label="Avon" sequence="0" value="Avon"/>
+                <element inactive_on_update="false" label="Ayer" sequence="0" value="Ayer"/>
+                <element inactive_on_update="false" label="Barnstable" sequence="0" value="Barnstable"/>
+                <element inactive_on_update="false" label="Belchertown" sequence="0" value="Belchertown"/>
+                <element inactive_on_update="false" label="Bellingham" sequence="0" value="Bellingham"/>
+                <element inactive_on_update="false" label="Belmont" sequence="0" value="Belmont"/>
+                <element inactive_on_update="false" label="Bernardston" sequence="0" value="Bernardston"/>
+                <element inactive_on_update="false" label="Beverly" sequence="0" value="Beverly"/>
+                <element inactive_on_update="false" label="Billerica" sequence="0" value="Billerica"/>
+                <element inactive_on_update="false" label="Blackstone" sequence="0" value="Blackstone"/>
+                <element inactive_on_update="false" label="Boston" sequence="0" value="Boston"/>
+                <element inactive_on_update="false" label="Bourne" sequence="0" value="Bourne"/>
+                <element inactive_on_update="false" label="Boxford" sequence="0" value="Boxford"/>
+                <element inactive_on_update="false" label="Braintree" sequence="0" value="Braintree"/>
+                <element inactive_on_update="false" label="Brewster" sequence="0" value="Brewster"/>
+                <element inactive_on_update="false" label="Bridgewater" sequence="0" value="Bridgewater"/>
+                <element inactive_on_update="false" label="Brockton" sequence="0" value="Brockton"/>
+                <element inactive_on_update="false" label="Brookline" sequence="0" value="Brookline"/>
+                <element inactive_on_update="false" label="Burlington" sequence="0" value="Burlington"/>
+                <element inactive_on_update="false" label="Cambridge" sequence="0" value="Cambridge"/>
+                <element inactive_on_update="false" label="Canton" sequence="0" value="Canton"/>
+                <element inactive_on_update="false" label="Carlisle" sequence="0" value="Carlisle"/>
+                <element inactive_on_update="false" label="Carver" sequence="0" value="Carver"/>
+                <element inactive_on_update="false" label="Chatham" sequence="0" value="Chatham"/>
+                <element inactive_on_update="false" label="Chelmsford" sequence="0" value="Chelmsford"/>
+                <element inactive_on_update="false" label="Chelsea" sequence="0" value="Chelsea"/>
+                <element inactive_on_update="false" label="Cheshire" sequence="0" value="Cheshire"/>
+                <element inactive_on_update="false" label="Chester" sequence="0" value="Chester"/>
+                <element inactive_on_update="false" label="Chicopee" sequence="0" value="Chicopee"/>
+                <element inactive_on_update="false" label="Clinton" sequence="0" value="Clinton"/>
+                <element inactive_on_update="false" label="Cohasset" sequence="0" value="Cohasset"/>
+                <element inactive_on_update="false" label="Colrain" sequence="0" value="Colrain"/>
+                <element inactive_on_update="false" label="Concord" sequence="0" value="Concord"/>
+                <element inactive_on_update="false" label="Dalton" sequence="0" value="Dalton"/>
+                <element inactive_on_update="false" label="Danvers" sequence="0" value="Danvers"/>
+                <element inactive_on_update="false" label="Dartmouth" sequence="0" value="Dartmouth"/>
+                <element inactive_on_update="false" label="Dedham" sequence="0" value="Dedham"/>
+                <element inactive_on_update="false" label="Deerfield" sequence="0" value="Deerfield"/>
+                <element inactive_on_update="false" label="Dennis" sequence="0" value="Dennis"/>
+                <element inactive_on_update="false" label="Douglas" sequence="0" value="Douglas"/>
+                <element inactive_on_update="false" label="Dover" sequence="0" value="Dover"/>
+                <element inactive_on_update="false" label="Dudley" sequence="0" value="Dudley"/>
+                <element inactive_on_update="false" label="Duxbury" sequence="0" value="Duxbury"/>
+                <element inactive_on_update="false" label="East Bridgewater" sequence="0" value="East Bridgewater"/>
+                <element inactive_on_update="false" label="East Brookfield" sequence="0" value="East Brookfield"/>
+                <element inactive_on_update="false" label="East Longmeadow" sequence="0" value="East Longmeadow"/>
+                <element inactive_on_update="false" label="Eastham" sequence="0" value="Eastham"/>
+                <element inactive_on_update="false" label="Easthampton" sequence="0" value="Easthampton"/>
+                <element inactive_on_update="false" label="Easton" sequence="0" value="Easton"/>
+                <element inactive_on_update="false" label="Essex" sequence="0" value="Essex"/>
+                <element inactive_on_update="false" label="Everett" sequence="0" value="Everett"/>
+                <element inactive_on_update="false" label="Fairhaven" sequence="0" value="Fairhaven"/>
+                <element inactive_on_update="false" label="Fall River" sequence="0" value="Fall River"/>
+                <element inactive_on_update="false" label="Falmouth" sequence="0" value="Falmouth"/>
+                <element inactive_on_update="false" label="Fitchburg" sequence="0" value="Fitchburg"/>
+                <element inactive_on_update="false" label="Foxborough" sequence="0" value="Foxborough"/>
+                <element inactive_on_update="false" label="Framingham" sequence="0" value="Framingham"/>
+                <element inactive_on_update="false" label="Franklin" sequence="0" value="Franklin"/>
+                <element inactive_on_update="false" label="Freetown" sequence="0" value="Freetown"/>
+                <element inactive_on_update="false" label="Gardner" sequence="0" value="Gardner"/>
+                <element inactive_on_update="false" label="Gill" sequence="0" value="Gill"/>
+                <element inactive_on_update="false" label="Gloucester" sequence="0" value="Gloucester"/>
+                <element inactive_on_update="false" label="Grafton" sequence="0" value="Grafton"/>
+                <element inactive_on_update="false" label="Great Barrington" sequence="0" value="Great Barrington"/>
+                <element inactive_on_update="false" label="Greenfield" sequence="0" value="Greenfield"/>
+                <element inactive_on_update="false" label="Groveland" sequence="0" value="Groveland"/>
+                <element inactive_on_update="false" label="Halifax" sequence="0" value="Halifax"/>
+                <element inactive_on_update="false" label="Hamilton" sequence="0" value="Hamilton"/>
+                <element inactive_on_update="false" label="Hampden" sequence="0" value="Hampden"/>
+                <element inactive_on_update="false" label="Hanover" sequence="0" value="Hanover"/>
+                <element inactive_on_update="false" label="Hanson" sequence="0" value="Hanson"/>
+                <element inactive_on_update="false" label="Harwich" sequence="0" value="Harwich"/>
+                <element inactive_on_update="false" label="Hatfield" sequence="0" value="Hatfield"/>
+                <element inactive_on_update="false" label="Haverhill" sequence="0" value="Haverhill"/>
+                <element inactive_on_update="false" label="Hingham" sequence="0" value="Hingham"/>
+                <element inactive_on_update="false" label="Holbrook" sequence="0" value="Holbrook"/>
+                <element inactive_on_update="false" label="Holden" sequence="0" value="Holden"/>
+                <element inactive_on_update="false" label="Holland" sequence="0" value="Holland"/>
+                <element inactive_on_update="false" label="Holliston" sequence="0" value="Holliston"/>
+                <element inactive_on_update="false" label="Holyoke" sequence="0" value="Holyoke"/>
+                <element inactive_on_update="false" label="Hopedale" sequence="0" value="Hopedale"/>
+                <element inactive_on_update="false" label="Hopkinton" sequence="0" value="Hopkinton"/>
+                <element inactive_on_update="false" label="Hudson" sequence="0" value="Hudson"/>
+                <element inactive_on_update="false" label="Ipswich" sequence="0" value="Ipswich"/>
+                <element inactive_on_update="false" label="Kingston" sequence="0" value="Kingston"/>
+                <element inactive_on_update="false" label="Lakeville" sequence="0" value="Lakeville"/>
+                <element inactive_on_update="false" label="Lancaster" sequence="0" value="Lancaster"/>
+                <element inactive_on_update="false" label="Lawrence" sequence="0" value="Lawrence"/>
+                <element inactive_on_update="false" label="Leicester" sequence="0" value="Leicester"/>
+                <element inactive_on_update="false" label="Lenox" sequence="0" value="Lenox"/>
+                <element inactive_on_update="false" label="Leominster" sequence="0" value="Leominster"/>
+                <element inactive_on_update="false" label="Leverett" sequence="0" value="Leverett"/>
+                <element inactive_on_update="false" label="Lexington" sequence="0" value="Lexington"/>
+                <element inactive_on_update="false" label="Leyden" sequence="0" value="Leyden"/>
+                <element inactive_on_update="false" label="Littleton" sequence="0" value="Littleton"/>
+                <element inactive_on_update="false" label="Longmeadow" sequence="0" value="Longmeadow"/>
+                <element inactive_on_update="false" label="Lowell" sequence="0" value="Lowell"/>
+                <element inactive_on_update="false" label="Lunenburg" sequence="0" value="Lunenburg"/>
+                <element inactive_on_update="false" label="Lynn" sequence="0" value="Lynn"/>
+                <element inactive_on_update="false" label="Lynnfield" sequence="0" value="Lynnfield"/>
+                <element inactive_on_update="false" label="Malden" sequence="0" value="Malden"/>
+                <element inactive_on_update="false" label="Manchester-by-the-Sea" sequence="0" value="Manchester-by-the-Sea"/>
+                <element inactive_on_update="false" label="Mansfield" sequence="0" value="Mansfield"/>
+                <element inactive_on_update="false" label="Marblehead" sequence="0" value="Marblehead"/>
+                <element inactive_on_update="false" label="Marlborough" sequence="0" value="Marlborough"/>
+                <element inactive_on_update="false" label="Marshfield" sequence="0" value="Marshfield"/>
+                <element inactive_on_update="false" label="Mashpee" sequence="0" value="Mashpee"/>
+                <element inactive_on_update="false" label="Mattapoisett" sequence="0" value="Mattapoisett"/>
+                <element inactive_on_update="false" label="Maynard" sequence="0" value="Maynard"/>
+                <element inactive_on_update="false" label="Medfield" sequence="0" value="Medfield"/>
+                <element inactive_on_update="false" label="Medford" sequence="0" value="Medford"/>
+                <element inactive_on_update="false" label="Medway" sequence="0" value="Medway"/>
+                <element inactive_on_update="false" label="Melrose" sequence="0" value="Melrose"/>
+                <element inactive_on_update="false" label="Methuen" sequence="0" value="Methuen"/>
+                <element inactive_on_update="false" label="Middleborough" sequence="0" value="Middleborough"/>
+                <element inactive_on_update="false" label="Middleton" sequence="0" value="Middleton"/>
+                <element inactive_on_update="false" label="Milford" sequence="0" value="Milford"/>
+                <element inactive_on_update="false" label="Millbury" sequence="0" value="Millbury"/>
+                <element inactive_on_update="false" label="Millis" sequence="0" value="Millis"/>
+                <element inactive_on_update="false" label="Millville" sequence="0" value="Millville"/>
+                <element inactive_on_update="false" label="Milton" sequence="0" value="Milton"/>
+                <element inactive_on_update="false" label="Montague" sequence="0" value="Montague"/>
+                <element inactive_on_update="false" label="Nantucket" sequence="0" value="Nantucket"/>
+                <element inactive_on_update="false" label="Natick" sequence="0" value="Natick"/>
+                <element inactive_on_update="false" label="Needham" sequence="0" value="Needham"/>
+                <element inactive_on_update="false" label="New Ashford" sequence="0" value="New Ashford"/>
+                <element inactive_on_update="false" label="New Bedford" sequence="0" value="New Bedford"/>
+                <element inactive_on_update="false" label="Newburyport" sequence="0" value="Newburyport"/>
+                <element inactive_on_update="false" label="Newton" sequence="0" value="Newton"/>
+                <element inactive_on_update="false" label="Norfolk" sequence="0" value="Norfolk"/>
+                <element inactive_on_update="false" label="North Adams" sequence="0" value="North Adams"/>
+                <element inactive_on_update="false" label="North Andover" sequence="0" value="North Andover"/>
+                <element inactive_on_update="false" label="North Attleborough" sequence="0" value="North Attleborough"/>
+                <element inactive_on_update="false" label="North Brookfield" sequence="0" value="North Brookfield"/>
+                <element inactive_on_update="false" label="North Reading" sequence="0" value="North Reading"/>
+                <element inactive_on_update="false" label="Northampton" sequence="0" value="Northampton"/>
+                <element inactive_on_update="false" label="Northborough" sequence="0" value="Northborough"/>
+                <element inactive_on_update="false" label="Northbridge" sequence="0" value="Northbridge"/>
+                <element inactive_on_update="false" label="Norton" sequence="0" value="Norton"/>
+                <element inactive_on_update="false" label="Norwell" sequence="0" value="Norwell"/>
+                <element inactive_on_update="false" label="Norwood" sequence="0" value="Norwood"/>
+                <element inactive_on_update="false" label="Orange" sequence="0" value="Orange"/>
+                <element inactive_on_update="false" label="Oxford" sequence="0" value="Oxford"/>
+                <element inactive_on_update="false" label="Palmer" sequence="0" value="Palmer"/>
+                <element inactive_on_update="false" label="Peabody" sequence="0" value="Peabody"/>
+                <element inactive_on_update="false" label="Pembroke" sequence="0" value="Pembroke"/>
+                <element inactive_on_update="false" label="Phillipston" sequence="0" value="Phillipston"/>
+                <element inactive_on_update="false" label="Pittsfield" sequence="0" value="Pittsfield"/>
+                <element inactive_on_update="false" label="Plainville" sequence="0" value="Plainville"/>
+                <element inactive_on_update="false" label="Plymouth" sequence="0" value="Plymouth"/>
+                <element inactive_on_update="false" label="Provincetown" sequence="0" value="Provincetown"/>
+                <element inactive_on_update="false" label="Quincy" sequence="0" value="Quincy"/>
+                <element inactive_on_update="false" label="Randolph" sequence="0" value="Randolph"/>
+                <element inactive_on_update="false" label="Raynham" sequence="0" value="Raynham"/>
+                <element inactive_on_update="false" label="Reading" sequence="0" value="Reading"/>
+                <element inactive_on_update="false" label="Rehoboth" sequence="0" value="Rehoboth"/>
+                <element inactive_on_update="false" label="Revere" sequence="0" value="Revere"/>
+                <element inactive_on_update="false" label="Rochester" sequence="0" value="Rochester"/>
+                <element inactive_on_update="false" label="Rockland" sequence="0" value="Rockland"/>
+                <element inactive_on_update="false" label="Rockport" sequence="0" value="Rockport"/>
+                <element inactive_on_update="false" label="Rutland" sequence="0" value="Rutland"/>
+                <element inactive_on_update="false" label="Salem" sequence="0" value="Salem"/>
+                <element inactive_on_update="false" label="Salisbury" sequence="0" value="Salisbury"/>
+                <element inactive_on_update="false" label="Sandwich" sequence="0" value="Sandwich"/>
+                <element inactive_on_update="false" label="Saugus" sequence="0" value="Saugus"/>
+                <element inactive_on_update="false" label="Scituate" sequence="0" value="Scituate"/>
+                <element inactive_on_update="false" label="Seekonk" sequence="0" value="Seekonk"/>
+                <element inactive_on_update="false" label="Sharon" sequence="0" value="Sharon"/>
+                <element inactive_on_update="false" label="Sheffield" sequence="0" value="Sheffield"/>
+                <element inactive_on_update="false" label="Shirley" sequence="0" value="Shirley"/>
+                <element inactive_on_update="false" label="Shrewsbury" sequence="0" value="Shrewsbury"/>
+                <element inactive_on_update="false" label="Somerset" sequence="0" value="Somerset"/>
+                <element inactive_on_update="false" label="Somerville" sequence="0" value="Somerville"/>
+                <element inactive_on_update="false" label="South Hadley" sequence="0" value="South Hadley"/>
+                <element inactive_on_update="false" label="Southampton" sequence="0" value="Southampton"/>
+                <element inactive_on_update="false" label="Southborough" sequence="0" value="Southborough"/>
+                <element inactive_on_update="false" label="Southbridge" sequence="0" value="Southbridge"/>
+                <element inactive_on_update="false" label="Southwick" sequence="0" value="Southwick"/>
+                <element inactive_on_update="false" label="Spencer" sequence="0" value="Spencer"/>
+                <element inactive_on_update="false" label="Springfield" sequence="0" value="Springfield"/>
+                <element inactive_on_update="false" label="Stoneham" sequence="0" value="Stoneham"/>
+                <element inactive_on_update="false" label="Stoughton" sequence="0" value="Stoughton"/>
+                <element inactive_on_update="false" label="Stow" sequence="0" value="Stow"/>
+                <element inactive_on_update="false" label="Sudbury" sequence="0" value="Sudbury"/>
+                <element inactive_on_update="false" label="Swampscott" sequence="0" value="Swampscott"/>
+                <element inactive_on_update="false" label="Swansea" sequence="0" value="Swansea"/>
+                <element inactive_on_update="false" label="Taunton" sequence="0" value="Taunton"/>
+                <element inactive_on_update="false" label="Tewksbury" sequence="0" value="Tewksbury"/>
+                <element inactive_on_update="false" label="Tyngsborough" sequence="0" value="Tyngsborough"/>
+                <element inactive_on_update="false" label="Upton" sequence="0" value="Upton"/>
+                <element inactive_on_update="false" label="Uxbridge" sequence="0" value="Uxbridge"/>
+                <element inactive_on_update="false" label="Wakefield" sequence="0" value="Wakefield"/>
+                <element inactive_on_update="false" label="Walpole" sequence="0" value="Walpole"/>
+                <element inactive_on_update="false" label="Waltham" sequence="0" value="Waltham"/>
+                <element inactive_on_update="false" label="Ware" sequence="0" value="Ware"/>
+                <element inactive_on_update="false" label="Wareham" sequence="0" value="Wareham"/>
+                <element inactive_on_update="false" label="Warren" sequence="0" value="Warren"/>
+                <element inactive_on_update="false" label="Watertown" sequence="0" value="Watertown"/>
+                <element inactive_on_update="false" label="Wayland" sequence="0" value="Wayland"/>
+                <element inactive_on_update="false" label="Webster" sequence="0" value="Webster"/>
+                <element inactive_on_update="false" label="Wellesley" sequence="0" value="Wellesley"/>
+                <element inactive_on_update="false" label="Wellfleet" sequence="0" value="Wellfleet"/>
+                <element inactive_on_update="false" label="West Springfield" sequence="0" value="West Springfield"/>
+                <element inactive_on_update="false" label="West Tisbury" sequence="0" value="West Tisbury"/>
+                <element inactive_on_update="false" label="Westborough" sequence="0" value="Westborough"/>
+                <element inactive_on_update="false" label="Westfield" sequence="0" value="Westfield"/>
+                <element inactive_on_update="false" label="Westford" sequence="0" value="Westford"/>
+                <element inactive_on_update="false" label="Westminster" sequence="0" value="Westminster"/>
+                <element inactive_on_update="false" label="Weston" sequence="0" value="Weston"/>
+                <element inactive_on_update="false" label="Westport" sequence="0" value="Westport"/>
+                <element inactive_on_update="false" label="Weymouth" sequence="0" value="Weymouth"/>
+                <element inactive_on_update="false" label="Wilbraham" sequence="0" value="Wilbraham"/>
+                <element inactive_on_update="false" label="Williamsburg" sequence="0" value="Williamsburg"/>
+                <element inactive_on_update="false" label="Williamstown" sequence="0" value="Williamstown"/>
+                <element inactive_on_update="false" label="Wilmington" sequence="0" value="Wilmington"/>
+                <element inactive_on_update="false" label="Winchendon" sequence="0" value="Winchendon"/>
+                <element inactive_on_update="false" label="Winchester" sequence="0" value="Winchester"/>
+                <element inactive_on_update="false" label="Winthrop" sequence="0" value="Winthrop"/>
+                <element inactive_on_update="false" label="Woburn" sequence="0" value="Woburn"/>
+                <element inactive_on_update="false" label="Worcester" sequence="0" value="Worcester"/>
+                <element inactive_on_update="false" label="Worthington" sequence="0" value="Worthington"/>
+                <element inactive_on_update="false" label="Wrentham" sequence="0" value="Wrentham"/>
+                <element inactive_on_update="false" label="Yarmouth" sequence="0" value="Yarmouth"/>
+            </choice>
+        </element>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;    var codes = &quot;&quot;;&#13;&#10;    var encQuery = &quot;patient=&quot; + current.sys_id;&#13;&#10;    var grRec = new GlideRecord('x_snc_health_monit_patient_contitions');&#13;&#10;    grRec.addEncodedQuery(encQuery);&#13;&#10;    grRec.query();&#13;&#10;    while (grRec.next()) {&#13;&#10;        if (codes == '') {&#13;&#10;&#13;&#10;            codes = grRec.code.sys_id;&#13;&#10;        } else {&#13;&#10;            codes += &quot;,&quot; + grRec.code.sys_id;&#13;&#10;        }&#13;&#10;&#13;&#10;    }&#13;&#10;&#13;&#10;&#13;&#10;    var encRiskQuery = &quot;risk_type=Mortality^risk_for=fdc3f4b91b68d0100cd4c91b1e4bcbd3^risk_from.sys_idIN&quot; + codes;&#13;&#10;    var maxRisk = '';&#13;&#10;    var grRiskAgg = new GlideAggregate('x_snc_health_monit_risk_analysis');&#13;&#10;    grRiskAgg.addEncodedQuery(encRiskQuery);&#13;&#10;    grRiskAgg.addAggregate('MAX', 'risk_percentage');&#13;&#10;    grRiskAgg.groupBy('risk_type');&#13;&#10;    grRiskAgg.query();&#13;&#10;    if (grRiskAgg.next()) {&#13;&#10;&#13;&#10;        maxRisk = grRiskAgg.getAggregate('MAX', 'risk_percentage');&#13;&#10;        if (maxRisk != 0) {&#13;&#10;&#9;&#9;&#9; return maxRisk;&#13;&#10;        } else {&#13;&#10;              return '';&#13;&#10;        }&#13;&#10;    } else {&#13;&#10;        return '';&#13;&#10;    }&#13;&#10;&#13;&#10;&#13;&#10;})(current);" label="Covid Mortality Risk" max_length="15" name="covid_mortality_risk" read_only="true" type="percent_complete" virtual="true"/>
+        <element attributes="edge_encryption_enabled=true" label="Drivers License" max_length="40" name="drivers_license" type="string"/>
+        <element attributes="edge_encryption_enabled=true" display="true" label="First Name" max_length="40" name="first_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Gender" max_length="40" name="gender" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="F" value="F"/>
+                <element inactive_on_update="false" label="M" value="M"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Last Covid Test" max_length="40" name="last_covid_test" read_only="true" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Negative" value="Negative"/>
+                <element inactive_on_update="false" label="Positive" value="Positive"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Last Name" max_length="40" name="last_name" type="string"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;var name = current.first_name  + &quot; &quot; + current.last_name;&#13;&#10;&#9;return name;  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Name" max_length="200" name="name" type="string" virtual="true"/>
+        <element attributes="edge_encryption_enabled=true" label="Passport" max_length="40" name="passport" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Patiend ID" max_length="100" name="patiend_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Race" max_length="40" name="race" type="string">
+            <choice>
+                <element inactive_on_update="false" label="asian" sequence="0" value="asian"/>
+                <element inactive_on_update="false" label="black" sequence="0" value="black"/>
+                <element inactive_on_update="false" label="native" sequence="0" value="native"/>
+                <element inactive_on_update="false" label="other" sequence="0" value="other"/>
+                <element inactive_on_update="false" label="white" sequence="0" value="white"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Risk Calculated" max_length="40" name="risk_calculated" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Last COVID-19 Risk Level" max_length="40" name="risk_level" read_only="true" type="string">
+            <choice>
+                <element inactive_on_update="false" label="High" sequence="0" value="High"/>
+                <element inactive_on_update="false" label="Medium" sequence="1" value="Medium"/>
+                <element inactive_on_update="false" label="Low" sequence="2" value="Low"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="SSN" max_length="40" name="ssn" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="State" max_length="40" name="state" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Massachusetts" sequence="0" value="Massachusetts"/>
+            </choice>
+        </element>
+    </element>
+</database>

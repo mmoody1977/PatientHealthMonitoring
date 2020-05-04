@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Immunizations" max_length="40" name="x_snc_health_monit_immunizations" sizeclass="10369" type="collection">
+        <element attributes="encode_utf8=false" label="Code" max_length="32" name="code" reference="x_snc_health_monit_code" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Date" max_length="40" name="date" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" label="Description" max_length="100" name="description" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Encounter" max_length="100" name="encounter" type="string"/>
+        <element attributes="encode_utf8=false" label="Patient" max_length="32" name="patient" reference="x_snc_health_monit_patient_details" type="reference"/>
+        <index name="index">
+            <element name="code"/>
+        </index>
+        <index name="index2">
+            <element name="patient"/>
+        </index>
+    </element>
+</database>

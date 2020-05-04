@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_snc_health_monit_risk_policies</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>calculat COVID Risk</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+  
+    // create script actions  
+    var eventInstance = "";
+    var queueInstance = "";
+    var queueName = "";
+    var bool = false;
+    var policyDetails;
+    var encQuery = "";
+
+    var grRecRefreshPolicyQuery = new GlideRecord('x_snc_health_monit_risk_policies');
+    grRecRefreshPolicyQuery.addEncodedQuery('active=true^policy_type=COVID RISK');
+    grRecRefreshPolicyQuery.query();
+    while (grRecRefreshPolicyQuery.next()) {
+
+        if (encQuery == '') {
+            encQuery = grRecRefreshPolicyQuery.conditions.toString();
+
+        } else {
+
+            encQuery = encQuery + "^NQ" + grRecRefreshPolicyQuery.conditions.toString();
+        }
+
+    }
+   
+    var grRec = new GlideRecord('x_snc_health_monit_covid_stats');
+    grRec.addEncodedQuery(encQuery);
+    grRec.query();
+    while (grRec.next()) {
+   
+        bool = false;
+        var grRecRefreshPolicy = new GlideRecord('x_snc_health_monit_risk_policies');
+        grRecRefreshPolicy.addEncodedQuery('active=true^policy_type=COVID RISK');
+        grRecRefreshPolicy.orderBy('order');
+        grRecRefreshPolicy.query();
+        while (grRecRefreshPolicy.next()) {
+            bool = GlideFilter.checkRecord(grRec, grRecRefreshPolicy.conditions);
+          
+            if (bool) {
+				grRec.risk_level = grRecRefreshPolicy.risk_value;
+				grRec.risk_policy = grRecRefreshPolicy.sys_id;
+				grRec.update();
+                break;
+            }
+
+        }
+
+    }
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>rlochan</sys_created_by>
+        <sys_created_on>2020-05-03 02:46:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4dce11e11bac90100cd4c91b1e4bcbe2</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>calculat COVID Risk</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sys_script_4dce11e11bac90100cd4c91b1e4bcbe2</sys_update_name>
+        <sys_updated_by>rlochan</sys_updated_by>
+        <sys_updated_on>2020-05-03 03:34:00</sys_updated_on>
+        <template/>
+        <when>async</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=4dce11e11bac90100cd4c91b1e4bcbe2"/>
+</record_update>

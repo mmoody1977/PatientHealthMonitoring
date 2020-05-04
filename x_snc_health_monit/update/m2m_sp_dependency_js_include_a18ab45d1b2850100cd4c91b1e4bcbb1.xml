@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_dependency_js_include">
+    <m2m_sp_dependency_js_include action="INSERT_OR_UPDATE">
+        <order>100</order>
+        <sp_dependency display_value="smart_table">393a745d1b2850100cd4c91b1e4bcb9c</sp_dependency>
+        <sp_js_include display_value="https://cdnjs.cloudflare.com/ajax/libs/angular-smart-table/2.1.11/smart-table.min.js">ef4ab45d1b2850100cd4c91b1e4bcb9b</sp_js_include>
+        <sys_class_name>m2m_sp_dependency_js_include</sys_class_name>
+        <sys_created_by>mmoody</sys_created_by>
+        <sys_created_on>2020-05-02 05:09:07</sys_created_on>
+        <sys_id>a18ab45d1b2850100cd4c91b1e4bcbb1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>smart_table.https://cdnjs.cloudflare.com/ajax/libs/angular-smart-table/2.1.11/smart-table.min.js</sys_name>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>m2m_sp_dependency_js_include_a18ab45d1b2850100cd4c91b1e4bcbb1</sys_update_name>
+        <sys_updated_by>mmoody</sys_updated_by>
+        <sys_updated_on>2020-05-02 05:09:07</sys_updated_on>
+    </m2m_sp_dependency_js_include>
+</record_update>

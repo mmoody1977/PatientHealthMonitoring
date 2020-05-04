@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="COVID Test Analysis" max_length="40" name="x_snc_health_monit_covid_test_analysis" sizeclass="2032" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Covid Result" max_length="40" name="covid_result" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Positive" sequence="0" value="Positive"/>
+                <element inactive_on_update="false" label="Negative" sequence="1" value="Negative"/>
+            </choice>
+        </element>
+        <element attributes="encode_utf8=false" label="Covid Stat Ref" max_length="32" name="covid_stat_ref" reference="x_snc_health_monit_covid_stats" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:getNextObjNumberPadded();" dynamic_default_value="fdcb83a85f220100a9ad2572f2b4773c" label="Encounter ID" max_length="40" name="encounter_id" read_only="true" type="string" use_dynamic_default="true"/>
+        <element attributes="edge_encryption_enabled=true" label="Test DateTime" max_length="40" name="test_datetime" type="glide_date_time"/>
+        <index name="index">
+            <element name="covid_stat_ref"/>
+        </index>
+    </element>
+</database>

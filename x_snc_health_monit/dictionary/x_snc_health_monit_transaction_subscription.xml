@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Transaction Subscription" max_length="40" name="x_snc_health_monit_transaction_subscription" sizeclass="8" type="collection">
+        <element dependent="table" dependent_on_field="table" label="Conditions" max_length="4000" name="conditions" type="conditions" use_dependent_field="true"/>
+        <element display="true" label="Event name" mandatory="true" max_length="40" name="event_name" type="string"/>
+        <element attributes="is_multi_text=false" dependent="table" dependent_on_field="table" label="Fields" max_length="4000" name="fields" type="field_list" use_dependent_field="true"/>
+        <element label="Live" max_length="40" name="live" type="boolean"/>
+        <element attributes="types=reference" dependent="table" dependent_on_field="table" label="Parent field" max_length="80" name="parent_field" type="field_name" use_dependent_field="true"/>
+        <element default="true" label="Persistent" max_length="40" name="persistent" type="boolean"/>
+        <element label="Record key" mandatory="true" max_length="40" name="record_key" type="string"/>
+        <element label="Table" mandatory="true" max_length="80" name="table" type="table_name"/>
+        <element label="Transaction ID" max_length="40" name="transaction_id" type="string"/>
+        <element label="User" max_length="32" name="user" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="user"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_grid_canvas_pane">
+    <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+        <grid_canvas display_value="PA Patient Health Monit - New Tab">3f9cc2391bacd0100cd4c91b1e4bcba7</grid_canvas>
+        <height>5</height>
+        <portal_widget display_value="Created 2020-05-03 18:36:01">23ec1ab11b2014100cd4c91b1e4bcb6d</portal_widget>
+        <posx>4</posx>
+        <posy>0</posy>
+        <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+        <sys_created_by>rlochan</sys_created_by>
+        <sys_created_on>2020-05-04 01:36:01</sys_created_on>
+        <sys_id>2fec1ab11b2014100cd4c91b1e4bcb6e</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>3f9cc2391bacd0100cd4c91b1e4bcba7</sys_name>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sys_grid_canvas_pane_2fec1ab11b2014100cd4c91b1e4bcb6e</sys_update_name>
+        <sys_updated_by>rlochan</sys_updated_by>
+        <sys_updated_on>2020-05-04 02:10:44</sys_updated_on>
+        <width>4</width>
+    </sys_grid_canvas_pane>
+</record_update>

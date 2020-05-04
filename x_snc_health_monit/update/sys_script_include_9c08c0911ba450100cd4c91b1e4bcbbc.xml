@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_snc_health_monit.ServerSentUtil</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Utility functions to support ServerSent communications.</description>
+        <name>ServerSentUtil</name>
+        <script><![CDATA[var ServerSentUtil = Class.create();
+ServerSentUtil.prototype = {
+    initialize: function () {
+    },
+
+    createEventStreamBR: function (sourceGR) {
+        var sourceSid = String(sourceGR.sys_id);
+        if (sourceGR.getTableName() == "x_snc_health_monit_transaction_subscription") {
+            sourceSid = String(sourceGR.record_key);
+        }
+        var targetName = "ss_" + sourceSid;
+        var gr = new GlideRecord("sys_script");
+        gr.addQuery("name", targetName);
+        gr.query();
+        if (gr.next()) {
+            gr.script = this._setBRScriptBody(sourceGR);
+            gr.when = "after";
+            gr.action_insert = true;
+            gr.action_update = true;
+            gr.sys_scope = "214e27cd1b2450100cd4c91b1e4bcbb3";
+            gr.advanced = true;
+            gr.active = true;
+            gr.collection = String(sourceGR.table);
+            gs.debug("Attempting update of StreamBR");
+            //(new global.HealthMontorGlobalUtils()).setWorkflowFalseUpdate(gr);
+            gr.update();
+        }
+        else {
+            gr.initialize();
+            gr.name = targetName;
+            gr.when = "after";
+            gr.action_insert = true;
+            gr.action_update = true;
+            gr.sys_scope = "214e27cd1b2450100cd4c91b1e4bcbb3";
+            gr.advanced = true;
+            gr.script = this._setBRScriptBody(sourceGR);
+            gr.active = true;
+            gr.collection = String(sourceGR.table);
+            //(new global.HealthMontorGlobalUtils()).insertGlobalRecord(gr);
+            gr.insert();
+        }
+    },
+
+    deleteEventStreamBR: function (sourceGR) {
+        var sourceSid = String(sourceGR.sys_id);
+        if (sourceGR.getTableName() == "x_snc_health_monit_transaction_subscription") {
+            sourceSid = String(sourceGR.record_key);
+        }
+        var targetName = "ss_" + sourceSid;
+        var gr = new GlideRecord("sys_script");
+        gr.addQuery("name", targetName);
+        gr.query();
+        if (gr.next()) {
+            //(new global.HealthMontorGlobalUtils()).deleteGlobalRecord(gr);
+            gr.deleteRecord();
+        }
+    },
+
+    _setBRScriptBody: function (sourceGR) {
+        var sourceSid = String(sourceGR.sys_id);
+        var sourceTable = String(sourceGR.getTableName());
+        var parentField = "";
+        var liveTx = false;
+        if (sourceGR.getTableName() == "x_snc_health_monit_transaction_subscription") {
+            sourceSid = String(sourceGR.record_key);
+            //sourceTable = String(sourceGR.table);
+            parentField = String(sourceGR.parent_field);
+            liveTx = sourceGR.live;
+        }
+
+        var script =
+            '(function executeRule(current, previous /*null when async*/) { ' + "\n" +
+            '    var sourceRec = new GlideRecord("' + sourceTable + '");' + "\n" +
+            '    var liveTx = ' + liveTx + ';' + "\n" +
+            '    if (sourceRec.get("' + sourceSid + '")) {' + "\n" +
+            '        var parentField = "' + parentField + '";' + "\n" +
+            '        var fields = String(sourceRec.fields);' + "\n" +
+            '        if (!gs.nil(parentField)) {' + "\n" +
+            '           fields += "," + parentField;' + "\n" +
+            '        }' + "\n" +
+            '        var message = objectfyGlideRecord_NoSys_updated(current, String(fields));' + "\n" +
+            '        var nothingToSend = true;' + "\n" +
+            '        message.sys_id = String(current.getUniqueValue());' + "\n" +
+            '        message[parentField] = String(current[parentField]);' + "\n" +
+            '        for (var f in message) {' + "\n" +
+            '            if (message.hasOwnProperty(f)) {' + "\n" +
+            '                nothingToSend = false;' + "\n" +
+            '                break;' + "\n" +
+            '            }' + "\n" +
+            '        }' + "\n" +
+            '        var currentMatches = false;' + "\n" +
+            '        var previousMatches = false;' + "\n" +
+            '        var shouldFire = false;' + "\n" +
+            '        // If current matches the GlideFilter' + "\n" +
+            '        if (GlideFilter.checkRecord(current, sourceRec.conditions)) {' + "\n" +
+            '            currentMatches = true;' + "\n" +
+            '            shouldFire = true;' + "\n" +
+            '        }' + "\n" +
+            '        if (GlideFilter.checkRecord(previous, sourceRec.conditions)) {' + "\n" +
+            '            previousMatches = true;' + "\n" +
+            '            shouldFire = true;' + "\n" +
+            '        }' + "\n" +
+            '' + "\n" +
+            '        if (currentMatches && !previousMatches || liveTx || (currentMatches && current.operation() == "insert")) {' + "\n" +
+            '            message = {};' + "\n" +
+            '            message = objectfyGlideRecord_NoSys_created(current, String(sourceRec.fields));' + "\n" +
+            '            message.sys_id = String(current.getUniqueValue());' + "\n" +
+            '            message[parentField] = String(current[parentField]);' + "\n" +
+            '            //gs.addInfoMessage(JSON.stringify(message));' + "\n" +
+            '            message.operation = "create";' + "\n" +
+            '            nothingToSend = false;' + "\n" +
+            '        }' + "\n" +
+            '        if (message.operation == "") {' + "\n" +
+            '           if (currentMatches && previousMatches && !liveTx || (currentMatches && current.operation() == "update" && !liveTx)) {' + "\n" +
+            '               message.operation = "update";' + "\n" +
+            '           }' + "\n" +
+            '        }' + "\n" +
+            '        if (message.operation == "") {' + "\n" +
+            '           if (!currentMatches && previousMatches && !liveTx) {' + "\n" +
+            '               message.operation = "delete";' + "\n" +
+            '           }' + "\n" +
+            '        }' + "\n" +
+            '        if (message.operation == "") {' + "\n" +
+            '           if (!currentMatches && !previousMatches && !liveTx) {' + "\n" +
+            '               message.operation = "none";' + "\n" +
+            '           }' + "\n" +
+            '        }' + "\n" +
+            '        if (((message.operation == "create" || message.operation == "update") && nothingToSend) || message.operation == "none") {' + "\n" +
+            '            gs.debug("NOT Sending event! " + current.number  + " nothingToSend: " + nothingToSend + " message.operation: " + message.operation);' + "\n" +
+            '        }' + "\n" +
+            '        else {' + "\n" +
+            '            gs.debug("Sending event! " + current.number  + " nothingToSend: " + nothingToSend + " message.operation: " + message.operation);' + "\n" +
+            '            if (shouldFire) {' + "\n" +
+            '                gs.eventQueue("' + String(sourceGR.event_name) + '", sourceRec, JSON.stringify(message), String(current.sys_updated_by), "no_process");' + "\n" +
+            '            }' + "\n" +
+            '        }' + "\n" +
+            '    }' + "\n" +
+            '' + "\n" +
+            '' + "\n" +
+            '})(current, previous);' + "\n" +
+            '' + "\n" +
+            'function objectfyGlideRecord_NoSys_updated(gr, fields) {' + "\n" +
+            '    var convertedObj = {};' + "\n" +
+            '    var field = fields.split(",");' + "\n" +
+            '    for (var f in field) {' + "\n" +
+            '        if (field[f].indexOf(".") > -1) {' + "\n" +
+            '            field = removeA(field, field[f]);' + "\n" +
+            '        }' + "\n" +
+            '    }' + "\n" +
+            '    for (var prop in field) {' + "\n" +
+            '       if (typeof(gr[field[prop]]) != "undefined") {' + "\n" +
+            '        if (gr[field[prop]].changes()) {' + "\n" +
+            '            if (!gs.nil(gr[field[prop]])) {' + "\n" +
+            '                if (String(field[prop]).indexOf("sys_") > -1) { }' + "\n" +
+            '                else {' + "\n" +
+            '                    convertedObj[field[prop]] = { displayValue: gr[field[prop]].getDisplayValue(), path: String(field[prop]), value: gr.getValue(field[prop]) };' + "\n" +
+            '                }' + "\n" +
+            '            }' + "\n" +
+            '        }' + "\n" +
+            '       }' + "\n" +
+            '    }' + "\n" +
+            '    return convertedObj;' + "\n" +
+            '}' + "\n" +
+            '' + "\n" +
+            'function objectfyGlideRecord_NoSys_created(gr, fields) {' + "\n" +
+            '    var convertedObj = {};' + "\n" +
+            '    var field = fields.split(",");' + "\n" +
+            '    for (var prop in field) {' + "\n" +
+            '        if (String(field[prop]).indexOf(".") > -1) {' + "\n" +
+            '            // Get Path via eval' + "\n" +
+            '            var splitF = String(field[prop]).split(".");' + "\n" +
+            '            var fieldName = String(splitF[splitF.length - 1]);' + "\n" +
+            '            var displayValue = getPropertyValue(gr, String(field[prop]), "displayValue");' + "\n" +
+            '            var value = getPropertyValue(gr, String(field[prop]), "value");' + "\n" +
+            '            convertedObj[fieldName] = { displayValue: gs.nil(displayValue) ? "" : displayValue, path: String(field[prop]), value: gs.nil(value) ? "" : value };' + "\n" +
+            '        }' + "\n" +
+            '        else {' + "\n" +
+            '            convertedObj[field[prop]] = { displayValue: gr[field[prop]].getDisplayValue(), path: String(field[prop]), value: gr.getValue(field[prop]) };' + "\n" +
+            '        }' + "\n" +
+            '' + "\n" +
+            '    }' + "\n" +
+            '    //gs.debug(JSON.stringify(convertedObj));' + "\n" +
+            '    return convertedObj;' + "\n" +
+            '}' + "\n" +
+            '' + "\n" +
+            'function removeA(arr) {' + "\n" +
+            '    var what, a = arguments, L = a.length, ax;' + "\n" +
+            '    while (L > 1 && arr.length) {' + "\n" +
+            '        what = a[--L];' + "\n" +
+            '        while ((ax = arr.indexOf(what)) !== -1) {' + "\n" +
+            '            arr.splice(ax, 1);' + "\n" +
+            '        }' + "\n" +
+            '    }' + "\n" +
+            '    return arr;' + "\n" +
+            '}' + "\n" +
+            '' + "\n" +
+            'function getProperty(propertyName, obj) {' + "\n" +
+            '    var parts = propertyName.split("."),' + "\n" +
+            '        length = parts.length,' + "\n" +
+            '        i,' + "\n" +
+            '        property = obj || this;' + "\n" +
+            '' + "\n" +
+            '    for (i = 0; i < length; i++) {' + "\n" +
+            '        if (typeof property[parts[i]] != "undefined") {' + "\n" +
+            '            property = property[parts[i]];' + "\n" +
+            '        }' + "\n" +
+            '    }' + "\n" +
+            '    return property;' + "\n" +
+            '}' + "\n" +
+            '' + "\n" +
+            'function getPropertyValue(obj, path, valType) {' + "\n" +
+            '    var result;' + "\n" +
+            '    var arr = String(path).split(\'.\');' + "\n" +
+            '    //var last = arr.pop();' + "\n" +
+            '    var evalString = "";' + "\n" +
+            '    if (valType == "value") {' + "\n" +
+            '        evalString = \'var answer = String(obj["\' + arr.join(\'"]["\') + \'"]);\';' + "\n" +
+            '    }' + "\n" +
+            '    if (valType == "displayValue") {' + "\n" +
+            '        evalString = \'var answer = String(obj["\' + arr.join(\'"]["\') + \'"]);\';' + "\n" +
+            '    }' + "\n" +
+            '    // Create eval script object' + "\n" +
+            '    var evalScript = new GlideRecord("x_snc_health_monit_eval_script");' + "\n" +
+            '    evalScript.initialize();' + "\n" +
+            '    evalScript.script = evalString;' + "\n" +
+            '    var sid = evalScript.insert();' + "\n" +
+            '    if (evalScript.get(sid)) {' + "\n" +
+            '        var evaluator = new GlideScopedEvaluator();' + "\n" +
+            '        //var evaluator = new GlideEvaluator();' + "\n" +
+            '        evaluator.putVariable("obj", obj);' + "\n" +
+            '        evaluator.putVariable("answer", null);' + "\n" +
+            '        evaluator.evaluateScript(evalScript, "script");' + "\n" +
+            '        result = evaluator.getVariable("answer");' + "\n" +
+            '        evalScript.deleteRecord();' + "\n" +
+            '    }' + "\n" +
+            '    return result;' + "\n" +
+            '}        ';
+        return script;
+    },
+
+    /**
+     * 
+     * @param subscription_sids array of transaction subscription sys_id
+     */
+    getPersisentSubscriptions: function (subscription_sids) {
+        var result = { url: "", subscriptions: [] };
+        var subscriptions = [];
+        var userSid = String(gs.getUserID());
+        var gr = new GlideRecord('x_snc_health_monit_transaction_subscription');
+        if (!gs.nil(subscription_sids)) {
+            // userDYNAMIC90d1921e5f510100a9ad2572f2b477fe^NQpersistent=true^record_key=10914f21dbb8c8d80c40a4cb0b96191a
+            var query = "persistent=true^record_keyIN" + subscription_sids.toString();
+            gr.addEncodedQuery(query);
+        }
+        else {
+            //gr.addQuery('user', userSid);
+            var query = "persistent=true";
+            gr.addEncodedQuery(query);
+        }
+        gr.addNotNullQuery('event_name');
+        gr.addNotNullQuery('record_key');
+        gr.query();
+        while (gr.next()) {
+            var parentTable = this._getReferencedTable(String(gr.table), String(gr.parent_field));
+            subscriptions.push({ event_name: String(gr.event_name), record_sid: String(gr.record_key), table: String(gr.table), parent_field: String(gr.parent_field), parent_table: parentTable });
+        }
+        result.subscriptions = subscriptions;
+        return JSON.stringify(result);
+    },
+
+    _getReferencedTable: function (table, element) {
+        var referencedTable = "";
+        if (!gs.nil(element)) {
+            // name=agent_file^element=mid_server^reference.name=ecc_agent
+            var query = "name=" + table + "^element=" + element;
+            var gr = new GlideRecord("sys_dictionary");
+            gr.addEncodedQuery(query);
+            gr.query();
+            if (gr.next()) {
+                String(gr.reference.name);
+            }
+        }
+        return referencedTable;
+    },
+
+    type: 'ServerSentUtil'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>mmoody</sys_created_by>
+        <sys_created_on>2020-05-02 01:29:25</sys_created_on>
+        <sys_id>9c08c0911ba450100cd4c91b1e4bcbbc</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_name>ServerSentUtil</sys_name>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sys_script_include_9c08c0911ba450100cd4c91b1e4bcbbc</sys_update_name>
+        <sys_updated_by>mmoody</sys_updated_by>
+        <sys_updated_on>2020-05-03 23:11:35</sys_updated_on>
+    </sys_script_include>
+</record_update>

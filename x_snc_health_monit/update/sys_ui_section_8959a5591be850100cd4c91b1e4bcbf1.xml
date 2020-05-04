@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="8959a5591be850100cd4c91b1e4bcbf1" sys_domain="global" table="x_snc_health_monit_covid_stats" version="3" view="">
+        <sys_ui_annotation action="INSERT_OR_UPDATE">
+            <is_plain_text>true</is_plain_text>
+            <sys_created_by>rlochan</sys_created_by>
+            <sys_created_on>2020-05-03 03:22:06</sys_created_on>
+            <sys_id>3b9be1e91bac90100cd4c91b1e4bcbf8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rlochan</sys_updated_by>
+            <sys_updated_on>2020-05-03 03:22:06</sys_updated_on>
+            <text>In the past 2 weeks, have you had close contact with anyone with a physician-documented positive COVID-19 test?</text>
+            <type display_value="Info Box Blue">753f88a80f930000b12e6903cfe01206</type>
+        </sys_ui_annotation>
+        <sys_ui_annotation action="INSERT_OR_UPDATE">
+            <is_plain_text>true</is_plain_text>
+            <sys_created_by>rlochan</sys_created_by>
+            <sys_created_on>2020-05-03 03:22:06</sys_created_on>
+            <sys_id>339be1e91bac90100cd4c91b1e4bcbf9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rlochan</sys_updated_by>
+            <sys_updated_on>2020-05-03 03:22:06</sys_updated_on>
+            <text>Do you have a NEW sore throat, nasal congestion, or runny nose that you don't think is associated with seasonal allergies (hay fever)?</text>
+            <type display_value="Info Box Blue">753f88a80f930000b12e6903cfe01206</type>
+        </sys_ui_annotation>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>0</position>
+            <sys_created_by>rlochan</sys_created_by>
+            <sys_created_on>2020-05-03 03:22:07</sys_created_on>
+            <sys_id>00ab25e91bac90100cd4c91b1e4bcb7d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_health_monit_covid_stats" sys_domain="global" view="Default view">8959a5591be850100cd4c91b1e4bcbf1</sys_ui_section>
+            <sys_updated_by>rlochan</sys_updated_by>
+            <sys_updated_on>2020-05-03 03:22:07</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>patient</element>
+            <position>1</position>
+            <sys_created_by>rlochan</sys_created_by>
+            <sys_created_on>2020-05-03 03:22:07</sys_created_on>
+            <sys_id>88ab25e91bac90100cd4c91b1e4bcb7d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_health_monit_covid_stats" sys_domain="global" view="Default view">8959a5591be850100cd4c91b1e4bcbf1</sys_ui_section>
+            <sys_updated_by>rlochan</sys_updated_by>
+            <sys_updated_on>2020-05-03 03:22:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>encounter_id</element>
+            <position>2</position>
+            <sys_created_by>rlochan</sys_created_by>
+            <sys_created_on>2020-05-03 03:22:07</sys_created_on>
+            <sys_id>00ab25e91bac90100cd4c91b1e4bcb7e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_health_monit_covid_stats" sys_domain="global" view="Default view">8959a5591be850100cd4c91b1e4bcbf1</sys_ui_section>
+            <sys_updated_by>rlochan</sys_updated_by>
+            <sys_updated_on>2020-05-03 03:22:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>risk_level</element>
+            <position>3</position>
+            <sys_created_by>rlochan</sys_created_by>
+            <sys_created_on>2020-05-03 03:22:07</sys_created_on>
+            <sys_id>84ab25e91bac90100cd4c91b1e4bcb7e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_health_monit_covid_stats" sys_domain="global" view="Default view">8959a5591be850100cd4c91b1e4bcbf1</sys_ui_section>
+            <sys_updated_by>rlochan</sys_updated_by>
+            <sys_updated_on>2020-05-03 03:22:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>stat_date_time</element>
+            <position>4</position>
+            <sys_created_by>rlochan</sys_created_by>
+            <sys_created_on>2020-05-03 03:22:07</sys_created_on>
+            <sys_id>0cab25e91bac90100cd4c91b1e4bcb7e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_health_monit_covid_stats" sys_domain="global" view="Default view">8959a5591be850100cd4c91b1e4bcbf1</sys_ui_section>
+            <sys_updated_by>rlochan</sys_updated_by>
+            <sys_updated_on>2020-05-03 03:22:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>risk_policy</element>
+            <position>5</position>
+            <sys_created_by>rlochan</sys_created_by>
+            <sys_created_on>2020-05-03 03:22:07</sys_created_on>
+            <sys_id>80ab25e91bac90100cd4c91b1e4bcb7f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_health_monit_covid_stats" sys_domain="global" view="Default view">8959a5591be850100cd4c91b1e4bcbf1</sys_ui_section>
+            <sys_updated_by>rlochan</sys_updated_by>
+            <sys_updated_on>2020-05-03 03:22:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>6</position>
+            <sys_created_by>rlochan</sys_created_by>
+            <sys_created_on>2020-05-03 03:22:07</sys_created_on>
+            <sys_id>08ab25e91bac90100cd4c91b1e4bcb7f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_health_monit_covid_stats" sys_domain="global" view="Default view">8959a5591be850100cd4c91b1e4bcbf1</sys_ui_section>
+            <sys_updated_by>rlochan</sys_updated_by>
+            <sys_updated_on>2020-05-03 03:22:07</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>fever</element>
+            <position>7</position>
+            <sys_created_by>rlochan</sys_created_by>
+            <sys_created_on>2020-05-03 03:22:07</sys_created_on>
+            <sys_id>8cab25e91bac90100cd4c91b1e4bcb7f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_health_monit_covid_stats" sys_domain="global" view="Default view">8959a5591be850100cd4c91b1e4bcbf1</sys_ui_section>
+            <sys_updated_by>rlochan</sys_updated_by>
+            <sys_updated_on>2020-05-03 03:22:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>cough</element>
+            <position>8</position>
+            <sys_created_by>rlochan</sys_created_by>
+            <sys_created_on>2020-05-03 03:22:07</sys_created_on>
+            <sys_id>04ab25e91bac90100cd4c91b1e4bcb80</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_health_monit_covid_stats" sys_domain="global" view="Default view">8959a5591be850100cd4c91b1e4bcbf1</sys_ui_section>
+            <sys_updated_by>rlochan</sys_updated_by>
+            <sys_updated_on>2020-05-03 03:22:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>difficulty_breathing</element>
+            <position>9</position>
+            <sys_created_by>rlochan</sys_created_by>
+            <sys_created_on>2020-05-03 03:22:07</sys_created_on>
+            <sys_id>88ab25e91bac90100cd4c91b1e4bcb80</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_health_monit_covid_stats" sys_domain="global" view="Default view">8959a5591be850100cd4c91b1e4bcbf1</sys_ui_section>
+            <sys_updated_by>rlochan</sys_updated_by>
+            <sys_updated_on>2020-05-03 03:22:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>10</position>
+            <sys_created_by>rlochan</sys_created_by>
+            <sys_created_on>2020-05-03 03:22:07</sys_created_on>
+            <sys_id>00ab25e91bac90100cd4c91b1e4bcb81</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_health_monit_covid_stats" sys_domain="global" view="Default view">8959a5591be850100cd4c91b1e4bcbf1</sys_ui_section>
+            <sys_updated_by>rlochan</sys_updated_by>
+            <sys_updated_on>2020-05-03 03:22:07</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>3b9be1e91bac90100cd4c91b1e4bcbf8</element>
+            <position>11</position>
+            <sys_created_by>rlochan</sys_created_by>
+            <sys_created_on>2020-05-03 03:22:07</sys_created_on>
+            <sys_id>84ab25e91bac90100cd4c91b1e4bcb81</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_health_monit_covid_stats" sys_domain="global" view="Default view">8959a5591be850100cd4c91b1e4bcbf1</sys_ui_section>
+            <sys_updated_by>rlochan</sys_updated_by>
+            <sys_updated_on>2020-05-03 03:22:07</sys_updated_on>
+            <sys_user/>
+            <type>annotation</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>check_one</element>
+            <position>12</position>
+            <sys_created_by>rlochan</sys_created_by>
+            <sys_created_on>2020-05-03 03:22:07</sys_created_on>
+            <sys_id>0cab25e91bac90100cd4c91b1e4bcb81</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_health_monit_covid_stats" sys_domain="global" view="Default view">8959a5591be850100cd4c91b1e4bcbf1</sys_ui_section>
+            <sys_updated_by>rlochan</sys_updated_by>
+            <sys_updated_on>2020-05-03 03:22:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>339be1e91bac90100cd4c91b1e4bcbf9</element>
+            <position>13</position>
+            <sys_created_by>rlochan</sys_created_by>
+            <sys_created_on>2020-05-03 03:22:07</sys_created_on>
+            <sys_id>80ab25e91bac90100cd4c91b1e4bcb82</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_health_monit_covid_stats" sys_domain="global" view="Default view">8959a5591be850100cd4c91b1e4bcbf1</sys_ui_section>
+            <sys_updated_by>rlochan</sys_updated_by>
+            <sys_updated_on>2020-05-03 03:22:07</sys_updated_on>
+            <sys_user/>
+            <type>annotation</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>check_two</element>
+            <position>14</position>
+            <sys_created_by>rlochan</sys_created_by>
+            <sys_created_on>2020-05-03 03:22:07</sys_created_on>
+            <sys_id>08ab25e91bac90100cd4c91b1e4bcb82</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_health_monit_covid_stats" sys_domain="global" view="Default view">8959a5591be850100cd4c91b1e4bcbf1</sys_ui_section>
+            <sys_updated_by>rlochan</sys_updated_by>
+            <sys_updated_on>2020-05-03 03:22:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_snc_health_monit_covid_stats</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>rlochan</sys_created_by>
+            <sys_created_on>2020-05-02 08:33:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8959a5591be850100cd4c91b1e4bcbf1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_snc_health_monit_covid_stats</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+            <sys_update_name>sys_ui_section_8959a5591be850100cd4c91b1e4bcbf1</sys_update_name>
+            <sys_updated_by>rlochan</sys_updated_by>
+            <sys_updated_on>2020-05-02 08:33:36</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

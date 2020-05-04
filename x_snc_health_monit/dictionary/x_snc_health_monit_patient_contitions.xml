@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Patient Conditions" max_length="40" name="x_snc_health_monit_patient_contitions" sizeclass="8961" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Code" max_length="40" name="code" reference="x_snc_health_monit_code" type="reference"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;    // Add your code here&#13;&#10;&#13;&#10;    if (current.code != '' &amp;&amp; gs.nil(current.stop)) {&#13;&#10;   &#13;&#10;        var encQuery = &quot;risk_for=fdc3f4b91b68d0100cd4c91b1e4bcbd3^risk_from=&quot; + current.code.sys_id;&#13;&#10;        var grRec = new GlideRecord('x_snc_health_monit_risk_analysis');&#13;&#10;        grRec.addEncodedQuery(encQuery);&#13;&#10;&#9;&#9;grRec.query();&#13;&#10;&#9;&#9;if(grRec.next()){&#13;&#10;&#9;&#9;&#9;return grRec.risk_percentage;&#13;&#10;&#9;&#9;} else {&#13;&#10;&#9;&#9;&#9;return &quot;&quot;;&#13;&#10;&#9;&#9;}&#13;&#10;&#13;&#10;&#13;&#10;    } else {&#13;&#10;&#13;&#10;        return '';&#13;&#10;    }&#13;&#10;&#13;&#10;})(current);" label="Covid Mortality Risk" max_length="15" name="covid_risk" read_only="true" type="percent_complete" virtual="true"/>
+        <element attributes="edge_encryption_enabled=true" display="true" label="Description" max_length="100" name="description" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Encounter ID" max_length="40" name="encounter_id" type="string"/>
+        <element attributes="encode_utf8=false" label="Patient" max_length="32" name="patient" reference="x_snc_health_monit_patient_details" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="START" max_length="40" name="start" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" label="STOP" max_length="40" name="stop" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Type" max_length="40" name="type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="General" sequence="0" value="General"/>
+                <element inactive_on_update="false" label="Allergy" sequence="1" value="Allergy"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="patient"/>
+        </index>
+        <index name="index2">
+            <element name="encounter_id"/>
+        </index>
+    </element>
+</database>

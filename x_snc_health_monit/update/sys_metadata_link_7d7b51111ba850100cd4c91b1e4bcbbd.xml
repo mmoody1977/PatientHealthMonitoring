@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>403b9ddd1b6850100cd4c91b1e4bcb65</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_processor"&gt;
+    &lt;sys_processor action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;class_name/&gt;
+        &lt;description&gt;ServerSent scripted processor&amp;#13;
+ServerSent HTML5&amp;#13;
+Usage: https://yourinstance.service-now.com/serversent.do?event_subscription=incident.updated&amp;amp;record_sid=d71da88ac0a801670061eabfe4b28f77&lt;/description&gt;
+        &lt;interactive&gt;false&lt;/interactive&gt;
+        &lt;name&gt;ServerSent&lt;/name&gt;
+        &lt;parameters/&gt;
+        &lt;params_endpoint/&gt;
+        &lt;path&gt;serversent&lt;/path&gt;
+        &lt;path_endpoint/&gt;
+        &lt;require_csrf&gt;false&lt;/require_csrf&gt;
+        &lt;roles/&gt;
+        &lt;script&gt;&lt;![CDATA[(function process(g_request, g_response, g_processor) {
+    // Event name from the sysevent table you wish to subscribe to
+    var subscribedEvent = g_request.getParameter("event_subscription");
+    // sys_id of the record that will trigger the event in the sysevent table. The value in the .instance field.
+    var subscribedRecord = g_request.getParameter("record_sid");
+
+    // Setup headers for ServerSent responses
+    g_response.setContentType("text/event-stream");
+    g_response.setHeader("Cache-Control", "no-cache");
+    g_response.setHeader("Connection", "keep-alive");
+    g_response.setHeader("Access-Control-Allow-Origin", "*");
+
+    // Test if the subscribed event has fired, and if so send notification to subscribed client browser
+    var clientResponse = eventFired(subscribedEvent, subscribedRecord);
+    if (clientResponse.length &gt; 0) {
+        var messageObj = { messages: clientResponse };
+        //gs.info("SS - Writing to event-stream output....");
+        //g_processor.writeOutput("text/event-stream", "id: " + String(event.sys_id) + "\n" + "data: " + JSON.stringify(messageObj) + "\n\n");
+    }
+
+    function eventFired(eventName, eventSid) {
+        var clientResponse = [];
+        // Query the sysevent table for the event desired.
+        // Query for a specific record that the event was triggered against.
+        // Query for the target event triggered within the current minute.
+        var query = "sys_created_onONCurrent minute@javascript:gs.beginningOfCurrentMinute()@javascript:gs.endOfCurrentMinute()^ORsys_created_onONLast minute@javascript:gs.beginningOfLastMinute()@javascript:gs.endOfLastMinute()^name=" + eventName + "^instance=" + eventSid;
+        var event = new GlideRecord('sysevent');
+        event.addEncodedQuery(query);
+        event.orderBy("sys_created_on");
+        event.query();
+        // Build client response from each occurance of the target event within the current minute.
+		//gs.info("SS - Total Events found: " + event.getRowCount());
+        while (event.next()) {
+            if (!gs.nil(event.instance)) {
+                // Get the target record that the event was triggered from
+                var record = new GlideRecord(String(event.table));
+                if (record.get(event.instance)) {
+					//gs.info("SS - Got Event GR!");
+                    var shouldSend = true;
+                    // Construct a HTML formated message for client browser processing.
+                    var messageOutput = [];
+                    var updateEvent = false;
+                    // Widget Table | persistent 
+                    /*
+                    var persistentSubscriptions = JSON.parse((new x_snc_health_monit.ServerSentUtil()).getPersisentSubscriptions());
+                    var persistentTables = [];
+                    for (var sub in persistentSubscriptions.subscriptions) {
+                        persistentTables.push(String(persistentSubscriptions.subscriptions[sub].table));
+                    }
+                    */
+                    var recordTable = String(record.getTableName());
+                    //gs.info("SS - persistentTables: " + persistentTables.toString() + " recordTable: " + recordTable);
+                    //if (persistentTables.indexOf(recordTable) &gt; -1) {
+                    if (recordTable == "x_snc_health_monit_transaction_subscription") {    
+						//gs.info("SS - Found persistent table event sending JSON payload!");
+                        // Expected JSON object in event.parm1
+                        messageOutput.push(String(event.parm1));
+                        if (event.state == "processed") {
+                            //shouldSend = false;
+                        }
+                        else {
+                            updateEvent = true;
+                        }
+                        updateEvent = true;
+                    }
+                    else {
+                        messageOutput.push("&lt;h2&gt;" + String(event.parm1) + "&lt;/h2&gt;");
+                    }
+                    //messageOutput.push("&lt;h2&gt;" + record.number + " was updated successfully!&lt;/h2&gt;");
+
+                    // Construct a JSON object for passing message and unique ID to client side.
+                    var outputObj = {};
+                    outputObj.message = messageOutput.toString();
+                    outputObj.id = String(event.sys_id);
+                    outputObj.instance = String(event.instance);
+                    if (event.name == 'x_ebay_integration.transaction_failure') {
+                        outputObj.type = "transaction";
+                    }
+                    else {
+                        outputObj.type = "";
+                    }
+                    if (shouldSend) {
+                        clientResponse.push(outputObj);
+                    }
+                    if (updateEvent) {
+                        event.processed = new GlideDateTime();
+                        event.state = "processed";
+                        event.setWorkflow(false);
+                        event.update();
+                    }
+                    
+                    // Send message to client side browser using JSON object and event unique id. Use event-stream formatting as specified via the ServerSent protocol.
+                    if (shouldSend) {
+                        g_processor.writeOutput("text/event-stream", "id: " + String(event.sys_id) + "\n" + "data: " + JSON.stringify(outputObj) + "\n\n");
+                    }
+
+                    
+                }
+            }
+        }
+       // gs.info("SS - clientResponse: " + JSON.stringify(clientResponse));
+        return clientResponse;
+    }
+
+})(g_request, g_response, g_processor);]]&gt;&lt;/script&gt;
+        &lt;sys_class_name&gt;sys_processor&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;mmoody&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2020-05-02 07:31:49&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;403b9ddd1b6850100cd4c91b1e4bcb65&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;16&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;ServerSent&lt;/sys_name&gt;
+        &lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;sys_processor_403b9ddd1b6850100cd4c91b1e4bcb65&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;mmoody&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2020-05-03 08:45:23&lt;/sys_updated_on&gt;
+        &lt;type&gt;script&lt;/type&gt;
+    &lt;/sys_processor&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>mmoody</sys_created_by>
+        <sys_created_on>2020-05-02 07:33:02</sys_created_on>
+        <sys_id>7d7b51111ba850100cd4c91b1e4bcbbd</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>ServerSent</sys_name>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sys_metadata_link_7d7b51111ba850100cd4c91b1e4bcbbd</sys_update_name>
+        <sys_updated_by>mmoody</sys_updated_by>
+        <sys_updated_on>2020-05-03 08:46:02</sys_updated_on>
+        <tablename>sys_processor</tablename>
+    </sys_metadata_link>
+</record_update>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>03bc31911b6c50100cd4c91b1e4bcb62</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sysauto_script"&gt;
+    &lt;sysauto_script action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;business_calendar/&gt;
+        &lt;condition/&gt;
+        &lt;conditional&gt;false&lt;/conditional&gt;
+        &lt;entered_time&gt;1970-01-01 00:00:00&lt;/entered_time&gt;
+        &lt;name&gt;Delete stale Health Events&lt;/name&gt;
+        &lt;run_as display_value="Mike Moody"&gt;831257811b2450100cd4c91b1e4bcbf3&lt;/run_as&gt;
+        &lt;run_as_tz/&gt;
+        &lt;run_dayofmonth&gt;1&lt;/run_dayofmonth&gt;
+        &lt;run_dayofweek&gt;1&lt;/run_dayofweek&gt;
+        &lt;run_period&gt;1970-01-01 00:00:05&lt;/run_period&gt;
+        &lt;run_start&gt;2020-05-02 09:58:23&lt;/run_start&gt;
+        &lt;run_time&gt;1970-01-01 08:00:00&lt;/run_time&gt;
+        &lt;run_type&gt;periodically&lt;/run_type&gt;
+        &lt;script&gt;&lt;![CDATA[deleteEvents();
+function deleteEvents() {
+    // sys_created_onBETWEENjavascript:gs.dateGenerate('2020-05-02','03:00:00')@javascript:gs.dateGenerate('2020-05-02','03:00:05')^name=x_snc_health_monit.patient_details
+    //sys_created_onBETWEENjavascript:gs.dateGenerate('2020-05-02','03:00:00')@javascript:gs.dateGenerate('2020-05-02','03:00:05')^name=x_snc_health_monit.patient_details
+    // queue=no_process^sys_created_on&lt;javascript:gs.dateGenerate('2020-05-02','03:15:00')
+    var nowGDT = new GlideDateTime();
+    nowGDT.addSeconds(-10);
+    var nowString = nowGDT.getDisplayValue();
+    var nowDate = String(nowString).split(" ")[0];
+    var nowTime = String(nowString).split(" ")[1];
+    /*
+    nowGDT.addSeconds(5);
+    var thenString = nowGDT.getDisplayValue();
+    var thenDate = String(thenString).split(" ")[0];
+    var thenTime = String(thenString).split(" ")[1];
+    var query = "sys_created_onBETWEENjavascript:gs.dateGenerate('" + nowDate + "','" + nowTime + "')@javascript:gs.dateGenerate('" + thenDate + "','" + thenTime + "')^queue=no_process";
+    gs.debug(query);
+    */
+    var query = "queue=no_process^sys_created_on&lt;javascript:gs.dateGenerate('" + nowDate + "','" + nowTime + "')";
+	gs.debug(query);
+    var gr = new GlideRecord("sysevent");
+    gr.addEncodedQuery(query);
+    gr.deleteMultiple();
+}]]&gt;&lt;/script&gt;
+        &lt;sys_class_name&gt;sysauto_script&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;mmoody&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2020-05-02 10:20:53&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;03bc31911b6c50100cd4c91b1e4bcb62&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;Delete stale Health Events&lt;/sys_name&gt;
+        &lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;sysauto_script_03bc31911b6c50100cd4c91b1e4bcb62&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;mmoody&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2020-05-02 10:24:40&lt;/sys_updated_on&gt;
+        &lt;time_zone/&gt;
+        &lt;upgrade_safe&gt;false&lt;/upgrade_safe&gt;
+    &lt;/sysauto_script&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>mmoody</sys_created_by>
+        <sys_created_on>2020-05-02 10:31:53</sys_created_on>
+        <sys_id>71648e951b6c50100cd4c91b1e4bcb8f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Delete stale Health Events</sys_name>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sys_metadata_link_71648e951b6c50100cd4c91b1e4bcb8f</sys_update_name>
+        <sys_updated_by>mmoody</sys_updated_by>
+        <sys_updated_on>2020-05-02 10:31:53</sys_updated_on>
+        <tablename>sysauto</tablename>
+    </sys_metadata_link>
+</record_update>

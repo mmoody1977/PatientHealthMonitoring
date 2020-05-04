@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Risk Analysis" max_length="40" name="x_snc_health_monit_risk_analysis" sizeclass="10" type="collection">
+        <element attributes="encode_utf8=false" label="Risk for" max_length="32" name="risk_for" reference="x_snc_health_monit_code" type="reference"/>
+        <element attributes="encode_utf8=false" label="Risk From" max_length="32" name="risk_from" reference="x_snc_health_monit_code" type="reference"/>
+        <element label="Risk Percentage" max_length="15" name="risk_percentage" type="percent_complete"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Risk Type" max_length="40" name="risk_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Mortality" value="Mortality"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="risk_from"/>
+        </index>
+        <index name="index2">
+            <element name="risk_for"/>
+        </index>
+    </element>
+</database>

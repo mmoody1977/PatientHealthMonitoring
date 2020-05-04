@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_snc_health_monit_patient_details</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>ss_d734ec511b2850100cd4c91b1e4bcb60</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) { 
+    var sourceRec = new GlideRecord("x_snc_health_monit_transaction_subscription");
+    var liveTx = false;
+    if (sourceRec.get("d734ec511b2850100cd4c91b1e4bcb60")) {
+        var parentField = "";
+        var fields = String(sourceRec.fields);
+        if (!gs.nil(parentField)) {
+           fields += "," + parentField;
+        }
+        var message = objectfyGlideRecord_NoSys_updated(current, String(fields));
+        var nothingToSend = true;
+        message.sys_id = String(current.getUniqueValue());
+        message[parentField] = String(current[parentField]);
+        for (var f in message) {
+            if (message.hasOwnProperty(f)) {
+                nothingToSend = false;
+                break;
+            }
+        }
+        var currentMatches = false;
+        var previousMatches = false;
+        var shouldFire = false;
+        // If current matches the GlideFilter
+        if (GlideFilter.checkRecord(current, sourceRec.conditions)) {
+            currentMatches = true;
+            shouldFire = true;
+        }
+        if (GlideFilter.checkRecord(previous, sourceRec.conditions)) {
+            previousMatches = true;
+            shouldFire = true;
+        }
+
+        if (currentMatches && !previousMatches || liveTx || (currentMatches && current.operation() == "insert")) {
+            message = {};
+            message = objectfyGlideRecord_NoSys_created(current, String(sourceRec.fields));
+            message.sys_id = String(current.getUniqueValue());
+            message[parentField] = String(current[parentField]);
+            //gs.addInfoMessage(JSON.stringify(message));
+            message.operation = "create";
+            nothingToSend = false;
+        }
+        if (message.operation == "") {
+           if (currentMatches && previousMatches && !liveTx || (currentMatches && current.operation() == "update" && !liveTx)) {
+               message.operation = "update";
+           }
+        }
+        if (message.operation == "") {
+           if (!currentMatches && previousMatches && !liveTx) {
+               message.operation = "delete";
+           }
+        }
+        if (message.operation == "") {
+           if (!currentMatches && !previousMatches && !liveTx) {
+               message.operation = "none";
+           }
+        }
+        if (((message.operation == "create" || message.operation == "update") && nothingToSend) || message.operation == "none") {
+            gs.debug("NOT Sending event! " + current.number  + " nothingToSend: " + nothingToSend + " message.operation: " + message.operation);
+        }
+        else {
+            gs.debug("Sending event! " + current.number  + " nothingToSend: " + nothingToSend + " message.operation: " + message.operation);
+            if (shouldFire) {
+                gs.eventQueue("x_snc_health_monit.patient_details", sourceRec, JSON.stringify(message), String(current.sys_updated_by), "no_process");
+            }
+        }
+    }
+
+
+})(current, previous);
+
+function objectfyGlideRecord_NoSys_updated(gr, fields) {
+    var convertedObj = {};
+    var field = fields.split(",");
+    for (var f in field) {
+        if (field[f].indexOf(".") > -1) {
+            field = removeA(field, field[f]);
+        }
+    }
+    for (var prop in field) {
+       if (typeof(gr[field[prop]]) != "undefined") {
+        if (gr[field[prop]].changes()) {
+            if (!gs.nil(gr[field[prop]])) {
+                if (String(field[prop]).indexOf("sys_") > -1) { }
+                else {
+                    convertedObj[field[prop]] = { displayValue: gr[field[prop]].getDisplayValue(), path: String(field[prop]), value: gr.getValue(field[prop]) };
+                }
+            }
+        }
+       }
+    }
+    return convertedObj;
+}
+
+function objectfyGlideRecord_NoSys_created(gr, fields) {
+    var convertedObj = {};
+    var field = fields.split(",");
+    for (var prop in field) {
+        if (String(field[prop]).indexOf(".") > -1) {
+            // Get Path via eval
+            var splitF = String(field[prop]).split(".");
+            var fieldName = String(splitF[splitF.length - 1]);
+            var displayValue = getPropertyValue(gr, String(field[prop]), "displayValue");
+            var value = getPropertyValue(gr, String(field[prop]), "value");
+            convertedObj[fieldName] = { displayValue: gs.nil(displayValue) ? "" : displayValue, path: String(field[prop]), value: gs.nil(value) ? "" : value };
+        }
+        else {
+            convertedObj[field[prop]] = { displayValue: gr[field[prop]].getDisplayValue(), path: String(field[prop]), value: gr.getValue(field[prop]) };
+        }
+
+    }
+    //gs.debug(JSON.stringify(convertedObj));
+    return convertedObj;
+}
+
+function removeA(arr) {
+    var what, a = arguments, L = a.length, ax;
+    while (L > 1 && arr.length) {
+        what = a[--L];
+        while ((ax = arr.indexOf(what)) !== -1) {
+            arr.splice(ax, 1);
+        }
+    }
+    return arr;
+}
+
+function getProperty(propertyName, obj) {
+    var parts = propertyName.split("."),
+        length = parts.length,
+        i,
+        property = obj || this;
+
+    for (i = 0; i < length; i++) {
+        if (typeof property[parts[i]] != "undefined") {
+            property = property[parts[i]];
+        }
+    }
+    return property;
+}
+
+function getPropertyValue(obj, path, valType) {
+    var result;
+    var arr = String(path).split('.');
+    //var last = arr.pop();
+    var evalString = "";
+    if (valType == "value") {
+        evalString = 'var answer = String(obj["' + arr.join('"]["') + '"]);';
+    }
+    if (valType == "displayValue") {
+        evalString = 'var answer = String(obj["' + arr.join('"]["') + '"]);';
+    }
+    // Create eval script object
+    var evalScript = new GlideRecord("x_snc_health_monit_eval_script");
+    evalScript.initialize();
+    evalScript.script = evalString;
+    var sid = evalScript.insert();
+    if (evalScript.get(sid)) {
+        var evaluator = new GlideScopedEvaluator();
+        //var evaluator = new GlideEvaluator();
+        evaluator.putVariable("obj", obj);
+        evaluator.putVariable("answer", null);
+        evaluator.evaluateScript(evalScript, "script");
+        result = evaluator.getVariable("answer");
+        evalScript.deleteRecord();
+    }
+    return result;
+}        ]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>mmoody</sys_created_by>
+        <sys_created_on>2020-05-02 03:32:20</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4464ec511b2850100cd4c91b1e4bcb57</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>ss_d734ec511b2850100cd4c91b1e4bcb60</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sys_script_4464ec511b2850100cd4c91b1e4bcb57</sys_update_name>
+        <sys_updated_by>mmoody</sys_updated_by>
+        <sys_updated_on>2020-05-03 23:15:58</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=4464ec511b2850100cd4c91b1e4bcb57"/>
+</record_update>

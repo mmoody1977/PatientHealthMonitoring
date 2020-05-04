@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_snc_health_monit_covid_stats</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Update Patient Risk Details</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+
+    // Add your code here
+    var encQuery = 'patient =' + current.patient.sys_id.toString();
+
+    var grRecStats = new GlideRecord('x_snc_health_monit_covid_stats');
+    grRecStats.addEncodedQuery(encQuery);
+    grRecStats.orderByDesc('stat_date_time');
+    grRecStats.query();
+    if (grRecStats.next()) {
+
+        var grRecPatientDetails = new GlideRecord('x_snc_health_monit_patient_details');
+        if (grRecPatientDetails.get(current.patient.sys_id)) {
+            grRecPatientDetails.risk_level = grRecStats.risk_level;
+			grRecPatientDetails.update();
+        }
+    }
+
+
+
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>rlochan</sys_created_by>
+        <sys_created_on>2020-05-03 04:16:14</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4725b5a11bec90100cd4c91b1e4bcbf7</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Update Patient Risk Details</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sys_script_4725b5a11bec90100cd4c91b1e4bcbf7</sys_update_name>
+        <sys_updated_by>mmoody</sys_updated_by>
+        <sys_updated_on>2020-05-04 00:40:50</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=4725b5a11bec90100cd4c91b1e4bcbf7"/>
+</record_update>

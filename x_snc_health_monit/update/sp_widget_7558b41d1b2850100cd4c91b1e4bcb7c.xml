@@ -1,0 +1,1550 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope, $rootScope, spUtil, $uibModal, $http, $timeout, $interval) {
+    $scope.liveObservationReady = false;
+    /*
+    var data = ["1061643", "1127940", "1201573", "1260090", "1332596", "1396360", "1442992", "1480229", "1494888", "1494993", "1472792", "1435630"];//,1385727,1317546,1247068,1188985,1112892,1049980,988974,932343,846896,821888,863404,952461,1003858,1065713,1131328,1204135,1264474,1336064,1399631,1444817,1481270,1495695];
+    var i = 0;
+    var ctx = null;
+    var w = null;
+    var h = 300;
+    var px = 0;
+    var opx = 0;
+    var speed = 3;
+    var py = h * 0.8;
+    var opy = py;
+    var scanBarWidth = 20;
+    if (typeof (demo) != "undefined") {
+        console.log("Setting up ECG!");
+        ctx = demo.getContext('2d');
+
+        ctx.strokeStyle = '#00bd00';
+        ctx.lineWidth = 3;
+
+        demo.onmousemove = function (e) {
+            var r = demo.getBoundingClientRect();
+            console.log("r.top: " + r.top);
+            py = (Math.round(data[i] / h)) - r.top;
+            console.log(py)
+            i++;
+            if (i == data.length - 1)
+                i = 0;
+        }
+        loop();
+    }
+    function randomPYval() {
+        //py = (parseInt(Math.round(data[i])/h));
+        py = (parseInt(data[i]) / 10000);
+        i++;
+        if (i == data.length - 1)
+            i = 0;
+    }
+
+    function loop() {
+        randomPYval();
+        px += speed;
+
+        ctx.clearRect(px, 0, scanBarWidth, h);
+        ctx.beginPath();
+        ctx.moveTo(opx, opy);
+        ctx.lineTo(px, py);
+        ctx.stroke();
+
+        opx = px;
+        opy = py;
+
+        if (opx > w) {
+            px = opx = -speed;
+        }
+
+        requestAnimationFrame(loop);
+    }
+*/
+
+
+
+
+
+
+
+
+    $scope.ServerSentUI = {
+        initialize: function (initializeThis, sources) {
+            if (typeof (sources) != "undefined" && sources.length > 0) {
+                this.sources = sources;
+            }
+            if (!!window.EventSource && initializeThis) {
+                this.instanceURL = "https://" + String(window.location.hostname);
+                this.ssURL = String(this.instanceURL) + "/serversent.do";
+                this.sources = this._instantiateEventSources();
+            }
+        },
+        sources: [],
+        processedIDs: [],
+        _registerEventHandlers: function () {
+            if (this.sources != "undefined" && this.sources.length > 0) {
+                for (var i = 0; i < this.sources.length; i++) {
+                    try {
+                        console.log("SS - Registering first event listener for event source " + i);
+                        processedIDs = [];
+                        // Register the Message Event Listener
+                        this.sources[i].addEventListener("message", function (e) {
+                            //console.log("SS - Event source message event has triggered!");
+                            //console.log("SS - Table Subscriptions: " + JSON.stringify($scope.data.tableSubscriptions));
+                            var data = JSON.parse(e.data);
+                            console.log("-------------------------------------------------------------------------------------------------------");
+                            console.log("data payload: " + JSON.stringify(data));
+                            console.log("-------------------------------------------------------------------------------------------------------");
+
+                            if (processedIDs.toString().indexOf(e.lastEventId) > -1) {
+                            }
+                            else {
+                                // Get source table that triggered the message
+                                var relTblFld = "";
+                                var parentTbl = "";
+                                var parentTblFld = "";
+                                for (var subscript in $scope.data.tableSubscriptions) {
+                                    if (String($scope.data.tableSubscriptions[subscript].record_sid) == String(data.instance)) {
+                                        if (String($scope.data.tableSubscriptions[subscript].table) != String($scope.data.table)) {
+                                            if (String($scope.data.tableSubscriptions[subscript].event_name) == "x_snc_health_monit.live_observations") {
+                                                relTblFld = String($scope.data.tableSubscriptions[subscript].table) + "_liverecs";
+                                            }
+                                            else {
+                                                relTblFld = String($scope.data.tableSubscriptions[subscript].table) + "_recs";
+                                            }
+                                            parentTbl = String($scope.data.tableSubscriptions[subscript].parent_table);
+                                            parentTblFld = String($scope.data.tableSubscriptions[subscript].parent_field);
+                                        }
+                                    }
+                                }
+                                var message = JSON.parse(data.message);
+                                console.log(message.operation + " for " + relTblFld);
+                                $scope.data.use_fast_link = true;
+                                if ($scope.data.use_fast_link) {
+                                    switch (message.operation) {
+                                        case "create":
+                                            var insert = true;
+                                            var newRec = { sys_id: message.sys_id };
+                                            for (var p in message) {
+                                                if (p != "operation" && p != "sys_id") {
+                                                    newRec[p] = message[p];
+                                                }
+                                            }
+                                            var parentRecObjIndex = "";
+                                            if (parentTblFld != "") {
+                                                //console.log("newRec[parentTblFld]: " + newRec[parentTblFld].value);
+                                                //parentRecObjIndex = typeof ($scope.data.recordSidObjs[newRec[parentTblFld].value]) != "undefined" ? $scope.data.recordSidObjs[newRec[parentTblFld].value] : -1;
+                                                console.log("newRec[parentTblFld]: " + newRec[parentTblFld]);
+                                                parentRecObjIndex = typeof ($scope.data.recordSidObjs[newRec[parentTblFld]]) != "undefined" ? $scope.data.recordSidObjs[newRec[parentTblFld]] : -1;
+                                            }
+
+                                            if (relTblFld == "") {
+                                                for (var r in $scope.data.recs) {
+                                                    if (String($scope.data.recs[r].sys_id) == String(newRec.sys_id)) {
+                                                        insert = false;
+                                                        break;
+                                                    }
+                                                }
+                                            }
+                                            else {
+                                                // Loop over relRecords by relTblFld
+                                                for (var r in $scope.data.recs[relTblFld]) {
+                                                    if (String($scope.data.recs[relTblFld][r].sys_id) == String(newRec.sys_id)) {
+                                                        insert = false;
+                                                        break;
+                                                    }
+                                                }
+
+                                                var foundRelRecord = false;
+                                                //for (var p in $scope.data.recs) {
+                                                console.log("SS - INSERT MADE IT HERE! " + parentRecObjIndex);
+                                                if (parentRecObjIndex == -1) {
+                                                    // Cannot insert related table record when parent doesn't exist!
+                                                    insert = false;
+                                                }
+                                                else {
+                                                    for (var r in $scope.data.recs[parentRecObjIndex][relTblFld]) {
+                                                        if (String($scope.data.recs[parentRecObjIndex][relTblFld][r].sys_id) == String(newRec.sys_id)) {
+                                                            insert = false;
+                                                            break;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            if (insert) {
+                                                var lastHash = "object:0";
+                                                if (relTblFld == "") {
+                                                    if ($scope.data.recs.length > 0) {
+                                                        lastHash = $scope.data.recs[$scope.data.recs.length - 1].$$hashKey;
+                                                    }
+                                                    var newHash = "object:" + String(parseInt(String(lastHash).split(":")[1]) + 1);
+                                                    if ($scope.data.recs.length > 0) {
+                                                        newRec.$$hashKey = newHash;
+                                                    }
+                                                    $scope.data.recs.unshift(newRec);
+                                                    $scope.data.totalRecords = parseInt($scope.data.totalRecords) + 1;
+                                                }
+                                                else {
+
+                                                    if ($scope.data.recs[parentRecObjIndex][relTblFld].length > 0) {
+                                                        lastHash = $scope.data.recs[parentRecObjIndex][relTblFld][$scope.data.recs[parentRecObjIndex][relTblFld].length - 1].$$hashKey;
+                                                    }
+                                                    var newHash = "object:" + String(parseInt(String(lastHash).split(":")[1]) + 1);
+                                                    if ($scope.data.recs[parentRecObjIndex][relTblFld].length > 0) {
+                                                        newRec.$$hashKey = newHash;
+                                                    }
+                                                    $scope.data.recs[parentRecObjIndex][relTblFld].unshift(newRec);
+                                                    //$scope.$apply();
+                                                    if (String(relTblFld).indexOf("_liverecs") > -1) {
+                                                        //$scope.updatePy($scope.data.recs[parentRecObjIndex][relTblFld]);
+                                                    }
+                                                }
+                                                $scope.$apply();
+                                                //$scope.flashRow(newRec);
+                                                //spUtil.update($scope);
+                                            }
+                                            break;
+                                        case "update":
+                                            var existingRec = { sys_id: message.sys_id };
+                                            for (var p in message) {
+                                                if (p != "operation" && p != "sys_id") {
+                                                    if (p == parentTblFld) {
+                                                        existingRec[p] = message[p];
+                                                    }
+                                                    else {
+                                                        existingRec[p] = message[p];
+                                                    }
+                                                }
+                                            }
+
+                                            // Find target index for recs table
+                                            //console.log("SS - $scope.data.recordSidObjs: " + JSON.stringify($scope.data.recordSidObjs));
+                                            var parentRecObjIndex = typeof ($scope.data.recordSidObjs[existingRec[parentTblFld]]) != "undefined" ? $scope.data.recordSidObjs[existingRec[parentTblFld]] : -1;
+
+                                            if (relTblFld == "") {
+                                                for (var r in $scope.data.recs) {
+                                                    if (String($scope.data.recs[r].sys_id) == String(existingRec.sys_id)) {
+                                                        for (var f in existingRec) {
+                                                            $scope.data.recs[r][f] = existingRec[f];
+                                                        }
+                                                        $scope.$apply();
+                                                        //$scope.flashRow(existingRec);
+                                                        break;
+                                                    }
+                                                }
+                                            }
+                                            else {
+                                                // x_snc_health_monit_patient_contitions_recs
+                                                // x_snc_health_monit_patient_contitions_recs
+                                                var foundRelRecord = false;
+                                                //for (var p in $scope.data.recs) {
+                                                console.log("SS - MADE IT HERE! " + parentRecObjIndex);
+                                                for (var r in $scope.data.recs[parentRecObjIndex][relTblFld]) {
+
+                                                    if (String($scope.data.recs[parentRecObjIndex][relTblFld][r].sys_id) == String(existingRec.sys_id)) {
+                                                        console.log("SS - Total " + relTblFld + " related records for " + $scope.data.recs[parentRecObjIndex].name.displayValue + ": " + $scope.data.recs[parentRecObjIndex][relTblFld].length);
+                                                        for (var f in existingRec) {
+                                                            if (f != parentTblFld && f != "sys_id") {
+                                                                if (String($scope.data.recs[parentRecObjIndex][relTblFld][r][f].value) != String(existingRec[f].value)) {
+
+                                                                    console.log("SS - Difference Found... Updating Cell... " + f + " with value " + existingRec[f].displayValue);
+                                                                    $scope.data.recs[parentRecObjIndex][relTblFld][r][f].value = String(existingRec[f].value);
+                                                                    $scope.data.recs[parentRecObjIndex][relTblFld][r][f].displayValue = String(existingRec[f].displayValue);
+                                                                    $scope.data.recs[parentRecObjIndex][relTblFld][r][f].path = String(existingRec[f].path);
+                                                                }
+                                                            }
+                                                        }
+                                                        //$scope.$apply($scope.model);
+                                                        //$scope.$apply($scope.data.recs);
+                                                        //$rootScope.$apply();
+                                                        $scope.$apply();
+                                                        console.log("SS - Done updating record! Changes should be visible!");
+                                                        foundRelRecord = true;
+                                                        //$scope.flashRow(existingRec);
+                                                        break;
+                                                    }
+                                                    if (foundRelRecord) {
+                                                        break;
+                                                    }
+                                                }
+                                                if (foundRelRecord) {
+                                                    break;
+                                                }
+                                                //}
+                                            }
+                                            break;
+                                        case "delete":
+                                            var existingRec = { sys_id: message.sys_id };
+                                            for (var p in message) {
+                                                if (p != "operation" && p != "sys_id") {
+                                                    existingRec[p] = message[p];
+                                                }
+                                            }
+                                            if (relTblFld == "") {
+                                                for (var r in $scope.data.recs) {
+                                                    if (String($scope.data.recs[r].sys_id) == String(existingRec.sys_id)) {
+                                                        var sourceArray = [existingRec];
+                                                        //console.log("before: " + JSON.stringify($scope.data.recs));
+                                                        $scope.removeObjectInArrayByKey($scope.data.recs, sourceArray, "sys_id");
+                                                        $scope.data.totalRecords = $scope.data.totalRecords - 1;
+                                                    }
+                                                }
+                                            }
+                                            else {
+                                                for (var r in $scope.data.recs[relTblFld]) {
+                                                    if (String($scope.data.recs[relTblFld][r].sys_id) == String(existingRec.sys_id)) {
+                                                        var sourceArray = [existingRec];
+                                                        //console.log("before: " + JSON.stringify($scope.data.recs));
+                                                        $scope.removeObjectInArrayByKey($scope.data.recs[relTblFld], sourceArray, "sys_id");
+                                                        //$scope.data.totalRecords = $scope.data.totalRecords - 1;
+                                                    }
+                                                }
+                                            }
+                                            break;
+                                        default:
+                                            break;
+                                    }
+                                }
+                                else {
+                                    spUtil.refresh($scope);
+                                }
+                                if (processedIDs.length >= 5) {
+                                    processedIDs.pop();
+                                }
+                                processedIDs.push(String(e.lastEventId));
+                            }
+                        }, false);
+
+                        // Register the Open Event Listener
+                        this.sources[i].addEventListener("open", function (e) {
+                            //console.log("ServerSent Connection Opened successfully!");
+                        }, false);
+
+                        // Register the Error Event Listener
+                        this.sources[i].addEventListener("error", function (e) {
+                            if (e.readyState == EventSource.CLOSED) {
+                                // Connection was closed.
+                                console.log("ServerSent Connection Was Closed!");
+                            }
+                            else {
+                                //console.log("ServerSent Error Encountered!: " + e.readyState + " " + e.data);
+                            }
+
+                        }, false);
+                    }
+                    catch (err) {
+                        console.log("Error adding Event Handlers: " + err.message);
+                    }
+                }
+            }
+        },
+
+        _instantiateEventSources: function () {
+            // Instantiate Event Sources from the Transaction Subscription table - handled Server Side
+            var sources = [];
+            var rawValue = $scope.data.transactionSubscriptions;
+            console.log("rawValue: " + rawValue);
+            var result = JSON.parse(String(rawValue));
+
+            if (typeof (result) != "undefined") {
+                if (typeof (result.subscriptions) != "undefined" && result.subscriptions.length > 0) {
+                    var subscriptions = result.subscriptions;
+                    $scope.data.tableSubscriptions = subscriptions;
+                    //console.log("subscriptions.length: " + subscriptions.length);
+                    for (var i = 0; i < subscriptions.length; i++) {
+                        if (String(subscriptions[i].event_name) != "undefined" && String(subscriptions[i].event_name) != "" && String(subscriptions[i].record_sid) != "undefined" && String(subscriptions[i].record_sid) != "") {
+                            var eventURL = String($scope.data.ssURL) + "?event_subscription=" + String(subscriptions[i].event_name) + "&record_sid=" + String(subscriptions[i].record_sid);
+                            if (String(subscriptions[i].event_name) == "x_snc_health_monit.live_observations") {
+                                eventURL = String($scope.data.ssLiveURL) + "?event_subscription=" + String(subscriptions[i].event_name) + "&record_sid=" + String(subscriptions[i].record_sid);
+                            }
+                            console.log("eventURL: " + eventURL);
+                            try {
+                                sources.push(new EventSource(eventURL));
+                                console.log("pushed EventSource");
+                            }
+                            catch (err) {
+                                console.log("Error creating EventSource: " + err.message);
+                            }
+                        }
+                    }
+                    console.log("Done creating EventSources from subscriptions");
+                    // Call remaining functions 
+                    this.sources = sources;
+                    this.processedIDs = [];
+                    this._registerEventHandlers();
+                }
+            }
+        }
+    };
+
+    $scope.ServerSentUI.initialize(true);
+
+    var c = this;
+    c.data.buttonClicked = "";
+    $scope.newRecordAdded = false;
+    c.selectedRecs = [];
+    $scope.initLoad = true;
+    //console.log(JSON.stringify(c.data.recs));
+
+    $scope.flashRow = function (recToFlash) {
+
+        var nIntervId;
+        changeColor(recToFlash.sys_id);
+        //stopTextColor();
+
+        var cntr = 0;
+        function changeColor(sid) {
+            var trElm = document.getElementById(sid);
+            var originalColor = trElm.style.backgroundColor;
+            nIntervId = window.setInterval(flashText(originalColor, sid), 1000);
+            setTimeout(function (trElm, originalColor){
+                trElm.style.backgroundColor = originalColor;
+                clearInterval(nIntervId);
+              }, 5000); // How long do you want the delay to be (in milliseconds)? 
+        }
+
+        function flashText(originalColor, sid) {
+            var oElem = document.getElementById(sid);
+            //var originalColor = oElem.style.backgroundColor;
+            oElem.style.backgroundColor = oElem.style.backgroundColor == 'blue' ? originalColor : 'blue';
+            // oElem.style.color == 'red' ? 'blue' : 'red' is a ternary operator.
+            
+        }
+
+        function stopTextColor() {
+            clearInterval(nIntervId);
+        }
+
+        $(function() {
+            var on = false;
+            window.setInterval(function() {
+                on = !on;
+                if (on) {
+                    $('.invalid').addClass('invalid-blink')
+                } else {
+                    $('.invalid-blink').removeClass('invalid-blink')
+                }
+            }, 2000);
+        });
+
+
+    }
+
+
+    /* Record Selection Functions */
+    c.recSelected = function ($event, checked, sys_id) {
+        if (checked) {
+            $("#" + String($event.currentTarget.id)).checked = true;
+            c.selectedRecs.push(sys_id);
+        }
+        else {
+            $("#" + String($event.currentTarget.id)).checked = false;
+            c.removeA(c.selectedRecs, sys_id);
+        }
+    };
+    c.removeA = function (arr) {
+        var what, a = arguments, L = a.length, ax;
+        while (L > 1 && arr.length) {
+            what = a[--L];
+            while ((ax = arr.indexOf(what)) !== -1) {
+                arr.splice(ax, 1);
+            }
+        }
+        return arr;
+    };
+
+    c.selectAllRecs = function ($event) {
+        if (String($event.currentTarget.id) == "ackcheck_all_fa7ed7811bd450d83788dbd4ec4bcbfc_t") {
+            setTimeout(function () {
+                var checked = $("#ackcheck_all_fa7ed7811bd450d83788dbd4ec4bcbfc_t")[0].checked;
+                if (checked) {
+                    var nodes = $("#ackcheck_all_fa7ed7811bd450d83788dbd4ec4bcbfc_t").parent().parent().parent().parent().find("input[type=checkbox]:not(:checked):not(#ackcheck_all_fa7ed7811bd450d83788dbd4ec4bcbfc_t):not(#ackcheck_all_fa7ed7811bd450d83788dbd4ec4bcbfc_b)");
+                    for (var node = 0; node < nodes.length; node++) {
+                        c.selectedRecs.push(String(nodes[node].id).replace("ackcheck_", ""));
+                        nodes[node].checked = true;
+                    }
+                }
+                else {
+                    var nodes = $("#ackcheck_all_fa7ed7811bd450d83788dbd4ec4bcbfc_t").parent().parent().parent().parent().find("input[type=checkbox]:checked:not(#ackcheck_all_fa7ed7811bd450d83788dbd4ec4bcbfc_t):not(#ackcheck_all_fa7ed7811bd450d83788dbd4ec4bcbfc_b)");
+                    for (var node = 0; node < nodes.length; node++) {
+                        c.removeA(c.selectedRecs, String(nodes[node].id).replace("ackcheck_", ""));
+                        nodes[node].checked = false;
+                    }
+                }
+            });
+        }
+        else {
+            setTimeout(function () {
+                var checked = $("#ackcheck_all_fa7ed7811bd450d83788dbd4ec4bcbfc_b")[0].checked;
+                if (checked) {
+                    var nodes = $("#ackcheck_all_fa7ed7811bd450d83788dbd4ec4bcbfc_b").parent().parent().parent().parent().parent().find("input[type=checkbox]:not(:checked):not(#ackcheck_all_fa7ed7811bd450d83788dbd4ec4bcbfc_t):not(#ackcheck_all_fa7ed7811bd450d83788dbd4ec4bcbfc_b)");
+                    for (var node = 0; node < nodes.length; node++) {
+                        c.selectedRecs.push(String(nodes[node].id).replace("ackcheck_", ""));
+                        nodes[node].checked = true;
+                    }
+                }
+                else {
+                    var nodes = $("#ackcheck_all_fa7ed7811bd450d83788dbd4ec4bcbfc_b").parent().parent().parent().parent().parent().find("input[type=checkbox]:checked:not(#ackcheck_all_fa7ed7811bd450d83788dbd4ec4bcbfc_t):not(#ackcheck_all_fa7ed7811bd450d83788dbd4ec4bcbfc_b)");
+                    for (var node = 0; node < nodes.length; node++) {
+                        c.removeA(c.selectedRecs, String(nodes[node].id).replace("ackcheck_", ""));
+                        nodes[node].checked = false;
+                    }
+                }
+            });
+        }
+    };
+    $scope.triggerButton = function (button_value) {
+        console.log("Action triggered: " + button_value);
+        switch (button_value) {
+            case "incident_acknowledge":
+                c.ackFunc();
+                break;
+            case "incident_correlate":
+                c.correlateFunc();
+                break;
+            case "incident_resolve":
+                c.resolveFunc();
+                break;
+            default:
+                break;
+        }
+        //c.data.buttonClicked = "";
+        $scope.data.button_action = "";
+    };
+
+    // New Functions to replace and remove objects from object arrays
+    $scope.replaceObjectInArrayByKey = function (targetArray, sourceArray, varArrObjKey) {
+        var newArray = [];
+        if (Array.isArray(sourceArray)) { // Only if the sourceArray is an Array
+            if (Array.isArray(targetArray)) { // Only if the targetArray is an Array
+
+                // Push the new version of the matching objects into the array
+                for (var e in targetArray) {
+                    for (var el in sourceArray) {
+                        if (typeof (targetArray[e][varArrObjKey]) != "undefined") {
+                            // Only if the unique key exists in the Scratchpad array object, proceed
+                            if (typeof (sourceArray[el][varArrObjKey]) != "undefined") {
+                                // Only if the unique key exists in the sourceArray array object, proceed
+                                if (targetArray[e][varArrObjKey] == sourceArray[el][varArrObjKey]) {
+                                    // Push sourceArray[el]
+                                    newArray.push(sourceArray[el]);
+                                }
+                            }
+                        }
+                    }
+                }
+                // Push the remaining scratchpad objects into the new array
+                for (var e in targetArray) {
+                    var isInNewArray = false;
+                    for (var i in newArray) {
+                        if (newArray[i][varArrObjKey] == targetArray[e][varArrObjKey]) {
+                            isInNewArray = true;
+                        }
+                    }
+                    if (!isInNewArray) {
+                        newArray.push(targetArray[e]);
+                    }
+                }
+                // Push the remaining un-matched objecs in sourceArray into the new array
+                for (var el in sourceArray) {
+                    var isInNewArray = false;
+                    for (var i in newArray) {
+                        if (newArray[i][varArrObjKey] == sourceArray[el][varArrObjKey]) {
+                            isInNewArray = true;
+                        }
+                    }
+                    if (!isInNewArray) {
+                        newArray.push(sourceArray[el]);
+                    }
+                }
+            }
+
+        }
+        return newArray;
+    };
+    $scope.removeObjectInArrayByKey = function (targetArray, sourceArray, varArrObjKey) {
+        if (Array.isArray(sourceArray)) { // Only if the sourceArray is an Array
+            if (Array.isArray(targetArray)) { // Only if the targetArray is an Array
+                // Push the new version of the matching objects into the array
+                for (var e in targetArray) {
+                    for (var el in sourceArray) {
+                        if (typeof (targetArray[e][varArrObjKey]) != "undefined") {
+                            // Only if the unique key exists in the Scratchpad array object, proceed
+                            if (typeof (sourceArray[el][varArrObjKey]) != "undefined") {
+                                // Only if the unique key exists in the sourceArray array object, proceed
+                                if (targetArray[e][varArrObjKey] == sourceArray[el][varArrObjKey]) {
+                                    // Push sourceArray[el]
+                                    targetArray.splice(e, 1);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return targetArray;
+    };
+
+
+
+
+
+
+
+    //$scope.watchingLiveRecords = {};
+    // ECG/EKG Simulator
+    /*
+    $scope.py = null;
+    var ctx = null,
+        w = null,
+        h = null,
+        px = 0, opx = 0, speed = 3;
+        //$scope.py = h * 0.8, 
+        var opy = $scope.py;
+        var scanBarWidth = 10;
+    var data = ["1061643", "1127940", "1201573", "1260090", "1332596", "1396360", "1442992", "1480229", "1494888", "1494993", "1472792", "1435630"];//,1385727,1317546,1247068,1188985,1112892,1049980,988974,932343,846896,821888,863404,952461,1003858,1065713,1131328,1204135,1264474,1336064,1399631,1444817,1481270,1495695];
+    var i = 0;
+    */
+    /*demo.onmousemove = function(e) {
+        var r = demo.getBoundingClientRect();
+        py = (Math.round(data[i]/h)) - r.top;
+        console.log(py)
+     i++;
+    if(i==data.length-1)
+        i=0;
+    }*/
+    /*
+    function randomPYval() {
+        //py = (parseInt(Math.round(data[i])/h));
+        //getDataPy();
+        //if (py == 0) {
+        $scope.py = (parseInt(data[i]) / 10000);
+        //}
+        i++;
+        if (i == data.length - 1)
+            i = 0;
+    }
+
+
+    function loop() {
+        randomPYval();
+        px += speed;
+
+        ctx.clearRect(px, 0, scanBarWidth, h);
+        ctx.beginPath();
+        ctx.moveTo(opx, opy);
+        ctx.lineTo(px, $scope.py);
+        ctx.stroke();
+
+        opx = px;
+        opy = $scope.py;
+
+        if (opx > w) {
+            px = opx = -speed;
+        }
+
+        requestAnimationFrame(loop);
+    }
+*/
+    //$scope.$watch(function () { return ctrl.parameters; }, ctrl.Update, true);
+
+
+
+
+    $scope.renderECG = function (rec) {
+        //$scope.watchCode = String(rec.liveObservation).split(" ")[0];
+        console.log("renderECG called! metric: " + rec.liveObservation);
+
+        // document.getElementById("mydiv").offsetWidth
+        //ctx = demo.getContext('2d');
+        //w = demo.parentElement.offsetWidth;
+        // h = demo.height;
+        //$scope.py = h * 0.8;
+        // opy = $scope.py;
+        /*
+            px = 0, opx = 0, speed = 3,
+            py = h * 0.8, opy = py,
+            scanBarWidth = 10;
+        */
+        /*
+                if (typeof (demo) != "undefined") {
+                    //demo.width = demo.parentElement.offsetWidth;
+                    demo.height = 300;
+                    w = demo.offsetWidth;
+                    ctx = demo.getContext('2d');
+        
+                    ctx.strokeStyle = '#00bd00';
+                    ctx.lineWidth = 3;
+                    var data = ["1061643", "1127940", "1201573", "1260090", "1332596", "1396360", "1442992", "1480229", "1494888", "1494993", "1472792", "1435630"];//,1385727,1317546,1247068,1188985,1112892,1049980,988974,932343,846896,821888,863404,952461,1003858,1065713,1131328,1204135,1264474,1336064,1399631,1444817,1481270,1495695];
+                    var i = 0;
+                    demo.onmousemove = function (e) {
+                        var r = demo.getBoundingClientRect();
+                        console.log("r.top: " + r.top);
+                        py = (Math.round(data[i] / h)) - r.top;
+                        console.log(py)
+                        i++;
+                        if (i == data.length - 1)
+                            i = 0;
+                    }
+                    loop();
+                }
+        
+        */
+
+
+
+
+
+        /*
+                ctx.strokeStyle = '#00bd00';
+                ctx.lineWidth = 2;
+                $scope.liveObservationReady = true;
+                loop(); // Start the EKG Loop
+                var parentRecObjIndex = typeof ($scope.data.recordSidObjs[String(rec.sys_id)]) != "undefined" ? $scope.data.recordSidObjs[String(rec.sys_id)] : -1;
+                */
+        /*
+        if (parentRecObjIndex != -1) {
+            $scope.updatePy($scope.data[parentRecObjIndex].x_snc_health_monit_observations_liverecs);
+        }
+        */
+        /*
+        var parentRecObjIndex = typeof ($scope.data.recordSidObjs[String(rec.sys_id)]) != "undefined" ? $scope.data.recordSidObjs[String(rec.sys_id)] : -1;
+        $scope.$watch(function () {
+            return $scope.data.recs[parentRecObjIndex].x_snc_health_monit_observations_liverecs;
+        }, function (newValue, oldValue, scope) {
+            var code = $scope.watchCode;
+            //console.log("in getDataPy code: " + code);
+            for (var r in newValue) {
+                if (String(newValue[r].code.displayValue) == code) {
+                    console.log("Found Live Observation for code " + code);
+                    var demo = document.getElementById("demo");
+                    if (typeof (demo) != "undefined") {
+                        var rect = demo.getBoundingClientRect();
+                        console.log("Live Observation field obj: " + JSON.stringify(newValue[r]));
+                        var val = Number(newValue[r].value.value);
+                        py = (Math.round(val / h)) - rect.top;
+
+                        // Find target index for recs table
+
+                        var parentRecObjIndex = typeof ($scope.data.recordSidObjs[String(newValue[r].patient.value)]) != "undefined" ? $scope.data.recordSidObjs[String(newValue[r].patient.value)] : -1;
+                        //var parentRecObjIndex = typeof ($scope.data.recordSidObjs[String(rec.sys_id)]) != "undefined" ? $scope.data.recordSidObjs[String(rec.sys_id)] : -1;
+                        console.log("Live array before removal: " + JSON.stringify($scope.data.recs[parentRecObjIndex].x_snc_health_monit_observations_liverecs));
+                        var sourceArray = [newValue[r]];
+                        // $scope.removeObjectInArrayByKey($scope.data.recs[parentRecObjIndex].x_snc_health_monit_observations_liverecs, sourceArray, "sys_id");
+                        $scope.removeObjectInArrayByKey(newValue, sourceArray, "sys_id");
+                        console.log("Live array after removal: " + JSON.stringify($scope.data.recs[parentRecObjIndex].x_snc_health_monit_observations_liverecs));
+                        //$scope.data.recs[parentRecObjIndex].x_snc_health_monit_observations_liverecs
+                    }
+                }
+            }
+        });
+        */
+
+        /*
+        var code = String(rec.liveObservation).split(" ")[0];
+        var parentRecObjIndex = typeof ($scope.data.recordSidObjs[String(rec.sys_id)]) != "undefined" ? $scope.data.recordSidObjs[String(rec.sys_id)] : -1;
+        console.log("rec.sys_id: " + rec.sys_id);
+        if (typeof ($scope.watchingLiveRecords[String(rec.sys_id)]) == "undefined") {
+            $scope.$watchCollection('data.recs[' + parentRecObjIndex + '].x_snc_health_monit_observations_liverecs', function (newNames, oldNames) {
+                //$scope.dataCount = newNames.length;
+                console.log("String(newNames[0].patient.value): " + String(newNames[0].patient.value));
+                console.log("Inside Collection Watcher Handler! " + JSON.stringify(newNames));
+                $scope.watchingLiveRecords[String(newNames[0].patient.value)] = true;
+                var rec = { x_snc_health_monit_observations_liverecs: newNames };
+                console.log("rec.x_snc_health_monit_observations_liverecs.length: " + rec.x_snc_health_monit_observations_liverecs.length);
+                for (var r in rec.x_snc_health_monit_observations_liverecs) {
+                    if (String(rec.x_snc_health_monit_observations_liverecs[r].code.displayValue) == code) {
+                        console.log("Found Live Observation for code " + code);
+                        var rect = demo.getBoundingClientRect();
+                        console.log("Live Observation field obj: " + JSON.stringify(rec.x_snc_health_monit_observations_liverecs[r]));
+                        var val = Number(rec.x_snc_health_monit_observations_liverecs[r].value.value);
+                        py = (Math.round(val / h)) - rect.top;
+
+                        // Find target index for recs table
+
+                        //var parentRecObjIndex = typeof ($scope.data.recordSidObjs[String(rec.x_snc_health_monit_observations_liverecs[r].patient.value)]) != "undefined" ? $scope.data.recordSidObjs[String(rec.x_snc_health_monit_observations_liverecs[r].patient.value)] : -1;
+
+                        console.log("Live array before removal: " + JSON.stringify($scope.data.recs[parentRecObjIndex].x_snc_health_monit_observations_liverecs));
+                        var sourceArray = [rec.x_snc_health_monit_observations_liverecs[r]];
+                        // $scope.removeObjectInArrayByKey($scope.data.recs[parentRecObjIndex].x_snc_health_monit_observations_liverecs, sourceArray, "sys_id");
+                        $scope.removeObjectInArrayByKey(rec.x_snc_health_monit_observations_liverecs, sourceArray, "sys_id");
+                        console.log("Live array after removal: " + JSON.stringify($scope.data.recs[parentRecObjIndex].x_snc_health_monit_observations_liverecs));
+                        //$scope.data.recs[parentRecObjIndex].x_snc_health_monit_observations_liverecs
+
+                    }
+                }
+
+            });
+        }
+        */
+
+        /*
+        function getDataPy() {
+            // var py = 0;
+            var code = String(rec.liveObservation).split(" ")[0];
+            //console.log("in getDataPy code: " + code);
+            for (var r in rec.x_snc_health_monit_observations_liverecs) {
+                if (String(rec.x_snc_health_monit_observations_liverecs[r].code.displayValue) == code) {
+                    console.log("Found Live Observation for code " + code);
+                    var rect = demo.getBoundingClientRect();
+                    console.log("Live Observation field obj: " + JSON.stringify(rec.x_snc_health_monit_observations_liverecs[r]));
+                    var val = Number(rec.x_snc_health_monit_observations_liverecs[r].value.value);
+                    py = (Math.round(val / h)) - rect.top;
+
+                    // Find target index for recs table
+
+                    //var parentRecObjIndex = typeof ($scope.data.recordSidObjs[String(rec.x_snc_health_monit_observations_liverecs[r].patient.value)]) != "undefined" ? $scope.data.recordSidObjs[String(rec.x_snc_health_monit_observations_liverecs[r].patient.value)] : -1;
+                    var parentRecObjIndex = typeof ($scope.data.recordSidObjs[String(rec.sys_id)]) != "undefined" ? $scope.data.recordSidObjs[String(rec.sys_id)] : -1;
+                    console.log("Live array before removal: " + JSON.stringify($scope.data.recs[parentRecObjIndex].x_snc_health_monit_observations_liverecs));
+                    var sourceArray = [rec.x_snc_health_monit_observations_liverecs[r]];
+                    // $scope.removeObjectInArrayByKey($scope.data.recs[parentRecObjIndex].x_snc_health_monit_observations_liverecs, sourceArray, "sys_id");
+                    $scope.removeObjectInArrayByKey(rec.x_snc_health_monit_observations_liverecs, sourceArray, "sys_id");
+                    console.log("Live array after removal: " + JSON.stringify($scope.data.recs[parentRecObjIndex].x_snc_health_monit_observations_liverecs));
+                    //$scope.data.recs[parentRecObjIndex].x_snc_health_monit_observations_liverecs
+
+                }
+            }
+            //return py;
+        }
+        */
+
+
+
+    }
+
+
+
+
+    $scope.updatePy = function (newValue) {
+        //var code = $scope.watchCode;
+        console.log("In updatePy - code: " + code);
+        console.log("newValue: " + JSON.stringify(newValue));
+        for (var r in newValue) {
+            var parentRecObjIndex = typeof ($scope.data.recordSidObjs[String(newValue[r].patient.value)]) != "undefined" ? $scope.data.recordSidObjs[String(newValue[r].patient.value)] : -1;
+            var code = $scope.data.recs[parentRecObjIndex].liveObservation;
+            console.log("code: " + String(newValue[r].code.displayValue));
+            if (String(newValue[r].code.displayValue) == code) {
+                console.log("Found Live Observation for code " + code);
+                var demo = document.getElementById("demo");
+                if (typeof (demo) != "undefined") {
+                    var rect = demo.getBoundingClientRect();
+                    console.log("Live Observation field obj: " + JSON.stringify(newValue[r]));
+                    var val = Number(newValue[r].value.value);
+                    //py = (Math.round(val / h)) - rect.top;
+                    console.log("Value of py before updating: " + $scope.py);
+                    var newPy = (parseInt(val) / 10000);
+                    /*
+                    var rn = getRandomArbitrary(0.12, 2);
+                    var pyRunner = setInterval(startPy(newPy), 1);
+                    var pyTimer = setTimeout(stopPy(pyRunner), 4000); // (rn * 1000)
+                    */
+                    console.log("Value of newPy: " + newPy);
+                    $scope.py = (newPy * 1000000);
+                    console.log("Value of py after udpateing: " + $scope.py);
+                    // Find target index for recs table
+                    //var parentRecObjIndex = typeof ($scope.data.recordSidObjs[String(rec.sys_id)]) != "undefined" ? $scope.data.recordSidObjs[String(rec.sys_id)] : -1;
+                    console.log("Live array before removal: " + JSON.stringify($scope.data.recs[parentRecObjIndex].x_snc_health_monit_observations_liverecs));
+                    var sourceArray = [newValue[r]];
+                    // $scope.removeObjectInArrayByKey($scope.data.recs[parentRecObjIndex].x_snc_health_monit_observations_liverecs, sourceArray, "sys_id");
+                    $scope.removeObjectInArrayByKey(newValue, sourceArray, "sys_id");
+                    console.log("Live array after removal: " + JSON.stringify($scope.data.recs[parentRecObjIndex].x_snc_health_monit_observations_liverecs));
+                    //$scope.data.recs[parentRecObjIndex].x_snc_health_monit_observations_liverecs
+                    var i = 0;
+                    demo.onmousemove = function (e) {
+                        var r = demo.getBoundingClientRect();
+                        console.log("r.top: " + r.top);
+                        $scope.py = parseInt(Math.round(data[i] / h) - r.top);
+                        console.log($scope.py)
+                        $scope.$apply();
+                        i++;
+                        if (i == data.length - 1)
+                            i = 0;
+                    }
+                }
+            }
+        }
+        function getRandomArbitrary(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+
+        function startPy(newPy, stopped) {
+            while (!stopped) {
+                console.log("nyPy runner: " + newPy);
+            }
+        }
+
+        function stopPy(pyRunner) {
+            clearInterval(pyRunner);
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* Custom Action Functions */
+    c.data.primaryRecord = undefined;
+    c.data.primaryCorrelationNum = "";
+    c.generateFunc = function () {
+        c.data.buttonClicked = "Generate Observations";
+        c.server.update().then(function (response) {
+            //spUtil.update($scope);
+        });
+    }
+
+
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.sort-header {&#13;
+    cursor: pointer;&#13;
+}&#13;
+&#13;
+.sort-header:after {&#13;
+    font-family: FontAwesome;&#13;
+    content: '  \f0dc';&#13;
+    color: lightgrey;&#13;
+}&#13;
+&#13;
+.st-sort-ascent:before {&#13;
+    content: '';&#13;
+}&#13;
+&#13;
+.st-sort-ascent:after {&#13;
+    font-family: FontAwesome;&#13;
+    content: '  \f0de';&#13;
+    color: black;&#13;
+}&#13;
+&#13;
+.st-sort-descent:before {&#13;
+    content: '';&#13;
+}&#13;
+&#13;
+.st-sort-descent:after {&#13;
+    font-family: FontAwesome;&#13;
+    content: '  \f0dd';&#13;
+    color: black;&#13;
+}&#13;
+&#13;
+.panel-heading {&#13;
+    padding-left: 8px;&#13;
+}&#13;
+&#13;
+.panel-footer {&#13;
+    padding-left: 8px;&#13;
+}&#13;
+&#13;
+.btn-selector {&#13;
+    padding-left: 16px;&#13;
+}&#13;
+canvas {&#13;
+    background:#000;&#13;
+    cursor:crosshair;&#13;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>patient_details</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>Patient Details</name>
+        <option_schema>[{"displayValue":"Transaction Subscription","name":"transaction_subscriptions","display_value_list":[],"section":"other","label":"Transaction subscriptions","type":"glide_list","value":"x_snc_health_monit_transaction_subscription","ed":{"reference":"x_snc_health_monit_transaction_subscription"}}]</option_schema>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[//@ts-check
+(function () {
+    if (typeof (data.button_actions) == "undefined") {
+        data.button_actions = [];
+    }
+    data.button_actions.push({ label: "--Generate Observations--", value: "generate_observations", disabled: true });
+    if (input && input.buttonClicked == "Generate Observations") {
+        gs.eventQueue("x_snc_health_monit.generate_observation", null, null, gs.getUserName());
+
+        if (typeof (input.recs) != 'undefined') {
+            for (var i in input.recs) {
+                if (input.recs[i].checked == true) {
+                    input.recs[i].checked = false;
+                }
+                if (input.recs[i].comment != "") {
+                    input.recs[i].comment = "";
+                }
+            }
+        }
+    }
+
+
+    //** Get ServerSent Subscriptions */
+    data.instanceURL = "https://" + gs.getProperty("instance_name") + ".service-now.com";
+    //gs.addInfoMessage(data.instanceURL);
+    data.ssURL = String(data.instanceURL) + "/serversent.do";
+    data.ssLiveURL = String(data.instanceURL) + "/serversentlive.do";
+    //gs.addInfoMessage(data.ssURL);
+    data.location = gs.getProperty("glide.servlet.uri") + gs.action.getGlideURI();
+    //gs.addInfoMessage(gs.getProperty("glide.servlet.uri") + gs.action.getGlideURI());
+    var txSubSids = String(options.transaction_subscriptions).split(",");
+    //data.transactionSubscriptions = (new global.ServerSentAjax()).getPersisentSubscription("fa7ed7811bd450d83788dbd4ec4bcbfc");
+    data.transactionSubscriptions = (new x_snc_health_monit.ServerSentUtil()).getPersisentSubscriptions(txSubSids);
+    data.txSubObj = JSON.parse(data.transactionSubscriptions);
+    //gs.addInfoMessage(JSON.stringify(data.transactionSubscriptions));            
+    if (gs.nil(data.totalRecords)) {
+        data.totalRecords = 0;
+    }
+    data.buttonClicked = "";
+    data.title = "Patient Health";
+    data.table = "x_snc_health_monit_patient_details";
+    data.initialQuery = "";
+    data.encodedQuery = data.initialQuery;
+    data.fastQuery = ""; // Use with tags
+    data.recs = getMatchingRecords(input, data, null, null, true);
+    function getMatchingRecords(input, data, startPage, endPage, getAllRecs) {
+        var records = [];
+        data.orderBy = "sys_created_on";
+        data.orderByDesc = true;
+        // Set Platform Link
+        data.link = "/nav_to.do?url=/" + data.table + "_list.do?sysparm_query=" + String(data.encodedQuery);
+        data.fast_link = "/nav_to.do?url=/" + data.table + "_list.do?sysparm_query=" + String(data.fastQuery);
+        data.use_fast_link = false;
+        /* Update totalRecords value via GlideAggregate query */
+        var ga = new GlideAggregate(String(data.table));
+        if (String(data.encodedQuery).indexOf("DYNAMIC") > -1 || String(data.encodedQuery).indexOf("javascript:") > -1 || !data.use_fast_link) {
+            data.use_fast_link = false;
+            ga.addEncodedQuery(data.encodedQuery);
+        }
+        else {
+            ga.addEncodedQuery(data.fastQuery);
+        }
+        ga.addAggregate("COUNT");
+        ga.query();
+        if (ga.next()) {
+            data.totalRecords = ga.getAggregate("COUNT");
+        }
+        /* Get record data */
+        var recordSids = [];
+        data.recordSidObjs = {};
+        var gr2 = new GlideRecord(String(data.table));
+        if (String(data.encodedQuery).indexOf("DYNAMIC") > -1 || String(data.encodedQuery).indexOf("javascript:") > -1 || !data.use_fast_link) {
+            gr2.addEncodedQuery(data.encodedQuery);
+        }
+        else {
+            gr2.addEncodedQuery(data.fastQuery);
+        }
+        if (data.orderByDesc) {
+            gr2.orderByDesc(data.orderBy);
+        }
+        else {
+            gr2.orderBy(data.orderBy);
+        }
+        gr2.query();
+        var counter = 0;
+        while (gr2.next()) {
+            var rec = {};
+            for (var f in gr2) {
+                if (String(f).indexOf("sys_") == -1) {
+                    rec[f] = { displayValue: gr2[f].getDisplayValue(), value: String(gr2[f]), path: String(f) };
+                    if (f == "ssn") {
+                        rec[f].displayValue = "***-**" + String(rec[f].displayValue).substr(String(rec[f].displayValue).length - 5);
+                    }
+                }
+            }
+            rec.sys_id = String(gr2.sys_id);
+            if (recordSids.length < 10) {
+                recordSids.push(String(gr2.sys_id));
+            }
+            data.recordSidObjs[String(gr2.sys_id)] = counter;
+            counter++;
+            //data.recordSidObjs = { "12345": 0 };
+            // Maintain record state for input fields
+            var saveInputState = false;
+            if (input && typeof (input.recs) != "undefined") {
+                for (var i in input.recs) {
+                    if (input.recs[i].sys_id == String(gr2.sys_id)) {
+                        rec.checked = input.recs[i].checked;
+                        rec.comment = input.recs[i].comment;
+                        saveInputState = true;
+                    }
+                }
+            }
+
+            if (!saveInputState) {
+                rec.checked = false;
+                rec.comment = "";
+            }
+            rec.showtable = "Covid-19 Stats";
+            rec.liveObservation = "8867-4";
+            data.showCommentInput = true;
+            data.showLastMessage = false;
+            for (var sub in data.txSubObj.subscriptions) {
+                var relRecFielName = String(data.txSubObj.subscriptions[sub].table) + "_recs";
+                rec[relRecFielName] = [];
+            }
+            //records[String(rec.sys_id)] = rec;
+            records.push(rec);
+        }
+
+        // Get Related record information for this patient record
+        //var newRec = {};
+
+        var sourceTable = String(data.table);
+        for (var sub in data.txSubObj.subscriptions) {
+            // newRec = {};
+            var relatedTable = String(data.txSubObj.subscriptions[sub].table);
+            var isLiveTable = false;
+            if (String(data.txSubObj.subscriptions[sub].event_name) == "x_snc_health_monit.live_observations") {
+                isLiveTable = true;
+            }
+            gs.info("sids: " + recordSids.toString());
+            records = getRelatedRecords(records, recordSids, sourceTable, relatedTable, isLiveTable);
+            //gs.addInfoMessage(JSON.stringify(relatedRecs));
+        }
+
+        // Get Related records for each other related table
+        /*
+        for (var sub in data.txSubObj.subscriptions) {
+            var sTable = String(data.txSubObj.subscriptions[sub].table);
+            if (sTable != sourceTable) {
+                for (var sub2 in data.txSubObj.subscriptions) {
+                    var rTable = String(data.txSubObj.subscriptions[sub2].table);
+                    if (rTable != sTable) {
+                        rec[sTable + "_recs"] = getRelatedRecords(rec[sTable + "_recs"], sTable, rTable);
+                    }
+                }
+            }
+        }
+        */
+
+        data.recordSids = recordSids;
+        return records;
+    }
+
+    function getRelatedRecords(records, recordSids, sourceTable, relatedTable, isLiveTable) {
+        //var records = [];
+        if (relatedTable != sourceTable) {
+            var referencingField = getReferencingField(sourceTable, relatedTable);
+            if (!gs.nil(referencingField)) {
+                var indexName = relatedTable;
+                if (isLiveTable) {
+                    indexName += "_liverecs";
+                }
+                else {
+                    indexName += "_recs";
+                }
+                //rec[indexName] = [];
+                var relQuery = referencingField + ".sys_idIN" + recordSids.toString();
+                var relRec = new GlideRecord(relatedTable);
+                if (relatedTable == "x_snc_health_monit_immunizations") {
+                    relRec.orderByDesc("date");
+                }
+                if (relatedTable == "x_snc_health_monit_patient_contitions") {
+                    relRec.orderByDesc("start");
+                }
+                if (relatedTable == "x_snc_health_monit_covid_stats") {
+                    relRec.orderByDesc("stat_date_time");
+                }
+                if (relatedTable == "x_snc_health_monit_observations") {
+                    if (!isLiveTable) {
+                        relRec.orderByDesc("observation_date");
+                        relQuery += "^live!=true";
+                    }
+                    else {
+                        relRec.orderByDesc("observation_date");
+                        //relQuery += "^live=true";
+                        relQuery += "^sys_id=poison";
+                    }
+                }
+
+                relRec.addEncodedQuery(relQuery);
+                relRec.query();
+                if (relRec.getRowCount() > 0) {
+                    while (relRec.next()) {
+                        // var rec = {};
+                        for (var i = 0; i < records.length; i++) {
+                            if (String(records[i].sys_id) == String(relRec[referencingField])) {
+                                // rec = records[i];
+                                // rec[indexName] = [];
+                                if (typeof (records[i][indexName]) == "undefined") {
+                                    records[i][indexName] = [];
+                                }
+                                var custRelRec = {};
+                                for (var fi in relRec) {
+                                    if (String(fi).indexOf("sys_") == -1) {
+                                        custRelRec[fi] = { displayValue: relRec[fi].getDisplayValue(), value: String(relRec[fi]), path: String(fi) };
+                                    }
+                                }
+                                custRelRec.sys_id = String(relRec.sys_id);
+                                // rec[indexName].push(custRelRec);
+                                records[i][indexName].push(custRelRec);
+                                break;
+                            }
+                        }
+                        /*
+                        if (JSON.stringify(rec) != "{}") {
+                            records[i] = rec;
+                        }
+                        */
+                    }
+                }
+                else {
+                    for (var i = 0; i < records.length; i++) {
+                        if (typeof (records[i][indexName]) == "undefined") {
+                            records[i][indexName] = [];
+                        }
+                    }
+                }
+            }
+        }
+        return records;
+    }
+
+    function getReferencingField(sourceTable, relatedTable) {
+        var fName = "";
+        // internal_type=reference^reference.name=cxs_table_config^name=agent_assist_recommendation
+        var query = "name=" + String(relatedTable) + "^internal_type=reference^reference.name=" + String(sourceTable);
+        var fld = new GlideRecord("sys_dictionary");
+        fld.addEncodedQuery(query);
+        fld.query();
+        if (fld.next()) {
+            fName = String(fld.element);
+        }
+        return fName;
+    }
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>mmoody</sys_created_by>
+        <sys_created_on>2020-05-02 05:04:04</sys_created_on>
+        <sys_id>7558b41d1b2850100cd4c91b1e4bcb7c</sys_id>
+        <sys_mod_count>331</sys_mod_count>
+        <sys_name>Patient Details</sys_name>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sp_widget_7558b41d1b2850100cd4c91b1e4bcb7c</sys_update_name>
+        <sys_updated_by>mmoody</sys_updated_by>
+        <sys_updated_on>2020-05-04 17:39:27</sys_updated_on>
+        <template><![CDATA[<div class="panel panel-default">
+    <div class="panel-heading"> <a href="{{data.link}}">{{data.title}} ({{data.totalRecords}})</a>
+        <div class="btn-group pull-right" role="group">
+            <input class="btn-primary" ng-if="c.selectedRecs.length" type="button" value="Generate Observations" ng-click="c.generateFunc()" style="padding-right:15px;"/>
+        </div>
+    </div>
+    
+    <script type="text/ng-template" id="modalTemplate2_fa7ed7811bd450d83788dbd4ec4bcbfc">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">Manual {{data.table}} Resolution</h4>
+            </div>
+            <div class="panel-body wrapper-xl">
+                <h4>Select the appropriate resolve code, provide optional resolved notes, and then click OK.</h4>
+               <!-- <pre>Model: {{selected | json}}</pre> -->
+               <select label="Close code" ng-model="c.data.closeCode" ng-options="code.label for code in c.data.closeCodes" required> </select>
+               <!--<input type="text" ng-model="c.data.closeCode" uib-typeahead="code.label for (x, y) in c.data.closeCodes | filter:$viewValue | limitTo:8" class="form-control" placeholder="...select a close code">-->
+                <br/><br/>
+                <input label="Close notes" type="text" ng-model="c.data.closeNotes" class="form-control" placeholder="...start typing resolve notes here" />
+            </div>
+            <div class="modal-footer">
+                <button ng-if="c.data.closeCode" class="btn btn-primary" type="button" ng-click="c.resolve.ok()">OK</button>
+                <button class="btn btn-warning" type="button" ng-click="c.resolve.cancel()">Cancel</button>
+            </div>
+        </div>
+    </script>
+    <div ng-show="loading">
+        <h3>Loading...</h3>
+    </div>
+    <table id="tableId" st-table="data.recs" class="table table-striped">
+        <thead>
+            <tr>
+                <th colspan="12"> <input ng-model="searchMe" placeholder="global search" class="input-sm form-control" type="search"/> </th>
+            </tr>
+            <tr>
+                <th><input id="ackcheck_all_fa7ed7811bd450d83788dbd4ec4bcbfc_t" type="checkbox" ng-click="c.selectAllRecs($event)"></th>
+                <th st-sort="name">Name</th>
+                <th st-sort="ssn">SSN</th>
+                <th st-sort="gender">Gender</th>
+                <th st-sort="race">Race</th>
+                <th st-sort="state">State</th>
+                <th st-sort="city">City</th>
+                <th st-sort="address">Address</th>
+                <th st-sort="risk_level">Covid-19 Risk</th>
+                <th st-sort="last_covid_test">Covid-19 Last Test</th>
+                <th st-sort="covid_mortality_risk">Covid-19 Mortality Risk</th>
+                <th colspan="2" style="width: 50%; padding-right: 10px; padding-left: 10px; margin: 0px; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;" ng-if="c.data.showCommentInput">Patient Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr st-select-row="rec" st-select-mode="multiple"
+                ng-repeat-start="rec in filtered = (data.recs | filter: searchMe) track by rec.sys_id">
+                <td><input id="ackcheck_{{rec.sys_id}}" type="checkbox" ng-model="rec.checked" ng-click="c.recSelected($event, rec.checked, rec.sys_id)" value="{{rec.checked}}"/></td>
+                <td><a href="/nav_to.do?url={{data.table}}.do?sys_id={{rec.sys_id}}">{{rec["name"].displayValue}}</a></td>
+                <td>{{rec["ssn"].displayValue}}</td>
+                <td>{{rec["gender"].displayValue}}</td>
+                <td>{{rec["race"].displayValue}}</td>
+                <td>{{rec["state"].displayValue}}</td>
+                <td>{{rec["city"].displayValue}}</td>
+                <td>{{rec["address"].displayValue}}</td>
+                <td ng-style="{'color': (rec.risk_level.displayValue == 'High' ? 'crimson' : rec.risk_level.displayValue == 'Medium' ? 'orange' : 'green')}"><strong>{{rec["risk_level"].displayValue}}</strong></td>
+                <td ng-style="{'color': (rec.last_covid_test.displayValue == 'Positive' ? 'crimson' : rec.last_covid_test.displayValue == 'Negative' ? 'green' : 'green')}"><strong>{{rec["last_covid_test"].displayValue}}</strong></td>
+                <td><div ng-show="rec.covid_mortality_risk.displayValue"
+                    ng-style="{'color': (rec.covid_mortality_risk.value >= 75 ? 'crimson' : rec.covid_mortality_risk.value >= 50 && rec.covid_mortality_risk.value < 75 ? 'orange' : rec.covid_mortality_risk.value >= 25 && rec.covid_mortality_risk.value < 50 ? 'gold' : 'green')}"
+                    ><strong>{{rec["covid_mortality_risk"].displayValue}} %</strong></div></td>
+                <td colspan="2"  ng-if="c.data.showCommentInput"><input class="pull-left" type="textbox" ng-model="rec.comment"
+                        ng-keyup="c.addComment(rec.comment, rec.sys_id)" placeholder="...additional notes"
+                        value="{{rec.comment}}"
+                        style="width: 50%; padding-right: 10px; padding-left: 10px; margin: 0px; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;">
+                </td>
+                
+                <tr ng-if="rec.x_snc_health_monit_patient_contitions_recs && rec.checked"
+                    rowspan="{{rec.x_snc_health_monit_patient_contitions_recs.length}}" colspan="12">
+                    <!--<th colspan="1" class="pull-left"></th>-->
+                    <th>
+                        <!--ng-model="rec.showtable"-->
+                        <select name="table_select" id="table_select" value="Covid-19 Stats" ng-model="rec.showtable"
+                            ng-change="" required>
+                            <option value="Covid-19 Stats" ng-disabled="rec.x_snc_health_monit_covid_stats_recs.length < 1">
+                                Covid-19 Stats</option>
+                            <option value="Conditions"
+                                ng-disabled="rec.x_snc_health_monit_patient_contitions_recs.length < 1">Conditions
+                            </option>
+                            <option value="Immunizations"
+                                ng-disabled="rec.x_snc_health_monit_immunizations_recs.length < 1">Immunizations
+                            </option>
+                            <option value="Observations" ng-disabled="rec.x_snc_health_monit_observations_recs.length < 1">
+                                Observations</option>
+                            <option value="Live Observations"
+                                ng-disabled="rec.x_snc_health_monit_observations_recs.length < 1">
+                                Live Observations</option>
+                        </select>
+                    </th>
+                    <th ng-if="rec.showtable == 'Live Observations'">
+                        <select name="observation_select" id="observation_select" value="8867-4"
+                            ng-model="rec.liveObservation" required>
+                            <option value="8867-4" ng-disabled="rec.x_snc_health_monit_observations_recs.length < 1">
+                                8867-4
+                                Heart rate
+                            </option>
+                            <option value="9279-1" ng-disabled="rec.x_snc_health_monit_observations_recs.length < 1">
+                                9279-1
+                                Respiratory
+                                rate
+                            </option>
+                            <option value="8462-4" ng-disabled="rec.x_snc_health_monit_observations_recs.length < 1">
+                                8462-4
+                                Diastolic Blood
+                                Pressure
+                            </option>
+                            <option value="8480-6" ng-disabled="rec.x_snc_health_monit_observations_recs.length < 1">
+                                8480-6
+                                Systolic Blood
+                                Pressure
+                            </option>
+                        </select>
+                    </th>
+                </tr>
+                <!-- Related Table of Conditions -->
+                <tr ng-if="rec.x_snc_health_monit_patient_contitions_recs && rec.checked && rec.showtable == 'Conditions'"
+                     rowspan="{{rec.x_snc_health_monit_patient_contitions_recs.length}}"
+                    style="background-color: lightgrey">
+                    <!--<th></th>-->
+                    <th>Description</th>
+                    <th>Type</th>
+                    <th>Start</th>
+                    <th>Stop</th>
+                    <th>Covid-19 Mortality Risk</th>
+                    
+                    
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                
+                <tr id="{{cond.sys_id}}" ng-if="rec.x_snc_health_monit_patient_contitions_recs && rec.checked && rec.showtable == 'Conditions'"
+                    ng-repeat="cond in rec.x_snc_health_monit_patient_contitions_recs track by cond.sys_id"
+                    ng-style="{'background-color': ($index % 2 === 0 ? 'lightyellow' : 'lemonchiffon')}"
+                    >
+
+                    <!--<td></td>-->
+                    <td><a href="/nav_to.do?url=x_snc_health_monit_patient_contitions.do?sys_id={{cond.sys_id}}">{{cond.description.displayValue}}</a></td>
+                    <td>{{cond.type.displayValue}}</td>
+                    <td>{{cond.start.displayValue}}</td>
+                    <td>{{cond.stop.displayValue}}</td>
+                    <td>{{cond.covid_risk.displayValue}}<p></p></td>
+                    
+                    
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                
+                <!-- Related Table of Covid Stats -->
+                <tr ng-if="rec.x_snc_health_monit_covid_stats_recs && rec.checked && rec.showtable == 'Covid-19 Stats'"
+                    colspan="12" rowspan="{{rec.x_snc_health_monit_covid_stats_recs.length}}"
+                    style="background-color: lightgrey">
+                    
+                    <th>Encounter ID</th>
+                    <th>Risk Level</th>
+                    <th>Stat Taken</th>
+                    <th>Fever</th>
+                    <th>Cough</th>
+                    <th>Difficulty Breathing</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                
+                <tr id="{{covstat.sys_id}}" ng-if="rec.x_snc_health_monit_covid_stats_recs && rec.checked && rec.showtable == 'Covid-19 Stats'"
+                    ng-repeat="covstat in rec.x_snc_health_monit_covid_stats_recs track by covstat.sys_id"
+                    ng-style="{'background-color': ($index % 2 === 0 ? 'lavender' : 'thistle')}">
+                    
+                    <td><a href="/nav_to.do?url=x_snc_health_monit_covid_stats.do?sys_id={{covstat.sys_id}}">{{covstat.encounter_id.displayValue}}</a></td>
+                    <td ng-style="{'color': (covstat.risk_level.displayValue == 'High' ? 'crimson' : covstat.risk_level.displayValue == 'Medium' ? 'orange' : 'green')}"><p><strong>{{covstat.risk_level.displayValue}}</strong></p></td>
+                    <td>{{covstat.stat_date_time.displayValue}}</td>
+                    <td>{{covstat.fever.displayValue}}</td>
+                    <td>{{covstat.cough.displayValue}}</td>
+                    <td>{{covstat.difficulty_breathing.displayValue}}</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                
+
+                <!-- Related Table of Immunizations -->
+                <tr ng-if="rec.x_snc_health_monit_immunizations_recs && rec.checked && rec.showtable == 'Immunizations'"
+                    colspan="12" rowspan="{{rec.x_snc_health_monit_immunizations_recs.length}}"
+                    style="background-color: lightgrey">
+                    
+                    <th>Description</th>
+                    <th>Code</th>
+                    <th>Date</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                
+                <tr id="{{imnz.sys_id}}" ng-if="rec.x_snc_health_monit_immunizations_recs && rec.checked && rec.showtable == 'Immunizations'"
+                    ng-repeat="imnz in rec.x_snc_health_monit_immunizations_recs track by imnz.sys_id"
+                    ng-style="{'background-color': ($index % 2 === 0 ? 'powderblue' : 'lightblue')}">
+                    
+                    <td><a href="/nav_to.do?url=x_snc_health_monit_immunizations.do?sys_id={{imnz.sys_id}}">{{imnz.description.displayValue}}</a></td>
+                    <td>{{imnz.code.displayValue}}</td>
+                    <td>{{imnz.date.displayValue}}</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                </tr>
+                
+            
+                <!-- Related Table of Observations -->
+                <tr ng-if="rec.x_snc_health_monit_observations_recs && rec.checked && rec.showtable == 'Observations'"
+                    colspan="12" rowspan="{{rec.x_snc_health_monit_observations_recs.length}}"
+                    style="background-color: lightgrey">
+                    
+                    <th>Description</th>
+                    <th>Code</th>
+                    <th>Observation Date</th>
+                    <th>Unit</th>
+                    <th>Value</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                
+                <tr id="{{obz.sys_id}}" ng-if="rec.x_snc_health_monit_observations_recs && rec.checked && rec.showtable == 'Observations'"
+                    ng-repeat="obz in rec.x_snc_health_monit_observations_recs track by obz.sys_id"
+                    ng-style="{'background-color': ($index % 2 === 0 ? 'seashell' : 'linen')}">
+                    
+                    <td><a href="/nav_to.do?url=x_snc_health_monit_observations.do?sys_id={{obz.sys_id}}">{{obz.description.displayValue}}</a></td>
+                    <td>{{obz.code.displayValue}}</td>
+                    <td>{{obz.observation_date.displayValue}}</td>
+                    <td>{{obz.units.displayValue}}</td>
+                    <td>{{obz.value.displayValue}}</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                
+                <!-- Related Visulization of Live Observations rec.x_snc_health_monit_observations_liverecs &&  -->
+                <tr ng-show="rec.checked && rec.showtable == 'Live Observations'" rowspan="{{rec.x_snc_health_monit_observations_liverecs.length}}"
+                    style="background-color: lightgrey" ng-init="renderECG(rec)">
+                   
+                    <th colspan="12">
+                        <canvas id="demo"></canvas> <!--ng-show="liveObservationReady"--> 
+                    </th>
+                </tr>
+                
+                <tr ng-if="c.data.showLastMessage" ng-repeat-end="">
+                    <td colspan="9">
+                        <p ng-bind-html="rec.details"></p>
+                    </td>
+                </tr>
+            </tbody>
+        <tfoot>
+            <tr class="btn-toolbar m-r pull-left">
+                <td colspan="9" class="text-center">
+                    <div class="btn-group pull-left">
+                        <input id="ackcheck_all_fa7ed7811bd450d83788dbd4ec4bcbfc_b" class="pull-left" type="checkbox"
+                            ng-click="c.selectAllRecs($event)" />
+                        <div class="btn-group btn-selector pull-left">
+                            <select name="action_select" id="action_select" value="not_selected"
+                                ng-model="data.button_action" ng-change="triggerButton(data.button_action)" required>
+                                <option value="">Actions on selected rows...</option>
+                                <!--<option value="incident_correlate" ng-disabled="c.selectedRecs.length < 1">--Correlate--</option>-->
+                                <option value="incident_resolve" ng-disabled="c.selectedRecs.length < 1">--Resolve--</option>
+                                <!--<option value="incident_acknowledge" ng-disabled="c.selectedRecs.length < 1">--Acknowledge--</option>-->
+                            </select>
+                        </div>
+                    <div st-pagination="" st-items-by-page="100"></div>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</div>]]></template>
+    </sp_widget>
+</record_update>

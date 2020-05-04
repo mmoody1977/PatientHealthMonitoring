@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Observations" max_length="40" name="x_snc_health_monit_observations" sizeclass="277715" type="collection">
+        <element attributes="encode_utf8=false" label="Code" max_length="32" name="code" reference="x_snc_health_monit_code" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Description" max_length="100" name="description" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Encounter ID" max_length="40" name="encounter_id" type="string"/>
+        <element label="Live" max_length="40" name="live" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Observation Date" max_length="40" name="observation_date" type="glide_date_time"/>
+        <element attributes="encode_utf8=false" label="Patient" max_length="32" name="patient" reference="x_snc_health_monit_patient_details" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="UNITS" max_length="40" name="units" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Value" max_length="40" name="value" type="string"/>
+        <index name="index">
+            <element name="code"/>
+        </index>
+        <index name="index2">
+            <element name="patient"/>
+        </index>
+        <index name="index3">
+            <element name="live"/>
+        </index>
+    </element>
+</database>

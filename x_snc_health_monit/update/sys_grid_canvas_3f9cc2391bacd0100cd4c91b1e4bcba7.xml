@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_grid_canvas">
+    <sys_grid_canvas action="INSERT_OR_UPDATE">
+        <legacy_page display_value="PA Patient Health Monit - New Tab">6f9cc2391bacd0100cd4c91b1e4bcba6</legacy_page>
+        <name>PA Patient Health Monit - New Tab</name>
+        <sys_class_name>sys_grid_canvas</sys_class_name>
+        <sys_created_by>mmoody</sys_created_by>
+        <sys_created_on>2020-05-04 00:24:45</sys_created_on>
+        <sys_id>3f9cc2391bacd0100cd4c91b1e4bcba7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PA Patient Health Monit - New Tab</sys_name>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sys_grid_canvas_3f9cc2391bacd0100cd4c91b1e4bcba7</sys_update_name>
+        <sys_updated_by>mmoody</sys_updated_by>
+        <sys_updated_on>2020-05-04 00:24:45</sys_updated_on>
+    </sys_grid_canvas>
+</record_update>

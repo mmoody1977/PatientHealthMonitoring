@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>dfff81734f120380272e49cf0310c734</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;
+    &lt;sys_script_include action="INSERT_OR_UPDATE"&gt;
+        &lt;access&gt;public&lt;/access&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;api_name&gt;global.AutoScaleEventQueues&lt;/api_name&gt;
+        &lt;caller_access/&gt;
+        &lt;client_callable&gt;false&lt;/client_callable&gt;
+        &lt;description&gt;Utility used to auto-scale event queues for performance processing purposes&lt;/description&gt;
+        &lt;name&gt;AutoScaleEventQueues&lt;/name&gt;
+        &lt;script&gt;&lt;![CDATA[//@ts-check
+var AutoScaleEventQueues = Class.create();
+AutoScaleEventQueues.prototype = {
+    initialize: function (qLimit, wLimit) {
+        this.queueLimit = 100; // Message limit per queue
+        if (!gs.nil(qLimit)) {
+            this.queueLimit = qLimit;
+        }
+        this.workerLimit = 0; // Maximum number of background workers per node (default = 0 No Limit)
+        if (!gs.nil(wLimit)) {
+            this.workerLimit = wLimit;
+        }
+    },
+
+    getQueueName: function (primaryQueueName) {
+        var queueName = "";
+        var queueCheck = primaryQueueName;
+        var queueNum = 0;
+        var newQueueName = "";
+        while (this._isQueueAtCapacity(queueCheck, queueNum)) {
+            if (this.workerLimit &gt; 0 &amp;&amp; queueNum == this.workerLimit) {
+                // Send event to random queue 
+                var num = Math.floor(Math.random() * queueNum) + 1;     // returns a random integer from 1 to queueNum
+                // gs.debug(num);
+
+                // Dump next message into random queue
+                if (queueCheck == primaryQueueName) {
+                    newQueueName = primaryQueueName + "_" + String(num);
+                    // gs.debug("scale: queueCheck: " + queueCheck + " primaryQueueName: " + primaryQueueName);
+                }
+                else {
+                    newQueueName = String(queueCheck).substr(0, String(queueCheck).indexOf("_" + queueNum));
+                    //queueNum++;
+                    newQueueName = newQueueName + "_" + String(num);
+                }
+                break; // Exit loop to use the random queue name
+            }
+            else {
+                if (queueCheck == primaryQueueName) {
+                    queueNum++;
+                    queueCheck = primaryQueueName + "_" + queueNum;
+                }
+                else {
+                    queueCheck = String(queueCheck).substr(0, String(queueCheck).indexOf("_" + queueNum));
+                    queueNum++;
+                    queueCheck = queueCheck + "_" + queueNum;
+                }
+            }
+        }
+        queueName = gs.nil(newQueueName) ? queueCheck : newQueueName;
+        this._validateQueueJobExists(queueName);
+        return queueName;
+    },
+
+    _validateQueueJobExists: function (queueName) {
+        var jobContext = "fcScriptName=javascript\\:GlideEventManager('" + queueName + "').process();";
+        var query = "job_id=81c92ce9c0a8016400e5f0d2f784ea78^parentISEMPTY^trigger_type=10^job_contextLIKE" + jobContext;
+        //gs.debug("query: " + query);
+        var gr = new GlideRecord("sys_trigger");
+        gr.addEncodedQuery(query);
+        gr.query();
+        //gs.debug("Scheduled job row count: " + gr.getRowCount());
+        if (gr.next()) {
+            // Found. DO nothing
+        }
+        else {
+            gr.initialize();
+            gr.name = queueName;
+            gr.job_id = "81c92ce9c0a8016400e5f0d2f784ea78"; // RunScriptJob
+            gr.state = 0; // Ready
+            gr.trigger_type = 10; // Interval
+            var dto = new GlideDateTime();
+            dto.addSeconds(30);
+            gr.next_action = dto.getDisplayValue();
+            gr.job_context.setDisplayValue(String(jobContext));
+            // current.u_time_to_assign.setDisplayValue('3 04:30:14');
+            gr.repeat.setDisplayValue("0 00:00:02");
+            gr.insert();
+        }
+    },
+
+    _isQueueAtCapacity: function (queueName, num) {
+        var atCapacity = true;
+        if (num &gt;= 3) {
+            atCapacity = false;
+        }
+
+        // Check event table based on max capacity specification
+        var continuouslyOverLimit = false;
+        var underLimit = false;
+        for (var i = 0; i &lt; 5; i++) {
+            if (this._queueOverLimit(queueName)) {
+                gs.debug(queueName + " query (" + i + ") is at Capacity");
+            }
+            else {
+                gs.debug(queueName + " query (" + i + ") is under Capacity");
+                underLimit = true;
+            }
+        }
+        if (underLimit == false) {
+            continuouslyOverLimit = true;
+        }
+        atCapacity = continuouslyOverLimit;
+        gs.debug(queueName + " returning atCapacity: " + atCapacity);
+        return atCapacity;
+    },
+
+    _queueOverLimit: function (queueName) {
+        var overLimit = false;
+        // stateNOT INprocessed,error^queue=moody_queue
+        var query = "stateNOT INprocessed,error,reprocessed,transferred^queue=" + String(queueName);
+        var tableName = "sysevent";
+        //var gr = new GlideRecord("sysevent");
+        //gr.addQuery("state", "ready");
+        //gr.addQuery("queue", String(queueName));
+        /*
+        gr.addEncodedQuery(query);
+        gr.query();
+
+        if (gr.getRowCount() &gt;= this.queueLimit) {
+            overLimit = true;
+        }
+        */
+        if (this.countRecords(tableName, query) &gt;= this.queueLimit) {
+            overLimit = true;
+        }
+        return overLimit;
+    },
+
+    countRecords: function (table, query) {
+        var rec = new GlideAggregate(table);
+        rec.addAggregate('COUNT');
+        rec.addEncodedQuery(query);
+        rec.query();
+
+        var count = 0;
+        if (rec.next()) {
+            count = rec.getAggregate('COUNT');
+        }
+
+        return count;
+    },
+
+    type: 'AutoScaleEventQueues'
+};]]&gt;&lt;/script&gt;
+        &lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;mmadmin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2017-11-14 20:17:41&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;dfff81734f120380272e49cf0310c734&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;27&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;AutoScaleEventQueues&lt;/sys_name&gt;
+        &lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;sys_script_include_dfff81734f120380272e49cf0310c734&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;michmoody&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2020-04-09 07:25:29&lt;/sys_updated_on&gt;
+    &lt;/sys_script_include&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>mmoody</sys_created_by>
+        <sys_created_on>2020-05-04 01:17:57</sys_created_on>
+        <sys_id>83c81ef91becd0100cd4c91b1e4bcb25</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AutoScaleEventQueues</sys_name>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sys_metadata_link_83c81ef91becd0100cd4c91b1e4bcb25</sys_update_name>
+        <sys_updated_by>mmoody</sys_updated_by>
+        <sys_updated_on>2020-05-04 01:17:57</sys_updated_on>
+        <tablename>sys_script_include</tablename>
+    </sys_metadata_link>
+</record_update>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <before>false</before>
+        <description>Set global scope for adapter scripts</description>
+        <flush_cache>false</flush_cache>
+        <name>Fix Scope Values</name>
+        <record_for_rollback>false</record_for_rollback>
+        <run_once>false</run_once>
+        <script><![CDATA[fixScope("sys_script_incldue", "2b2450111be450100cd4c91b1e4bcbfa", "global"); // HealthMontorGlobalUtils
+fixScope("sys_script_incldue", "dfff81734f120380272e49cf0310c734", "global"); // AutoScaleEventQueues
+fixScope("sys_processor", "403b9ddd1b6850100cd4c91b1e4bcb65", "global"); // ServerSent Processor
+fixScope("sys_processor", "0ba5fae91be0d0100cd4c91b1e4bcb7f", "global"); // ServerSentLive Processor
+fixScope("sysauto", "03bc31911b6c50100cd4c91b1e4bcb62", "global"); // Delete Events Sched Job
+fixScope("sys_trigger", "05db5a311b2014100cd4c91b1e4bcb8b", "global"); // x_snc_health_monit_generate_observations - Queue processor
+fixScope("sys_trigger", "456b5efd1becd0100cd4c91b1e4bcbf3", "global"); // x_snc_health_monit_generate_observations - Queue processor
+fixScope("sys_trigger", "cddb5a311b2014100cd4c91b1e4bcb8a", "global"); // x_snc_health_monit_generate_observations - Queue processor
+
+function fixScope(tableName, recordSid, targetScope) {
+	var gr = new GlideRecord(String(tableName));
+	if (gr.get(String(recordSid))) {
+		gr.sys_scope = String(targetScope);
+		gr.update();
+	}
+}]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>mmoody</sys_created_by>
+        <sys_created_on>2020-05-02 02:34:51</sys_created_on>
+        <sys_id>2eb658551be450100cd4c91b1e4bcb3f</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Fix Scope Values</sys_name>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sys_script_fix_2eb658551be450100cd4c91b1e4bcb3f</sys_update_name>
+        <sys_updated_by>mmoody</sys_updated_by>
+        <sys_updated_on>2020-05-04 01:34:51</sys_updated_on>
+        <unloadable>true</unloadable>
+    </sys_script_fix>
+</record_update>

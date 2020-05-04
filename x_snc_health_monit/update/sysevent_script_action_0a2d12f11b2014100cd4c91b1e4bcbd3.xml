@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_script_action">
+    <sysevent_script_action action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition_script/>
+        <description/>
+        <event_name>x_snc_health_monit.generate_observations</event_name>
+        <name>Observation Quick Insertion</name>
+        <order>100</order>
+        <script><![CDATA[processInsertion(current);
+function processInsertion(current) {
+    var currentVal = current.value;
+    var minVal = 0;
+    var maxVal = 0;
+    var newVal = null;
+    if (!isNaN(currentVal)) {
+        //minVal = currentVal < 7 ? currentVal - 0.25 : currentVal - 5;
+        //maxVal = currentVal < 7 ? currentVal + 0.25 : currentVal + 5;
+        newVal = getRandomArbitrary(1, 4);
+        newVal = Math.round(newVal * 10) / 10;
+    }
+    if (!gs.nil(newVal)) {
+        current.value = newVal;
+    }
+    current.observation_date = new GlideDateTime();
+    current.insert();
+}
+
+function getRandomArbitrary(min, max) {
+    return Math.random() * (max - min) + min;
+}]]></script>
+        <synchronous>false</synchronous>
+        <sys_class_name>sysevent_script_action</sys_class_name>
+        <sys_created_by>mmoody</sys_created_by>
+        <sys_created_on>2020-05-04 01:51:30</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0a2d12f11b2014100cd4c91b1e4bcbd3</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Observation Quick Insertion</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sysevent_script_action_0a2d12f11b2014100cd4c91b1e4bcbd3</sys_update_name>
+        <sys_updated_by>mmoody</sys_updated_by>
+        <sys_updated_on>2020-05-04 02:03:11</sys_updated_on>
+    </sysevent_script_action>
+</record_update>

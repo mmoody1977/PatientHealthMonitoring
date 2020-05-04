@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="COVID Stats" max_length="40" name="x_snc_health_monit_covid_stats" sizeclass="2347" type="collection">
+        <element label="Check One" max_length="40" name="check_one" type="boolean"/>
+        <element label="Check Two" max_length="40" name="check_two" type="boolean"/>
+        <element label="Cough" max_length="40" name="cough" type="boolean"/>
+        <element label="Difficulty Breathing" max_length="40" name="difficulty_breathing" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:getNextObjNumberPadded();" display="true" dynamic_default_value="fdcb83a85f220100a9ad2572f2b4773c" label="Encounter ID" max_length="40" name="encounter_id" read_only="true" type="string" use_dynamic_default="true"/>
+        <element label="Fever" max_length="40" name="fever" type="boolean"/>
+        <element attributes="encode_utf8=false" label="Patient" max_length="32" name="patient" reference="x_snc_health_monit_patient_details" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Risk Level" max_length="40" name="risk_level" read_only="true" type="string">
+            <choice>
+                <element inactive_on_update="false" label="High" value="High"/>
+                <element inactive_on_update="false" label="Low" value="Low"/>
+                <element inactive_on_update="false" label="Medium" value="Medium"/>
+            </choice>
+        </element>
+        <element attributes="encode_utf8=false" label="Risk Policy" max_length="32" name="risk_policy" reference="x_snc_health_monit_risk_policies" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:new GlideDateTime();" label="Stat Date Time" max_length="40" name="stat_date_time" read_only="true" type="glide_date_time"/>
+        <index name="index">
+            <element name="risk_policy"/>
+        </index>
+        <index name="index2">
+            <element name="patient"/>
+        </index>
+    </element>
+</database>

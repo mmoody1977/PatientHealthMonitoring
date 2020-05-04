@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_entry">
+    <sys_transform_entry action="INSERT_OR_UPDATE">
+        <choice_action>ignore</choice_action>
+        <coalesce>false</coalesce>
+        <coalesce_case_sensitive>false</coalesce_case_sensitive>
+        <coalesce_empty_fields>false</coalesce_empty_fields>
+        <date_format>yyyy-MM-dd HH:mm:ss</date_format>
+        <map display_value="Import Immunizations">dc3a10991be450100cd4c91b1e4bcb43</map>
+        <reference_value_field/>
+        <source_field>[Script]</source_field>
+        <source_script><![CDATA[answer = (function transformEntry(source) {
+
+    // Add your code here
+    var patientID = source.u_patient.toString();
+    var grRecPatient = new GlideRecord('x_snc_health_monit_patient_details');
+    if (grRecPatient.get('patiend_id', patientID)) {
+        return grRecPatient.sys_id.toString();
+    } else {
+        return "";
+    }
+
+
+})(source);]]></source_script>
+        <source_table>x_snc_health_monit_import_immunizations</source_table>
+        <sys_class_name>sys_transform_entry</sys_class_name>
+        <sys_created_by>rlochan</sys_created_by>
+        <sys_created_on>2020-05-02 02:48:15</sys_created_on>
+        <sys_id>564adc591be450100cd4c91b1e4bcbde</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>[Script]</sys_name>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sys_transform_entry_564adc591be450100cd4c91b1e4bcbde</sys_update_name>
+        <sys_updated_by>rlochan</sys_updated_by>
+        <sys_updated_on>2020-05-02 02:53:38</sys_updated_on>
+        <target_field>patient</target_field>
+        <target_table>x_snc_health_monit_immunizations</target_table>
+        <use_source_script>true</use_source_script>
+    </sys_transform_entry>
+</record_update>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="encounter_id" label="Encounter ID" language="en" table="x_snc_health_monit_observations">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>encounter_id</element>
+            <help/>
+            <hint/>
+            <label>Encounter ID</label>
+            <language>en</language>
+            <name>x_snc_health_monit_observations</name>
+            <plural>Encounter IDs</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>rlochan</sys_created_by>
+            <sys_created_on>2020-05-02 08:10:48</sys_created_on>
+            <sys_id>b614e5111be850100cd4c91b1e4bcb9a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Encounter ID</sys_name>
+            <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_health_monit_observations_encounter_id_en</sys_update_name>
+            <sys_updated_by>rlochan</sys_updated_by>
+            <sys_updated_on>2020-05-02 08:10:48</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

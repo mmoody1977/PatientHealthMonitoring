@@ -1,0 +1,1566 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update node_type="sys_portal_page" unload_date="2020-05-04 22:35:04">
+    <sys_portal_page action="INSERT_OR_UPDATE">
+        <layout/>
+        <order/>
+        <read_roles/>
+        <roles/>
+        <selectable>false</selectable>
+        <sys_class_name>sys_portal_page</sys_class_name>
+        <sys_created_by>mmoody</sys_created_by>
+        <sys_created_on>2020-05-04 00:24:45</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6f9cc2391bacd0100cd4c91b1e4bcba6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PA Patient Health Monit - New Tab</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sys_portal_page_6f9cc2391bacd0100cd4c91b1e4bcba6</sys_update_name>
+        <sys_updated_by>mmoody</sys_updated_by>
+        <sys_updated_on>2020-05-04 00:24:45</sys_updated_on>
+        <title>PA Patient Health Monit - New Tab</title>
+        <user/>
+        <view>pa_patient_health_monit_-_new_tab</view>
+        <related_items_node>
+            <sys_portal action="INSERT_OR_UPDATE">
+                <dropzone/>
+                <offset/>
+                <page display_value="PA Patient Health Monit - New Tab">6f9cc2391bacd0100cd4c91b1e4bcba6</page>
+                <summary>Total Confirmed with Covid Mortality Risk &lt; 50%</summary>
+                <sys_created_by>rlochan</sys_created_by>
+                <sys_created_on>2020-05-04 01:04:49</sys_created_on>
+                <sys_id>22c5dab51becd0100cd4c91b1e4bcb14</sys_id>
+                <sys_mod_count>1</sys_mod_count>
+                <sys_updated_by>rlochan</sys_updated_by>
+                <sys_updated_on>2020-05-04 01:04:49</sys_updated_on>
+                <related_items_node>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_subscribe</name>
+                        <portal_section display_value="Created 2020-05-03 18:04:49">22c5dab51becd0100cd4c91b1e4bcb14</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 01:04:49</sys_created_on>
+                        <sys_id>22c5dab51becd0100cd4c91b1e4bcb15</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:04:49</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_publish</name>
+                        <portal_section display_value="Created 2020-05-03 18:04:49">22c5dab51becd0100cd4c91b1e4bcb14</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 01:04:49</sys_created_on>
+                        <sys_id>6ec5dab51becd0100cd4c91b1e4bcb14</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:04:49</sys_updated_on>
+                        <value>false</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>show_border</name>
+                        <portal_section display_value="Created 2020-05-03 18:04:49">22c5dab51becd0100cd4c91b1e4bcb14</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 01:05:48</sys_created_on>
+                        <sys_id>700652f51becd0100cd4c91b1e4bcb64</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:05:48</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>real_time</name>
+                        <portal_section display_value="Created 2020-05-03 18:04:49">22c5dab51becd0100cd4c91b1e4bcb14</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 01:05:48</sys_created_on>
+                        <sys_id>700652f51becd0100cd4c91b1e4bcb65</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:05:48</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>show_title</name>
+                        <portal_section display_value="Created 2020-05-03 18:04:49">22c5dab51becd0100cd4c91b1e4bcb14</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 01:05:48</sys_created_on>
+                        <sys_id>740652f51becd0100cd4c91b1e4bcb63</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:05:48</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>publisher_widget</name>
+                        <portal_section display_value="Created 2020-05-03 18:04:49">22c5dab51becd0100cd4c91b1e4bcb14</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 01:05:48</sys_created_on>
+                        <sys_id>740652f51becd0100cd4c91b1e4bcb64</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:05:48</sys_updated_on>
+                        <value>false</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>show_header</name>
+                        <portal_section display_value="Created 2020-05-03 18:04:49">22c5dab51becd0100cd4c91b1e4bcb14</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 01:05:48</sys_created_on>
+                        <sys_id>780652f51becd0100cd4c91b1e4bcb63</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:05:48</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>subscriber_widget</name>
+                        <portal_section display_value="Created 2020-05-03 18:04:49">22c5dab51becd0100cd4c91b1e4bcb14</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 01:05:48</sys_created_on>
+                        <sys_id>780652f51becd0100cd4c91b1e4bcb64</sys_id>
+                        <sys_mod_count>1</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 02:07:19</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title_align</name>
+                        <portal_section display_value="Created 2020-05-03 18:04:49">22c5dab51becd0100cd4c91b1e4bcb14</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 01:05:48</sys_created_on>
+                        <sys_id>7c0652f51becd0100cd4c91b1e4bcb63</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:05:48</sys_updated_on>
+                        <value>left</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>filter_indicator</name>
+                        <portal_section display_value="Created 2020-05-03 18:04:49">22c5dab51becd0100cd4c91b1e4bcb14</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 01:05:48</sys_created_on>
+                        <sys_id>7c0652f51becd0100cd4c91b1e4bcb64</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:05:48</sys_updated_on>
+                        <value>false</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 2020-05-03 18:04:49">22c5dab51becd0100cd4c91b1e4bcb14</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 01:04:49</sys_created_on>
+                        <sys_id>a2c5dab51becd0100cd4c91b1e4bcb14</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:04:49</sys_updated_on>
+                        <value>016512b51becd0100cd4c91b1e4bcb8d</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title</name>
+                        <portal_section display_value="Created 2020-05-03 18:04:49">22c5dab51becd0100cd4c91b1e4bcb14</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 01:04:49</sys_created_on>
+                        <sys_id>a6c5dab51becd0100cd4c91b1e4bcb15</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:04:49</sys_updated_on>
+                        <value>Total Confirmed with Covid Mortality Risk &lt; 50%</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>help_text_window</name>
+                        <portal_section display_value="Created 2020-05-03 18:04:49">22c5dab51becd0100cd4c91b1e4bcb14</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 01:04:49</sys_created_on>
+                        <sys_id>aac5dab51becd0100cd4c91b1e4bcb14</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:04:49</sys_updated_on>
+                        <value>report_widget_description</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>report_type</name>
+                        <portal_section display_value="Created 2020-05-03 18:04:49">22c5dab51becd0100cd4c91b1e4bcb14</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 01:04:49</sys_created_on>
+                        <sys_id>e2c5dab51becd0100cd4c91b1e4bcb15</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:04:49</sys_updated_on>
+                        <value>single_score</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>renderer</name>
+                        <portal_section display_value="Created 2020-05-03 18:04:49">22c5dab51becd0100cd4c91b1e4bcb14</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 01:04:49</sys_created_on>
+                        <sys_id>e6c5dab51becd0100cd4c91b1e4bcb14</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:04:49</sys_updated_on>
+                        <value>com.glide.ui.portal.RenderReport</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>is_using_database_view</name>
+                        <portal_section display_value="Created 2020-05-03 18:04:49">22c5dab51becd0100cd4c91b1e4bcb14</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 01:04:49</sys_created_on>
+                        <sys_id>eac5dab51becd0100cd4c91b1e4bcb15</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:04:49</sys_updated_on>
+                        <value/>
+                    </sys_portal_preferences>
+                </related_items_node>
+            </sys_portal>
+            <sys_portal action="INSERT_OR_UPDATE">
+                <dropzone/>
+                <offset/>
+                <page display_value="PA Patient Health Monit - New Tab">6f9cc2391bacd0100cd4c91b1e4bcba6</page>
+                <summary>Patient Race</summary>
+                <sys_created_by>rlochan</sys_created_by>
+                <sys_created_on>2020-05-04 01:36:01</sys_created_on>
+                <sys_id>23ec1ab11b2014100cd4c91b1e4bcb6d</sys_id>
+                <sys_mod_count>1</sys_mod_count>
+                <sys_updated_by>rlochan</sys_updated_by>
+                <sys_updated_on>2020-05-04 01:36:01</sys_updated_on>
+                <related_items_node>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title</name>
+                        <portal_section display_value="Created 2020-05-03 18:36:01">23ec1ab11b2014100cd4c91b1e4bcb6d</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 01:36:01</sys_created_on>
+                        <sys_id>23ec1ab11b2014100cd4c91b1e4bcb6e</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:36:01</sys_updated_on>
+                        <value>Patient Race</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>type</name>
+                        <portal_section display_value="Created 2020-05-03 18:36:01">23ec1ab11b2014100cd4c91b1e4bcb6d</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 01:36:01</sys_created_on>
+                        <sys_id>67ec1ab11b2014100cd4c91b1e4bcb6e</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:36:01</sys_updated_on>
+                        <value>1</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>publisher_widget</name>
+                        <portal_section display_value="Created 2020-05-03 18:36:01">23ec1ab11b2014100cd4c91b1e4bcb6d</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 01:36:01</sys_created_on>
+                        <sys_id>6fec1ab11b2014100cd4c91b1e4bcb6d</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:36:01</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 2020-05-03 18:36:01">23ec1ab11b2014100cd4c91b1e4bcb6d</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 01:36:01</sys_created_on>
+                        <sys_id>a3ec1ab11b2014100cd4c91b1e4bcb6d</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:36:01</sys_updated_on>
+                        <value>2e5c1a711b2014100cd4c91b1e4bcbbe</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_publish</name>
+                        <portal_section display_value="Created 2020-05-03 18:36:01">23ec1ab11b2014100cd4c91b1e4bcb6d</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 01:36:01</sys_created_on>
+                        <sys_id>abec1ab11b2014100cd4c91b1e4bcb6d</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:36:01</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>renderer</name>
+                        <portal_section display_value="Created 2020-05-03 18:36:01">23ec1ab11b2014100cd4c91b1e4bcb6d</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 01:36:01</sys_created_on>
+                        <sys_id>e7ec1ab11b2014100cd4c91b1e4bcb6d</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:36:01</sys_updated_on>
+                        <value>com.glideapp.home.RenderHomepagePublishers</value>
+                    </sys_portal_preferences>
+                </related_items_node>
+            </sys_portal>
+            <sys_portal action="INSERT_OR_UPDATE">
+                <dropzone/>
+                <offset/>
+                <page display_value="PA Patient Health Monit - New Tab">6f9cc2391bacd0100cd4c91b1e4bcba6</page>
+                <summary>Total Infected with Covid-19</summary>
+                <sys_created_by>mmoody</sys_created_by>
+                <sys_created_on>2020-05-04 00:25:15</sys_created_on>
+                <sys_id>3ebc86391bacd0100cd4c91b1e4bcb5a</sys_id>
+                <sys_mod_count>1</sys_mod_count>
+                <sys_updated_by>mmoody</sys_updated_by>
+                <sys_updated_on>2020-05-04 00:25:15</sys_updated_on>
+                <related_items_node>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_subscribe</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:15">3ebc86391bacd0100cd4c91b1e4bcb5a</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:25:15</sys_created_on>
+                        <sys_id>3ebc86391bacd0100cd4c91b1e4bcb5b</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:25:15</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_real_time</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:15">3ebc86391bacd0100cd4c91b1e4bcb5a</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:25:15</sys_created_on>
+                        <sys_id>7abc86391bacd0100cd4c91b1e4bcb5b</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:25:15</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:15">3ebc86391bacd0100cd4c91b1e4bcb5a</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:25:15</sys_created_on>
+                        <sys_id>b2bc86391bacd0100cd4c91b1e4bcb5c</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:25:15</sys_updated_on>
+                        <value>Total Infected with Covid-19</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>show_header</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:15">3ebc86391bacd0100cd4c91b1e4bcb5a</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:30:46</sys_created_on>
+                        <sys_id>b3fd4eb91bacd0100cd4c91b1e4bcba1</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:30:46</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>subscriber_widget</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:15">3ebc86391bacd0100cd4c91b1e4bcb5a</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:30:46</sys_created_on>
+                        <sys_id>b3fd4eb91bacd0100cd4c91b1e4bcba2</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:30:46</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>help_text_window</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:15">3ebc86391bacd0100cd4c91b1e4bcb5a</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:25:15</sys_created_on>
+                        <sys_id>b6bc86391bacd0100cd4c91b1e4bcb5b</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:25:15</sys_updated_on>
+                        <value>report_widget_description</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title_align</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:15">3ebc86391bacd0100cd4c91b1e4bcb5a</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:30:46</sys_created_on>
+                        <sys_id>b7fd4eb91bacd0100cd4c91b1e4bcba1</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:30:46</sys_updated_on>
+                        <value>left</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>filter_indicator</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:15">3ebc86391bacd0100cd4c91b1e4bcb5a</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:30:46</sys_created_on>
+                        <sys_id>b7fd4eb91bacd0100cd4c91b1e4bcba2</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:30:46</sys_updated_on>
+                        <value>false</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>show_border</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:15">3ebc86391bacd0100cd4c91b1e4bcb5a</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:30:46</sys_created_on>
+                        <sys_id>bbfd4eb91bacd0100cd4c91b1e4bcba1</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:30:46</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>real_time</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:15">3ebc86391bacd0100cd4c91b1e4bcb5a</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:30:47</sys_created_on>
+                        <sys_id>bbfd4eb91bacd0100cd4c91b1e4bcba2</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:30:47</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:15">3ebc86391bacd0100cd4c91b1e4bcb5a</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:25:15</sys_created_on>
+                        <sys_id>bebc86391bacd0100cd4c91b1e4bcb5a</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:25:15</sys_updated_on>
+                        <value>71a746f11bacd0100cd4c91b1e4bcbcf</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>show_title</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:15">3ebc86391bacd0100cd4c91b1e4bcb5a</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:30:46</sys_created_on>
+                        <sys_id>bffd4eb91bacd0100cd4c91b1e4bcba0</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:30:46</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>publisher_widget</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:15">3ebc86391bacd0100cd4c91b1e4bcb5a</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:30:46</sys_created_on>
+                        <sys_id>bffd4eb91bacd0100cd4c91b1e4bcba1</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:30:46</sys_updated_on>
+                        <value>false</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>renderer</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:15">3ebc86391bacd0100cd4c91b1e4bcb5a</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:25:15</sys_created_on>
+                        <sys_id>f2bc86391bacd0100cd4c91b1e4bcb5b</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:25:15</sys_updated_on>
+                        <value>com.glide.ui.portal.RenderReport</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>is_using_database_view</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:15">3ebc86391bacd0100cd4c91b1e4bcb5a</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:25:15</sys_created_on>
+                        <sys_id>f6bc86391bacd0100cd4c91b1e4bcb5c</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:25:15</sys_updated_on>
+                        <value>false</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>report_type</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:15">3ebc86391bacd0100cd4c91b1e4bcb5a</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:25:15</sys_created_on>
+                        <sys_id>febc86391bacd0100cd4c91b1e4bcb5b</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:25:15</sys_updated_on>
+                        <value>single_score</value>
+                    </sys_portal_preferences>
+                </related_items_node>
+            </sys_portal>
+            <sys_portal action="INSERT_OR_UPDATE">
+                <dropzone/>
+                <offset/>
+                <page display_value="PA Patient Health Monit - New Tab">6f9cc2391bacd0100cd4c91b1e4bcba6</page>
+                <summary>Most Likely Infected with Covid-19</summary>
+                <sys_created_by>mmoody</sys_created_by>
+                <sys_created_on>2020-05-04 00:25:28</sys_created_on>
+                <sys_id>5accc6391bacd0100cd4c91b1e4bcb27</sys_id>
+                <sys_mod_count>1</sys_mod_count>
+                <sys_updated_by>mmoody</sys_updated_by>
+                <sys_updated_on>2020-05-04 00:25:28</sys_updated_on>
+                <related_items_node>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>renderer</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:28">5accc6391bacd0100cd4c91b1e4bcb27</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:25:28</sys_created_on>
+                        <sys_id>12ccc6391bacd0100cd4c91b1e4bcb28</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:25:28</sys_updated_on>
+                        <value>com.glide.ui.portal.RenderReport</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>report_type</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:28">5accc6391bacd0100cd4c91b1e4bcb27</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:25:28</sys_created_on>
+                        <sys_id>1eccc6391bacd0100cd4c91b1e4bcb28</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:25:28</sys_updated_on>
+                        <value>single_score</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_subscribe</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:28">5accc6391bacd0100cd4c91b1e4bcb27</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:25:28</sys_created_on>
+                        <sys_id>5accc6391bacd0100cd4c91b1e4bcb28</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:25:28</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>show_title</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:28">5accc6391bacd0100cd4c91b1e4bcb27</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:30:40</sys_created_on>
+                        <sys_id>92fd4eb91bacd0100cd4c91b1e4bcb2b</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:30:40</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>publisher_widget</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:28">5accc6391bacd0100cd4c91b1e4bcb27</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:30:40</sys_created_on>
+                        <sys_id>92fd4eb91bacd0100cd4c91b1e4bcb2c</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:30:40</sys_updated_on>
+                        <value>false</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_real_time</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:28">5accc6391bacd0100cd4c91b1e4bcb27</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:25:28</sys_created_on>
+                        <sys_id>96ccc6391bacd0100cd4c91b1e4bcb28</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:25:28</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>show_header</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:28">5accc6391bacd0100cd4c91b1e4bcb27</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:30:40</sys_created_on>
+                        <sys_id>96fd4eb91bacd0100cd4c91b1e4bcb2b</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:30:40</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>subscriber_widget</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:28">5accc6391bacd0100cd4c91b1e4bcb27</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:30:40</sys_created_on>
+                        <sys_id>96fd4eb91bacd0100cd4c91b1e4bcb2c</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:30:40</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title_align</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:28">5accc6391bacd0100cd4c91b1e4bcb27</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:30:40</sys_created_on>
+                        <sys_id>9afd4eb91bacd0100cd4c91b1e4bcb2b</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:30:40</sys_updated_on>
+                        <value>left</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>filter_indicator</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:28">5accc6391bacd0100cd4c91b1e4bcb27</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:30:40</sys_created_on>
+                        <sys_id>9afd4eb91bacd0100cd4c91b1e4bcb2c</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:30:40</sys_updated_on>
+                        <value>false</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:28">5accc6391bacd0100cd4c91b1e4bcb27</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:25:28</sys_created_on>
+                        <sys_id>9eccc6391bacd0100cd4c91b1e4bcb98</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:25:28</sys_updated_on>
+                        <value>Most Likely Infected with Covid-19</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>show_border</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:28">5accc6391bacd0100cd4c91b1e4bcb27</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:30:40</sys_created_on>
+                        <sys_id>9efd4eb91bacd0100cd4c91b1e4bcb2b</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:30:40</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>real_time</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:28">5accc6391bacd0100cd4c91b1e4bcb27</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:30:40</sys_created_on>
+                        <sys_id>9efd4eb91bacd0100cd4c91b1e4bcb2c</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:30:40</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>help_text_window</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:28">5accc6391bacd0100cd4c91b1e4bcb27</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:25:28</sys_created_on>
+                        <sys_id>d2ccc6391bacd0100cd4c91b1e4bcb28</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:25:28</sys_updated_on>
+                        <value>report_widget_description</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>is_using_database_view</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:28">5accc6391bacd0100cd4c91b1e4bcb27</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:25:28</sys_created_on>
+                        <sys_id>d2ccc6391bacd0100cd4c91b1e4bcb99</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:25:28</sys_updated_on>
+                        <value>false</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:28">5accc6391bacd0100cd4c91b1e4bcb27</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:25:28</sys_created_on>
+                        <sys_id>daccc6391bacd0100cd4c91b1e4bcb27</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:25:28</sys_updated_on>
+                        <value>25280ef11bacd0100cd4c91b1e4bcb1a</value>
+                    </sys_portal_preferences>
+                </related_items_node>
+            </sys_portal>
+            <sys_portal action="INSERT_OR_UPDATE">
+                <dropzone/>
+                <offset/>
+                <page display_value="PA Patient Health Monit - New Tab">6f9cc2391bacd0100cd4c91b1e4bcba6</page>
+                <summary>Covid Mortality Risk  &gt; 50%</summary>
+                <sys_created_by>rlochan</sys_created_by>
+                <sys_created_on>2020-05-04 00:43:07</sys_created_on>
+                <sys_id>68d01ebd1bacd0100cd4c91b1e4bcb2b</sys_id>
+                <sys_mod_count>2</sys_mod_count>
+                <sys_updated_by>rlochan</sys_updated_by>
+                <sys_updated_on>2020-05-04 00:45:22</sys_updated_on>
+                <related_items_node>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_subscribe</name>
+                        <portal_section display_value="Created 2020-05-03 17:43:07">68d01ebd1bacd0100cd4c91b1e4bcb2b</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 00:43:07</sys_created_on>
+                        <sys_id>20d01ebd1bacd0100cd4c91b1e4bcb2d</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:43:07</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>help_text_window</name>
+                        <portal_section display_value="Created 2020-05-03 17:43:07">68d01ebd1bacd0100cd4c91b1e4bcb2b</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 00:43:07</sys_created_on>
+                        <sys_id>6cd01ebd1bacd0100cd4c91b1e4bcb2c</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:43:07</sys_updated_on>
+                        <value>report_widget_description</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title_align</name>
+                        <portal_section display_value="Created 2020-05-03 17:43:07">68d01ebd1bacd0100cd4c91b1e4bcb2b</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 00:56:20</sys_created_on>
+                        <sys_id>92d31ef11becd0100cd4c91b1e4bcbf2</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:56:20</sys_updated_on>
+                        <value>left</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>filter_indicator</name>
+                        <portal_section display_value="Created 2020-05-03 17:43:07">68d01ebd1bacd0100cd4c91b1e4bcb2b</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 00:56:20</sys_created_on>
+                        <sys_id>92d31ef11becd0100cd4c91b1e4bcbf3</sys_id>
+                        <sys_mod_count>2</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:13:20</sys_updated_on>
+                        <value>false</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>show_border</name>
+                        <portal_section display_value="Created 2020-05-03 17:43:07">68d01ebd1bacd0100cd4c91b1e4bcb2b</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 00:56:20</sys_created_on>
+                        <sys_id>96d31ef11becd0100cd4c91b1e4bcbf2</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:56:20</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>real_time</name>
+                        <portal_section display_value="Created 2020-05-03 17:43:07">68d01ebd1bacd0100cd4c91b1e4bcb2b</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 00:56:20</sys_created_on>
+                        <sys_id>96d31ef11becd0100cd4c91b1e4bcbf3</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:56:20</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>show_title</name>
+                        <portal_section display_value="Created 2020-05-03 17:43:07">68d01ebd1bacd0100cd4c91b1e4bcb2b</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 00:56:20</sys_created_on>
+                        <sys_id>9ad31ef11becd0100cd4c91b1e4bcbf1</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:56:20</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>publisher_widget</name>
+                        <portal_section display_value="Created 2020-05-03 17:43:07">68d01ebd1bacd0100cd4c91b1e4bcb2b</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 00:56:20</sys_created_on>
+                        <sys_id>9ad31ef11becd0100cd4c91b1e4bcbf2</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:56:20</sys_updated_on>
+                        <value>false</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>show_header</name>
+                        <portal_section display_value="Created 2020-05-03 17:43:07">68d01ebd1bacd0100cd4c91b1e4bcb2b</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 00:56:20</sys_created_on>
+                        <sys_id>9ed31ef11becd0100cd4c91b1e4bcbf1</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:56:20</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>subscriber_widget</name>
+                        <portal_section display_value="Created 2020-05-03 17:43:07">68d01ebd1bacd0100cd4c91b1e4bcb2b</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 00:56:20</sys_created_on>
+                        <sys_id>9ed31ef11becd0100cd4c91b1e4bcbf2</sys_id>
+                        <sys_mod_count>1</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:12:44</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>renderer</name>
+                        <portal_section display_value="Created 2020-05-03 17:43:07">68d01ebd1bacd0100cd4c91b1e4bcb2b</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 00:43:07</sys_created_on>
+                        <sys_id>a8d01ebd1bacd0100cd4c91b1e4bcb2c</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:43:07</sys_updated_on>
+                        <value>com.glide.ui.portal.RenderReport</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title</name>
+                        <portal_section display_value="Created 2020-05-03 17:43:07">68d01ebd1bacd0100cd4c91b1e4bcb2b</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 00:43:07</sys_created_on>
+                        <sys_id>e0d01ebd1bacd0100cd4c91b1e4bcb2d</sys_id>
+                        <sys_mod_count>1</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:45:22</sys_updated_on>
+                        <value>Covid Mortality Risk  &gt; 50%</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 2020-05-03 17:43:07">68d01ebd1bacd0100cd4c91b1e4bcb2b</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 00:43:07</sys_created_on>
+                        <sys_id>ecd01ebd1bacd0100cd4c91b1e4bcb2b</sys_id>
+                        <sys_mod_count>1</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:45:22</sys_updated_on>
+                        <value>21515afd1bacd0100cd4c91b1e4bcbf7</value>
+                    </sys_portal_preferences>
+                </related_items_node>
+            </sys_portal>
+            <sys_portal action="INSERT_OR_UPDATE">
+                <dropzone/>
+                <offset/>
+                <page display_value="PA Patient Health Monit - New Tab">6f9cc2391bacd0100cd4c91b1e4bcba6</page>
+                <summary>Patient Gender</summary>
+                <sys_created_by>rlochan</sys_created_by>
+                <sys_created_on>2020-05-04 01:31:21</sys_created_on>
+                <sys_id>93db9a311b2014100cd4c91b1e4bcb96</sys_id>
+                <sys_mod_count>1</sys_mod_count>
+                <sys_updated_by>rlochan</sys_updated_by>
+                <sys_updated_on>2020-05-04 01:31:21</sys_updated_on>
+                <related_items_node>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>publisher_widget</name>
+                        <portal_section display_value="Created 2020-05-03 18:31:21">93db9a311b2014100cd4c91b1e4bcb96</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 01:31:21</sys_created_on>
+                        <sys_id>17db9a311b2014100cd4c91b1e4bcb97</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:31:21</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 2020-05-03 18:31:21">93db9a311b2014100cd4c91b1e4bcb96</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 01:31:21</sys_created_on>
+                        <sys_id>1bdb9a311b2014100cd4c91b1e4bcb96</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:31:21</sys_updated_on>
+                        <value>cf0b56fd1becd0100cd4c91b1e4bcb3c</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_publish</name>
+                        <portal_section display_value="Created 2020-05-03 18:31:21">93db9a311b2014100cd4c91b1e4bcb96</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 01:31:21</sys_created_on>
+                        <sys_id>53db9a311b2014100cd4c91b1e4bcb97</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:31:21</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>type</name>
+                        <portal_section display_value="Created 2020-05-03 18:31:21">93db9a311b2014100cd4c91b1e4bcb96</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 01:31:21</sys_created_on>
+                        <sys_id>93db9a311b2014100cd4c91b1e4bcb98</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:31:21</sys_updated_on>
+                        <value>1</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>renderer</name>
+                        <portal_section display_value="Created 2020-05-03 18:31:21">93db9a311b2014100cd4c91b1e4bcb96</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 01:31:21</sys_created_on>
+                        <sys_id>9fdb9a311b2014100cd4c91b1e4bcb96</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:31:21</sys_updated_on>
+                        <value>com.glideapp.home.RenderHomepagePublishers</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title</name>
+                        <portal_section display_value="Created 2020-05-03 18:31:21">93db9a311b2014100cd4c91b1e4bcb96</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 01:31:21</sys_created_on>
+                        <sys_id>d7db9a311b2014100cd4c91b1e4bcb97</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:31:21</sys_updated_on>
+                        <value>Patient Gender</value>
+                    </sys_portal_preferences>
+                </related_items_node>
+            </sys_portal>
+            <sys_portal action="INSERT_OR_UPDATE">
+                <dropzone/>
+                <offset/>
+                <page display_value="PA Patient Health Monit - New Tab">6f9cc2391bacd0100cd4c91b1e4bcba6</page>
+                <summary>Moderately Likely Infected with Covid-19</summary>
+                <sys_created_by>mmoody</sys_created_by>
+                <sys_created_on>2020-05-04 00:25:41</sys_created_on>
+                <sys_id>99dc0a391bacd0100cd4c91b1e4bcb99</sys_id>
+                <sys_mod_count>1</sys_mod_count>
+                <sys_updated_by>mmoody</sys_updated_by>
+                <sys_updated_on>2020-05-04 00:25:41</sys_updated_on>
+                <related_items_node>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:41">99dc0a391bacd0100cd4c91b1e4bcb99</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:25:41</sys_created_on>
+                        <sys_id>11dc0a391bacd0100cd4c91b1e4bcb9b</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:25:41</sys_updated_on>
+                        <value>Moderately Likely Infected with Covid-19</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>help_text_window</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:41">99dc0a391bacd0100cd4c91b1e4bcb99</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:25:41</sys_created_on>
+                        <sys_id>15dc0a391bacd0100cd4c91b1e4bcb9a</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:25:41</sys_updated_on>
+                        <value>report_widget_description</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:41">99dc0a391bacd0100cd4c91b1e4bcb99</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:25:41</sys_created_on>
+                        <sys_id>1ddc0a391bacd0100cd4c91b1e4bcb99</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:25:41</sys_updated_on>
+                        <value>f1d806351bacd0100cd4c91b1e4bcbaf</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title_align</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:41">99dc0a391bacd0100cd4c91b1e4bcb99</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:30:24</sys_created_on>
+                        <sys_id>22ed0eb91bacd0100cd4c91b1e4bcb11</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:30:24</sys_updated_on>
+                        <value>left</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>filter_indicator</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:41">99dc0a391bacd0100cd4c91b1e4bcb99</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:30:24</sys_created_on>
+                        <sys_id>22ed0eb91bacd0100cd4c91b1e4bcb12</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:30:24</sys_updated_on>
+                        <value>false</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>show_border</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:41">99dc0a391bacd0100cd4c91b1e4bcb99</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:30:24</sys_created_on>
+                        <sys_id>26ed0eb91bacd0100cd4c91b1e4bcb11</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:30:24</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>real_time</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:41">99dc0a391bacd0100cd4c91b1e4bcb99</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:30:24</sys_created_on>
+                        <sys_id>26ed0eb91bacd0100cd4c91b1e4bcb12</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:30:24</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>show_title</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:41">99dc0a391bacd0100cd4c91b1e4bcb99</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:30:24</sys_created_on>
+                        <sys_id>2aed0eb91bacd0100cd4c91b1e4bcb10</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:30:24</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>publisher_widget</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:41">99dc0a391bacd0100cd4c91b1e4bcb99</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:30:24</sys_created_on>
+                        <sys_id>2aed0eb91bacd0100cd4c91b1e4bcb11</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:30:24</sys_updated_on>
+                        <value>false</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>show_header</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:41">99dc0a391bacd0100cd4c91b1e4bcb99</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:30:24</sys_created_on>
+                        <sys_id>2eed0eb91bacd0100cd4c91b1e4bcb10</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:30:24</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>subscriber_widget</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:41">99dc0a391bacd0100cd4c91b1e4bcb99</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:30:24</sys_created_on>
+                        <sys_id>2eed0eb91bacd0100cd4c91b1e4bcb11</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:30:24</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>renderer</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:41">99dc0a391bacd0100cd4c91b1e4bcb99</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:25:41</sys_created_on>
+                        <sys_id>51dc0a391bacd0100cd4c91b1e4bcb9a</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:25:41</sys_updated_on>
+                        <value>com.glide.ui.portal.RenderReport</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>is_using_database_view</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:41">99dc0a391bacd0100cd4c91b1e4bcb99</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:25:41</sys_created_on>
+                        <sys_id>55dc0a391bacd0100cd4c91b1e4bcb9b</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:25:41</sys_updated_on>
+                        <value>false</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>report_type</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:41">99dc0a391bacd0100cd4c91b1e4bcb99</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:25:41</sys_created_on>
+                        <sys_id>5ddc0a391bacd0100cd4c91b1e4bcb9a</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:25:41</sys_updated_on>
+                        <value>single_score</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_subscribe</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:41">99dc0a391bacd0100cd4c91b1e4bcb99</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:25:41</sys_created_on>
+                        <sys_id>99dc0a391bacd0100cd4c91b1e4bcb9a</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:25:41</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_real_time</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:41">99dc0a391bacd0100cd4c91b1e4bcb99</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:25:41</sys_created_on>
+                        <sys_id>d5dc0a391bacd0100cd4c91b1e4bcb9a</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:25:41</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                </related_items_node>
+            </sys_portal>
+            <sys_portal action="INSERT_OR_UPDATE">
+                <dropzone/>
+                <offset/>
+                <page display_value="PA Patient Health Monit - New Tab">6f9cc2391bacd0100cd4c91b1e4bcba6</page>
+                <summary>Patient City</summary>
+                <sys_created_by>rlochan</sys_created_by>
+                <sys_created_on>2020-05-04 01:44:45</sys_created_on>
+                <sys_id>a7ee56b51b2014100cd4c91b1e4bcbae</sys_id>
+                <sys_mod_count>1</sys_mod_count>
+                <sys_updated_by>rlochan</sys_updated_by>
+                <sys_updated_on>2020-05-04 01:44:45</sys_updated_on>
+                <related_items_node>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_publish</name>
+                        <portal_section display_value="Created 2020-05-03 18:44:45">a7ee56b51b2014100cd4c91b1e4bcbae</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 01:44:45</sys_created_on>
+                        <sys_id>23ee56b51b2014100cd4c91b1e4bcbaf</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:44:45</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 2020-05-03 18:44:45">a7ee56b51b2014100cd4c91b1e4bcbae</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 01:44:45</sys_created_on>
+                        <sys_id>2bee56b51b2014100cd4c91b1e4bcbae</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:44:45</sys_updated_on>
+                        <value>aaae9e751b2014100cd4c91b1e4bcb37</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>renderer</name>
+                        <portal_section display_value="Created 2020-05-03 18:44:45">a7ee56b51b2014100cd4c91b1e4bcbae</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 01:44:45</sys_created_on>
+                        <sys_id>6fee56b51b2014100cd4c91b1e4bcbae</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:44:45</sys_updated_on>
+                        <value>com.glideapp.home.RenderHomepagePublishers</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title</name>
+                        <portal_section display_value="Created 2020-05-03 18:44:45">a7ee56b51b2014100cd4c91b1e4bcbae</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 01:44:45</sys_created_on>
+                        <sys_id>a7ee56b51b2014100cd4c91b1e4bcbaf</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:44:45</sys_updated_on>
+                        <value>Patient City</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>publisher_widget</name>
+                        <portal_section display_value="Created 2020-05-03 18:44:45">a7ee56b51b2014100cd4c91b1e4bcbae</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 01:44:45</sys_created_on>
+                        <sys_id>e3ee56b51b2014100cd4c91b1e4bcbaf</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:44:45</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>type</name>
+                        <portal_section display_value="Created 2020-05-03 18:44:45">a7ee56b51b2014100cd4c91b1e4bcbae</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 01:44:45</sys_created_on>
+                        <sys_id>ebee56b51b2014100cd4c91b1e4bcbaf</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:44:45</sys_updated_on>
+                        <value>1</value>
+                    </sys_portal_preferences>
+                </related_items_node>
+            </sys_portal>
+            <sys_portal action="INSERT_OR_UPDATE">
+                <dropzone/>
+                <offset/>
+                <page display_value="PA Patient Health Monit - New Tab">6f9cc2391bacd0100cd4c91b1e4bcba6</page>
+                <summary>Total Confirmed Infected Per City</summary>
+                <sys_created_by>rlochan</sys_created_by>
+                <sys_created_on>2020-05-04 01:54:26</sys_created_on>
+                <sys_id>d92162b91b2014100cd4c91b1e4bcb4a</sys_id>
+                <sys_mod_count>1</sys_mod_count>
+                <sys_updated_by>rlochan</sys_updated_by>
+                <sys_updated_on>2020-05-04 01:54:26</sys_updated_on>
+                <related_items_node>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_publish</name>
+                        <portal_section display_value="Created 2020-05-03 18:54:26">d92162b91b2014100cd4c91b1e4bcb4a</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 01:54:26</sys_created_on>
+                        <sys_id>192162b91b2014100cd4c91b1e4bcb4b</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:54:26</sys_updated_on>
+                        <value>false</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title</name>
+                        <portal_section display_value="Created 2020-05-03 18:54:26">d92162b91b2014100cd4c91b1e4bcb4a</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 01:54:26</sys_created_on>
+                        <sys_id>512162b91b2014100cd4c91b1e4bcb4c</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:54:26</sys_updated_on>
+                        <value>Total Confirmed Infected Per City</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>help_text_window</name>
+                        <portal_section display_value="Created 2020-05-03 18:54:26">d92162b91b2014100cd4c91b1e4bcb4a</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 01:54:26</sys_created_on>
+                        <sys_id>552162b91b2014100cd4c91b1e4bcb4b</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:54:26</sys_updated_on>
+                        <value>report_widget_description</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 2020-05-03 18:54:26">d92162b91b2014100cd4c91b1e4bcb4a</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 01:54:26</sys_created_on>
+                        <sys_id>5d2162b91b2014100cd4c91b1e4bcb4a</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:54:26</sys_updated_on>
+                        <value>a8cf1ef51b2014100cd4c91b1e4bcbbd</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>show_header</name>
+                        <portal_section display_value="Created 2020-05-03 18:54:26">d92162b91b2014100cd4c91b1e4bcb4a</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 02:07:35</sys_created_on>
+                        <sys_id>712466fd1b2014100cd4c91b1e4bcba2</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 02:07:35</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>subscriber_widget</name>
+                        <portal_section display_value="Created 2020-05-03 18:54:26">d92162b91b2014100cd4c91b1e4bcb4a</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 02:07:35</sys_created_on>
+                        <sys_id>712466fd1b2014100cd4c91b1e4bcba3</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 02:07:35</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title_align</name>
+                        <portal_section display_value="Created 2020-05-03 18:54:26">d92162b91b2014100cd4c91b1e4bcb4a</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 02:07:35</sys_created_on>
+                        <sys_id>752466fd1b2014100cd4c91b1e4bcba2</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 02:07:35</sys_updated_on>
+                        <value>left</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>filter_indicator</name>
+                        <portal_section display_value="Created 2020-05-03 18:54:26">d92162b91b2014100cd4c91b1e4bcb4a</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 02:07:35</sys_created_on>
+                        <sys_id>752466fd1b2014100cd4c91b1e4bcba3</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 02:07:35</sys_updated_on>
+                        <value>false</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>show_border</name>
+                        <portal_section display_value="Created 2020-05-03 18:54:26">d92162b91b2014100cd4c91b1e4bcb4a</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 02:07:35</sys_created_on>
+                        <sys_id>792466fd1b2014100cd4c91b1e4bcba2</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 02:07:35</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>real_time</name>
+                        <portal_section display_value="Created 2020-05-03 18:54:26">d92162b91b2014100cd4c91b1e4bcb4a</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 02:07:35</sys_created_on>
+                        <sys_id>792466fd1b2014100cd4c91b1e4bcba3</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 02:07:35</sys_updated_on>
+                        <value>false</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>show_title</name>
+                        <portal_section display_value="Created 2020-05-03 18:54:26">d92162b91b2014100cd4c91b1e4bcb4a</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 02:07:35</sys_created_on>
+                        <sys_id>7d2466fd1b2014100cd4c91b1e4bcba1</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 02:07:35</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>publisher_widget</name>
+                        <portal_section display_value="Created 2020-05-03 18:54:26">d92162b91b2014100cd4c91b1e4bcb4a</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 02:07:35</sys_created_on>
+                        <sys_id>7d2466fd1b2014100cd4c91b1e4bcba2</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 02:07:35</sys_updated_on>
+                        <value>false</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>renderer</name>
+                        <portal_section display_value="Created 2020-05-03 18:54:26">d92162b91b2014100cd4c91b1e4bcb4a</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 01:54:26</sys_created_on>
+                        <sys_id>912162b91b2014100cd4c91b1e4bcb4b</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:54:26</sys_updated_on>
+                        <value>com.glide.ui.portal.RenderReport</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>is_using_database_view</name>
+                        <portal_section display_value="Created 2020-05-03 18:54:26">d92162b91b2014100cd4c91b1e4bcb4a</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 01:54:26</sys_created_on>
+                        <sys_id>952162b91b2014100cd4c91b1e4bcb4c</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:54:26</sys_updated_on>
+                        <value/>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>report_type</name>
+                        <portal_section display_value="Created 2020-05-03 18:54:26">d92162b91b2014100cd4c91b1e4bcb4a</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 01:54:26</sys_created_on>
+                        <sys_id>9d2162b91b2014100cd4c91b1e4bcb4b</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:54:26</sys_updated_on>
+                        <value>horizontal_bar</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_subscribe</name>
+                        <portal_section display_value="Created 2020-05-03 18:54:26">d92162b91b2014100cd4c91b1e4bcb4a</portal_section>
+                        <sys_created_by>rlochan</sys_created_by>
+                        <sys_created_on>2020-05-04 01:54:26</sys_created_on>
+                        <sys_id>d92162b91b2014100cd4c91b1e4bcb4b</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>rlochan</sys_updated_by>
+                        <sys_updated_on>2020-05-04 01:54:26</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                </related_items_node>
+            </sys_portal>
+            <sys_portal action="INSERT_OR_UPDATE">
+                <dropzone/>
+                <offset/>
+                <page display_value="PA Patient Health Monit - New Tab">6f9cc2391bacd0100cd4c91b1e4bcba6</page>
+                <summary>Less Likely Infected with Covid-19</summary>
+                <sys_created_by>mmoody</sys_created_by>
+                <sys_created_on>2020-05-04 00:25:46</sys_created_on>
+                <sys_id>dadc4a391bacd0100cd4c91b1e4bcb0f</sys_id>
+                <sys_mod_count>1</sys_mod_count>
+                <sys_updated_by>mmoody</sys_updated_by>
+                <sys_updated_on>2020-05-04 00:25:46</sys_updated_on>
+                <related_items_node>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_real_time</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:46">dadc4a391bacd0100cd4c91b1e4bcb0f</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:25:46</sys_created_on>
+                        <sys_id>1adc4a391bacd0100cd4c91b1e4bcb10</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:25:46</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>show_border</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:46">dadc4a391bacd0100cd4c91b1e4bcb0f</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:30:17</sys_created_on>
+                        <sys_id>20edcab91bacd0100cd4c91b1e4bcb62</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:30:17</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>real_time</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:46">dadc4a391bacd0100cd4c91b1e4bcb0f</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:30:17</sys_created_on>
+                        <sys_id>20edcab91bacd0100cd4c91b1e4bcb63</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:30:17</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>show_title</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:46">dadc4a391bacd0100cd4c91b1e4bcb0f</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:30:17</sys_created_on>
+                        <sys_id>24edcab91bacd0100cd4c91b1e4bcb61</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:30:16</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>publisher_widget</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:46">dadc4a391bacd0100cd4c91b1e4bcb0f</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:30:17</sys_created_on>
+                        <sys_id>24edcab91bacd0100cd4c91b1e4bcb62</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:30:17</sys_updated_on>
+                        <value>false</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>show_header</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:46">dadc4a391bacd0100cd4c91b1e4bcb0f</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:30:17</sys_created_on>
+                        <sys_id>28edcab91bacd0100cd4c91b1e4bcb61</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:30:17</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>subscriber_widget</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:46">dadc4a391bacd0100cd4c91b1e4bcb0f</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:30:17</sys_created_on>
+                        <sys_id>28edcab91bacd0100cd4c91b1e4bcb62</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:30:17</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title_align</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:46">dadc4a391bacd0100cd4c91b1e4bcb0f</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:30:17</sys_created_on>
+                        <sys_id>2cedcab91bacd0100cd4c91b1e4bcb61</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:30:17</sys_updated_on>
+                        <value>left</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>filter_indicator</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:46">dadc4a391bacd0100cd4c91b1e4bcb0f</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:30:17</sys_created_on>
+                        <sys_id>2cedcab91bacd0100cd4c91b1e4bcb62</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:30:17</sys_updated_on>
+                        <value>false</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>help_text_window</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:46">dadc4a391bacd0100cd4c91b1e4bcb0f</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:25:46</sys_created_on>
+                        <sys_id>56dc4a391bacd0100cd4c91b1e4bcb10</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:25:46</sys_updated_on>
+                        <value>report_widget_description</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:46">dadc4a391bacd0100cd4c91b1e4bcb0f</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:25:46</sys_created_on>
+                        <sys_id>5edc4a391bacd0100cd4c91b1e4bcb0f</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:25:46</sys_updated_on>
+                        <value>82190a351bacd0100cd4c91b1e4bcb1a</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:46">dadc4a391bacd0100cd4c91b1e4bcb0f</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:25:46</sys_created_on>
+                        <sys_id>62dc4a391bacd0100cd4c91b1e4bcb11</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:25:46</sys_updated_on>
+                        <value>Less Likely Infected with Covid-19</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>renderer</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:46">dadc4a391bacd0100cd4c91b1e4bcb0f</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:25:46</sys_created_on>
+                        <sys_id>92dc4a391bacd0100cd4c91b1e4bcb10</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:25:46</sys_updated_on>
+                        <value>com.glide.ui.portal.RenderReport</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>is_using_database_view</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:46">dadc4a391bacd0100cd4c91b1e4bcb0f</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:25:46</sys_created_on>
+                        <sys_id>a6dc4a391bacd0100cd4c91b1e4bcb11</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:25:46</sys_updated_on>
+                        <value>false</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>report_type</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:46">dadc4a391bacd0100cd4c91b1e4bcb0f</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:25:46</sys_created_on>
+                        <sys_id>aedc4a391bacd0100cd4c91b1e4bcb10</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:25:46</sys_updated_on>
+                        <value>single_score</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_subscribe</name>
+                        <portal_section display_value="Created 2020-05-03 17:25:46">dadc4a391bacd0100cd4c91b1e4bcb0f</portal_section>
+                        <sys_created_by>mmoody</sys_created_by>
+                        <sys_created_on>2020-05-04 00:25:46</sys_created_on>
+                        <sys_id>eadc4a391bacd0100cd4c91b1e4bcb10</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>mmoody</sys_updated_by>
+                        <sys_updated_on>2020-05-04 00:25:46</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                </related_items_node>
+            </sys_portal>
+        </related_items_node>
+    </sys_portal_page>
+</record_update>

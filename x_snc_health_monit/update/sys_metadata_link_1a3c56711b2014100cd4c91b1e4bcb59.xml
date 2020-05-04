@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>456b5efd1becd0100cd4c91b1e4bcbf3</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_trigger">
+    <sys_trigger action="INSERT_OR_UPDATE">
+        <application/>
+        <business_calendar/>
+        <calendar/>
+        <claimed_by/>
+        <document/>
+        <document_key/>
+        <entered_time>1970-01-01 00:00:00</entered_time>
+        <error_count>0</error_count>
+        <job_context>#Sun May 03 18:29:50 PDT 2020&#13;
+fcScriptName=javascript\:GlideEventManager('x_snc_health_monit_generate_observations').process();</job_context>
+        <job_id display_value="RunScriptJob">81c92ce9c0a8016400e5f0d2f784ea78</job_id>
+        <last_error/>
+        <log>false</log>
+        <maintenance>false</maintenance>
+        <max_drift/>
+        <name>x_snc_health_monit_generate_observations</name>
+        <next_action>2020-05-04 01:31:14</next_action>
+        <parent/>
+        <priority>100</priority>
+        <processing_duration>0</processing_duration>
+        <repeat>1970-01-01 00:00:02</repeat>
+        <replication_originator/>
+        <rollback_context_id/>
+        <run_count>0</run_count>
+        <run_dayofmonth/>
+        <run_dayofweek>1</run_dayofweek>
+        <run_month>1</run_month>
+        <run_time>1970-01-01 08:00:00</run_time>
+        <run_weekinmonth>1</run_weekinmonth>
+        <script/>
+        <state>0</state>
+        <sys_created_by>mmoody</sys_created_by>
+        <sys_created_on>2020-05-04 01:31:12</sys_created_on>
+        <sys_id>456b5efd1becd0100cd4c91b1e4bcbf3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>mmoody</sys_updated_by>
+        <sys_updated_on>2020-05-04 01:31:12</sys_updated_on>
+        <system_id>ALL NODES</system_id>
+        <time_zone/>
+        <trigger_class>DEFAULT</trigger_class>
+        <trigger_type>10</trigger_type>
+        <upgrade_safe>false</upgrade_safe>
+    </sys_trigger>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>mmoody</sys_created_by>
+        <sys_created_on>2020-05-04 01:32:55</sys_created_on>
+        <sys_id>1a3c56711b2014100cd4c91b1e4bcb59</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_health_monit_generate_observations</sys_name>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sys_metadata_link_1a3c56711b2014100cd4c91b1e4bcb59</sys_update_name>
+        <sys_updated_by>mmoody</sys_updated_by>
+        <sys_updated_on>2020-05-04 01:32:55</sys_updated_on>
+        <tablename>sys_trigger</tablename>
+    </sys_metadata_link>
+</record_update>

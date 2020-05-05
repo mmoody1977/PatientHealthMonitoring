@@ -1012,8 +1012,8 @@ canvas {&#13;
     data.recs = getMatchingRecords(input, data, null, null, true);
     function getMatchingRecords(input, data, startPage, endPage, getAllRecs) {
         var records = [];
-        data.orderBy = "sys_created_on";
-        data.orderByDesc = true;
+        data.orderBy = "name";
+        data.orderByDesc = false;
         // Set Platform Link
         data.link = "/nav_to.do?url=/" + data.table + "_list.do?sysparm_query=" + String(data.encodedQuery);
         data.fast_link = "/nav_to.do?url=/" + data.table + "_list.do?sysparm_query=" + String(data.fastQuery);
@@ -1227,14 +1227,14 @@ canvas {&#13;
         <sys_created_by>mmoody</sys_created_by>
         <sys_created_on>2020-05-02 05:04:04</sys_created_on>
         <sys_id>7558b41d1b2850100cd4c91b1e4bcb7c</sys_id>
-        <sys_mod_count>331</sys_mod_count>
+        <sys_mod_count>332</sys_mod_count>
         <sys_name>Patient Details</sys_name>
         <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
         <sys_policy/>
         <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
         <sys_update_name>sp_widget_7558b41d1b2850100cd4c91b1e4bcb7c</sys_update_name>
         <sys_updated_by>mmoody</sys_updated_by>
-        <sys_updated_on>2020-05-04 17:39:27</sys_updated_on>
+        <sys_updated_on>2020-05-05 00:10:06</sys_updated_on>
         <template><![CDATA[<div class="panel panel-default">
     <div class="panel-heading"> <a href="{{data.link}}">{{data.title}} ({{data.totalRecords}})</a>
         <div class="btn-group pull-right" role="group">

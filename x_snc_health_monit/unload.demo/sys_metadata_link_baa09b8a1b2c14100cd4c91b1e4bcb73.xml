@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload.demo</directory>
+        <documentkey>73f0d2911bec50100cd4c91b1e4bcb9e</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_snc_health_monit_observations">
+    <x_snc_health_monit_observations action="INSERT_OR_UPDATE">
+        <code display_value="59576-9">f79ee15d1be850100cd4c91b1e4bcbd1</code>
+        <description>Body mass index (BMI) [Percentile] Per age and gender</description>
+        <encounter_id>d959352c-9af9-4c86-8459-50db08c370f5</encounter_id>
+        <live>false</live>
+        <observation_date>2016-08-13 05:32:00</observation_date>
+        <patient display_value="Adam631">5b947fc11b6450100cd4c91b1e4bcb28</patient>
+        <sys_created_by>rlochan</sys_created_by>
+        <sys_created_on>2020-05-02 11:26:55</sys_created_on>
+        <sys_id>73f0d2911bec50100cd4c91b1e4bcb9e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>rlochan</sys_updated_by>
+        <sys_updated_on>2020-05-02 22:40:25</sys_updated_on>
+        <units>%</units>
+        <value>23.6</value>
+    </x_snc_health_monit_observations>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>mmoody</sys_created_by>
+        <sys_created_on>2020-05-05 00:00:32</sys_created_on>
+        <sys_id>baa09b8a1b2c14100cd4c91b1e4bcb73</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Created 2020-05-02 04:26:55</sys_name>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sys_metadata_link_baa09b8a1b2c14100cd4c91b1e4bcb73</sys_update_name>
+        <sys_updated_by>mmoody</sys_updated_by>
+        <sys_updated_on>2020-05-05 00:00:32</sys_updated_on>
+        <tablename>x_snc_health_monit_observations</tablename>
+    </sys_metadata_link>
+</record_update>

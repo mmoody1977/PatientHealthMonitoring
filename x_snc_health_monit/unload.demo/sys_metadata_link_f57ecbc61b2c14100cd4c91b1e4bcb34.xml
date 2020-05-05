@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload.demo</directory>
+        <documentkey>d8c473051b6450100cd4c91b1e4bcb1a</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_snc_health_monit_patient_details">
+    <x_snc_health_monit_patient_details action="INSERT_OR_UPDATE">
+        <address>300 Gulgowski Dale</address>
+        <city>Chelsea</city>
+        <covid_mortality_risk>13.2</covid_mortality_risk>
+        <drivers_license/>
+        <first_name>Albert312</first_name>
+        <gender>M</gender>
+        <last_covid_test>Positive</last_covid_test>
+        <last_name>Kshlerin58</last_name>
+        <name>Albert312 Kshlerin58</name>
+        <passport/>
+        <patiend_id>b16ca449-bc14-4619-a936-07f6f3db7119</patiend_id>
+        <race>black</race>
+        <risk_calculated/>
+        <risk_level>High</risk_level>
+        <ssn>999-50-5286</ssn>
+        <state>Massachusetts</state>
+        <sys_created_by>rlochan</sys_created_by>
+        <sys_created_on>2020-05-02 00:04:17</sys_created_on>
+        <sys_id>d8c473051b6450100cd4c91b1e4bcb1a</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>rlochan</sys_updated_by>
+        <sys_updated_on>2020-05-03 06:36:10</sys_updated_on>
+    </x_snc_health_monit_patient_details>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>mmoody</sys_created_by>
+        <sys_created_on>2020-05-04 23:50:55</sys_created_on>
+        <sys_id>f57ecbc61b2c14100cd4c91b1e4bcb34</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Albert312</sys_name>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sys_metadata_link_f57ecbc61b2c14100cd4c91b1e4bcb34</sys_update_name>
+        <sys_updated_by>mmoody</sys_updated_by>
+        <sys_updated_on>2020-05-04 23:50:55</sys_updated_on>
+        <tablename>x_snc_health_monit_patient_details</tablename>
+    </sys_metadata_link>
+</record_update>

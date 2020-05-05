@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload.demo</directory>
+        <documentkey>bfcb94d91be450100cd4c91b1e4bcb60</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_snc_health_monit_immunizations">
+    <x_snc_health_monit_immunizations action="INSERT_OR_UPDATE">
+        <code display_value="114">db6ec8d51ba450100cd4c91b1e4bcb56</code>
+        <date>2017-10-20</date>
+        <description>meningococcal MCV4P</description>
+        <encounter>bd9752e1-08a6-4d85-8f3d-6494c2ff962b</encounter>
+        <patient display_value="Al123">34a47fc11b6450100cd4c91b1e4bcbfe</patient>
+        <sys_created_by>rlochan</sys_created_by>
+        <sys_created_on>2020-05-02 02:54:55</sys_created_on>
+        <sys_id>bfcb94d91be450100cd4c91b1e4bcb60</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>rlochan</sys_updated_by>
+        <sys_updated_on>2020-05-02 02:54:55</sys_updated_on>
+    </x_snc_health_monit_immunizations>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>mmoody</sys_created_by>
+        <sys_created_on>2020-05-04 23:51:45</sys_created_on>
+        <sys_id>46ae8fc61b2c14100cd4c91b1e4bcb06</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Created 2020-05-01 19:54:55</sys_name>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sys_metadata_link_46ae8fc61b2c14100cd4c91b1e4bcb06</sys_update_name>
+        <sys_updated_by>mmoody</sys_updated_by>
+        <sys_updated_on>2020-05-04 23:51:45</sys_updated_on>
+        <tablename>x_snc_health_monit_immunizations</tablename>
+    </sys_metadata_link>
+</record_update>

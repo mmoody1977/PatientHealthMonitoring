@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload.demo</directory>
+        <documentkey>67b433051b6450100cd4c91b1e4bcbae</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_snc_health_monit_patient_details">
+    <x_snc_health_monit_patient_details action="INSERT_OR_UPDATE">
+        <address>707 Gaylord Glen Suite 95</address>
+        <city>Shrewsbury</city>
+        <covid_mortality_risk>66</covid_mortality_risk>
+        <drivers_license/>
+        <first_name>Alexandra16</first_name>
+        <gender>F</gender>
+        <last_covid_test>Negative</last_covid_test>
+        <last_name>Witting912</last_name>
+        <name>Alexandra16 Witting912</name>
+        <passport/>
+        <patiend_id>ac6253d5-c80b-444f-8e1b-e4b8b7a425f1</patiend_id>
+        <race>black</race>
+        <risk_calculated/>
+        <risk_level>High</risk_level>
+        <ssn>999-82-4750</ssn>
+        <state>Massachusetts</state>
+        <sys_created_by>rlochan</sys_created_by>
+        <sys_created_on>2020-05-02 00:04:14</sys_created_on>
+        <sys_id>67b433051b6450100cd4c91b1e4bcbae</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_updated_by>rlochan</sys_updated_by>
+        <sys_updated_on>2020-05-04 02:52:43</sys_updated_on>
+    </x_snc_health_monit_patient_details>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>mmoody</sys_created_by>
+        <sys_created_on>2020-05-04 23:57:54</sys_created_on>
+        <sys_id>84109f4a1b2c14100cd4c91b1e4bcb2f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Alexandra16</sys_name>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sys_metadata_link_84109f4a1b2c14100cd4c91b1e4bcb2f</sys_update_name>
+        <sys_updated_by>mmoody</sys_updated_by>
+        <sys_updated_on>2020-05-04 23:57:54</sys_updated_on>
+        <tablename>x_snc_health_monit_patient_details</tablename>
+    </sys_metadata_link>
+</record_update>

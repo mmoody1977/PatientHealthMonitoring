@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload.demo</directory>
+        <documentkey>02b4ffc11b6450100cd4c91b1e4bcbfa</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_snc_health_monit_patient_details">
+    <x_snc_health_monit_patient_details action="INSERT_OR_UPDATE">
+        <address>803 Raynor Neck Unit 39</address>
+        <city>Clinton</city>
+        <covid_mortality_risk>76.2</covid_mortality_risk>
+        <drivers_license>S99985250</drivers_license>
+        <first_name>Augustine565</first_name>
+        <gender>M</gender>
+        <last_covid_test>Negative</last_covid_test>
+        <last_name>Emard19</last_name>
+        <name>Augustine565 Emard19</name>
+        <passport>X11375394X</passport>
+        <patiend_id>e98f6994-bee2-4238-bc9d-1997dd5a4260</patiend_id>
+        <race>white</race>
+        <risk_calculated/>
+        <risk_level>High</risk_level>
+        <ssn>999-26-8999</ssn>
+        <state>Massachusetts</state>
+        <sys_created_by>rlochan</sys_created_by>
+        <sys_created_on>2020-05-02 00:04:07</sys_created_on>
+        <sys_id>02b4ffc11b6450100cd4c91b1e4bcbfa</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>rlochan</sys_updated_by>
+        <sys_updated_on>2020-05-03 06:37:06</sys_updated_on>
+    </x_snc_health_monit_patient_details>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>mmoody</sys_created_by>
+        <sys_created_on>2020-05-04 23:57:50</sys_created_on>
+        <sys_id>c7005f4a1b2c14100cd4c91b1e4bcb99</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Augustine565</sys_name>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sys_metadata_link_c7005f4a1b2c14100cd4c91b1e4bcb99</sys_update_name>
+        <sys_updated_by>mmoody</sys_updated_by>
+        <sys_updated_on>2020-05-04 23:57:50</sys_updated_on>
+        <tablename>x_snc_health_monit_patient_details</tablename>
+    </sys_metadata_link>
+</record_update>

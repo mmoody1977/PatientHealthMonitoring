@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload.demo</directory>
+        <documentkey>dcc473051b6450100cd4c91b1e4bcb22</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_snc_health_monit_patient_details">
+    <x_snc_health_monit_patient_details action="INSERT_OR_UPDATE">
+        <address>687 Heidenreich Loaf</address>
+        <city>North Brookfield</city>
+        <covid_mortality_risk>76.2</covid_mortality_risk>
+        <drivers_license>S99951461</drivers_license>
+        <first_name>Armand155</first_name>
+        <gender>M</gender>
+        <last_covid_test>Positive</last_covid_test>
+        <last_name>Grady603</last_name>
+        <name>Armand155 Grady603</name>
+        <passport>X32692852X</passport>
+        <patiend_id>92b4bd25-f752-49fe-b248-a3e4b0e89d2a</patiend_id>
+        <race>white</race>
+        <risk_calculated/>
+        <risk_level>Medium</risk_level>
+        <ssn>999-57-9074</ssn>
+        <state>Massachusetts</state>
+        <sys_created_by>rlochan</sys_created_by>
+        <sys_created_on>2020-05-02 00:04:17</sys_created_on>
+        <sys_id>dcc473051b6450100cd4c91b1e4bcb22</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_updated_by>rlochan</sys_updated_by>
+        <sys_updated_on>2020-05-04 02:52:06</sys_updated_on>
+    </x_snc_health_monit_patient_details>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>mmoody</sys_created_by>
+        <sys_created_on>2020-05-04 23:57:57</sys_created_on>
+        <sys_id>fc109f4a1b2c14100cd4c91b1e4bcb92</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Armand155</sys_name>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sys_metadata_link_fc109f4a1b2c14100cd4c91b1e4bcb92</sys_update_name>
+        <sys_updated_by>mmoody</sys_updated_by>
+        <sys_updated_on>2020-05-04 23:57:57</sys_updated_on>
+        <tablename>x_snc_health_monit_patient_details</tablename>
+    </sys_metadata_link>
+</record_update>

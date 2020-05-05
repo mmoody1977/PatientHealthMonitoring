@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload.demo</directory>
+        <documentkey>0d1c901d1be450100cd4c91b1e4bcb72</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_snc_health_monit_immunizations">
+    <x_snc_health_monit_immunizations action="INSERT_OR_UPDATE">
+        <code display_value="21">a76ec8d51ba450100cd4c91b1e4bcbb6</code>
+        <date>1994-07-11</date>
+        <description>MMR</description>
+        <encounter>c8ee7ea9-a710-4b46-b589-ed26fcf6620b</encounter>
+        <patient display_value="Agueda283">cdb4ffc11b6450100cd4c91b1e4bcb8f</patient>
+        <sys_created_by>rlochan</sys_created_by>
+        <sys_created_on>2020-05-02 02:56:06</sys_created_on>
+        <sys_id>0d1c901d1be450100cd4c91b1e4bcb72</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>rlochan</sys_updated_by>
+        <sys_updated_on>2020-05-02 02:56:06</sys_updated_on>
+    </x_snc_health_monit_immunizations>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>mmoody</sys_created_by>
+        <sys_created_on>2020-05-04 23:51:42</sys_created_on>
+        <sys_id>55ae4fc61b2c14100cd4c91b1e4bcb46</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Created 2020-05-01 19:56:06</sys_name>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sys_metadata_link_55ae4fc61b2c14100cd4c91b1e4bcb46</sys_update_name>
+        <sys_updated_by>mmoody</sys_updated_by>
+        <sys_updated_on>2020-05-04 23:51:42</sys_updated_on>
+        <tablename>x_snc_health_monit_immunizations</tablename>
+    </sys_metadata_link>
+</record_update>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload.demo</directory>
+        <documentkey>34b4ffc11b6450100cd4c91b1e4bcb7c</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_snc_health_monit_patient_details">
+    <x_snc_health_monit_patient_details action="INSERT_OR_UPDATE">
+        <address>314 Haag Orchard Suite 76</address>
+        <city>Weymouth</city>
+        <covid_mortality_risk/>
+        <drivers_license>S99967390</drivers_license>
+        <first_name>Awilda854</first_name>
+        <gender>F</gender>
+        <last_covid_test>Positive</last_covid_test>
+        <last_name>Skiles927</last_name>
+        <name>Awilda854 Skiles927</name>
+        <passport>X48732104X</passport>
+        <patiend_id>9ab883b3-d1dd-4120-b19c-e78d3ea8c25c</patiend_id>
+        <race>white</race>
+        <risk_calculated/>
+        <risk_level>High</risk_level>
+        <ssn>999-68-4955</ssn>
+        <state>Massachusetts</state>
+        <sys_created_by>rlochan</sys_created_by>
+        <sys_created_on>2020-05-02 00:04:03</sys_created_on>
+        <sys_id>34b4ffc11b6450100cd4c91b1e4bcb7c</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_updated_by>rlochan</sys_updated_by>
+        <sys_updated_on>2020-05-03 06:36:54</sys_updated_on>
+    </x_snc_health_monit_patient_details>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>mmoody</sys_created_by>
+        <sys_created_on>2020-05-04 23:57:52</sys_created_on>
+        <sys_id>27005f4a1b2c14100cd4c91b1e4bcbda</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Awilda854</sys_name>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sys_metadata_link_27005f4a1b2c14100cd4c91b1e4bcbda</sys_update_name>
+        <sys_updated_by>mmoody</sys_updated_by>
+        <sys_updated_on>2020-05-04 23:57:52</sys_updated_on>
+        <tablename>x_snc_health_monit_patient_details</tablename>
+    </sys_metadata_link>
+</record_update>

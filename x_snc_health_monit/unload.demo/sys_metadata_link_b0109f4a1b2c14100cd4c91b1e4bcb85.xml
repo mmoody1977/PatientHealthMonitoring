@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload.demo</directory>
+        <documentkey>c4b4ffc11b6450100cd4c91b1e4bcb2e</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_snc_health_monit_patient_details">
+    <x_snc_health_monit_patient_details action="INSERT_OR_UPDATE">
+        <address>820 Mante Throughway</address>
+        <city>Medford</city>
+        <covid_mortality_risk>13.2</covid_mortality_risk>
+        <drivers_license>S99918844</drivers_license>
+        <first_name>Alton320</first_name>
+        <gender>M</gender>
+        <last_covid_test>Positive</last_covid_test>
+        <last_name>Bauch723</last_name>
+        <name>Alton320 Bauch723</name>
+        <passport>X30644787X</passport>
+        <patiend_id>e521bdba-f8ca-4cf9-9c4d-ade83f63e496</patiend_id>
+        <race>asian</race>
+        <risk_calculated/>
+        <risk_level>Medium</risk_level>
+        <ssn>999-24-9609</ssn>
+        <state>Massachusetts</state>
+        <sys_created_by>rlochan</sys_created_by>
+        <sys_created_on>2020-05-02 00:03:59</sys_created_on>
+        <sys_id>c4b4ffc11b6450100cd4c91b1e4bcb2e</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>rlochan</sys_updated_by>
+        <sys_updated_on>2020-05-03 06:36:51</sys_updated_on>
+    </x_snc_health_monit_patient_details>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>mmoody</sys_created_by>
+        <sys_created_on>2020-05-04 23:57:57</sys_created_on>
+        <sys_id>b0109f4a1b2c14100cd4c91b1e4bcb85</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Alton320</sys_name>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sys_metadata_link_b0109f4a1b2c14100cd4c91b1e4bcb85</sys_update_name>
+        <sys_updated_by>mmoody</sys_updated_by>
+        <sys_updated_on>2020-05-04 23:57:57</sys_updated_on>
+        <tablename>x_snc_health_monit_patient_details</tablename>
+    </sys_metadata_link>
+</record_update>

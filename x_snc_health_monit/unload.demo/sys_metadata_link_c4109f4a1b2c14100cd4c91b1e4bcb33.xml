@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload.demo</directory>
+        <documentkey>6f947fc11b6450100cd4c91b1e4bcb52</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_snc_health_monit_patient_details">
+    <x_snc_health_monit_patient_details action="INSERT_OR_UPDATE">
+        <address>389 Beatty Plaza Apt 32</address>
+        <city>Milton</city>
+        <covid_mortality_risk>66</covid_mortality_risk>
+        <drivers_license>S99945838</drivers_license>
+        <first_name>Annalee788</first_name>
+        <gender>F</gender>
+        <last_covid_test>Positive</last_covid_test>
+        <last_name>Spencer878</last_name>
+        <name>Annalee788 Spencer878</name>
+        <passport>X55649009X</passport>
+        <patiend_id>a001f3e9-5955-4b52-bb83-99a791380c56</patiend_id>
+        <race>white</race>
+        <risk_calculated/>
+        <risk_level>Medium</risk_level>
+        <ssn>999-54-8544</ssn>
+        <state>Massachusetts</state>
+        <sys_created_by>rlochan</sys_created_by>
+        <sys_created_on>2020-05-02 00:03:41</sys_created_on>
+        <sys_id>6f947fc11b6450100cd4c91b1e4bcb52</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_updated_by>rlochan</sys_updated_by>
+        <sys_updated_on>2020-05-03 06:36:30</sys_updated_on>
+    </x_snc_health_monit_patient_details>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>mmoody</sys_created_by>
+        <sys_created_on>2020-05-04 23:57:54</sys_created_on>
+        <sys_id>c4109f4a1b2c14100cd4c91b1e4bcb33</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Annalee788</sys_name>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sys_metadata_link_c4109f4a1b2c14100cd4c91b1e4bcb33</sys_update_name>
+        <sys_updated_by>mmoody</sys_updated_by>
+        <sys_updated_on>2020-05-04 23:57:54</sys_updated_on>
+        <tablename>x_snc_health_monit_patient_details</tablename>
+    </sys_metadata_link>
+</record_update>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload.demo</directory>
+        <documentkey>aebb90d91be450100cd4c91b1e4bcbbf</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_snc_health_monit_immunizations">
+    <x_snc_health_monit_immunizations action="INSERT_OR_UPDATE">
+        <code display_value="140">976ec8d51ba450100cd4c91b1e4bcb55</code>
+        <date>2017-03-30</date>
+        <description>Influenza  seasonal  injectable  preservative free</description>
+        <encounter>dec6aeef-e3e9-4ba8-b198-d9059753444f</encounter>
+        <patient display_value="Adrian111">03947fc11b6450100cd4c91b1e4bcb1e</patient>
+        <sys_created_by>rlochan</sys_created_by>
+        <sys_created_on>2020-05-02 02:54:33</sys_created_on>
+        <sys_id>aebb90d91be450100cd4c91b1e4bcbbf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rlochan</sys_updated_by>
+        <sys_updated_on>2020-05-02 02:54:33</sys_updated_on>
+    </x_snc_health_monit_immunizations>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>mmoody</sys_created_by>
+        <sys_created_on>2020-05-04 23:51:45</sys_created_on>
+        <sys_id>b5ae4fc61b2c14100cd4c91b1e4bcbef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Created 2020-05-01 19:54:33</sys_name>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sys_metadata_link_b5ae4fc61b2c14100cd4c91b1e4bcbef</sys_update_name>
+        <sys_updated_by>mmoody</sys_updated_by>
+        <sys_updated_on>2020-05-04 23:51:45</sys_updated_on>
+        <tablename>x_snc_health_monit_immunizations</tablename>
+    </sys_metadata_link>
+</record_update>

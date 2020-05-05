@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload.demo</directory>
+        <documentkey>86943fc11b6450100cd4c91b1e4bcb36</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_snc_health_monit_patient_details">
+    <x_snc_health_monit_patient_details action="INSERT_OR_UPDATE">
+        <address>970 Grant Highlands</address>
+        <city>Foxborough</city>
+        <covid_mortality_risk>76.2</covid_mortality_risk>
+        <drivers_license>S99927965</drivers_license>
+        <first_name>Amada498</first_name>
+        <gender>F</gender>
+        <last_covid_test>Negative</last_covid_test>
+        <last_name>Reichert620</last_name>
+        <name>Amada498 Reichert620</name>
+        <passport>X70120330X</passport>
+        <patiend_id>2ffe9369-24e4-414b-8973-258fad09313a</patiend_id>
+        <race>white</race>
+        <risk_calculated/>
+        <risk_level>High</risk_level>
+        <ssn>999-76-2715</ssn>
+        <state>Massachusetts</state>
+        <sys_created_by>rlochan</sys_created_by>
+        <sys_created_on>2020-05-02 00:03:35</sys_created_on>
+        <sys_id>86943fc11b6450100cd4c91b1e4bcb36</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_updated_by>rlochan</sys_updated_by>
+        <sys_updated_on>2020-05-04 00:27:19</sys_updated_on>
+    </x_snc_health_monit_patient_details>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>mmoody</sys_created_by>
+        <sys_created_on>2020-05-04 23:57:55</sys_created_on>
+        <sys_id>10109f4a1b2c14100cd4c91b1e4bcb43</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Amada498</sys_name>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sys_metadata_link_10109f4a1b2c14100cd4c91b1e4bcb43</sys_update_name>
+        <sys_updated_by>mmoody</sys_updated_by>
+        <sys_updated_on>2020-05-04 23:57:55</sys_updated_on>
+        <tablename>x_snc_health_monit_patient_details</tablename>
+    </sys_metadata_link>
+</record_update>

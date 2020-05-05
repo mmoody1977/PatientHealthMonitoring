@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload.demo</directory>
+        <documentkey>9eb433051b6450100cd4c91b1e4bcb1f</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_snc_health_monit_patient_details">
+    <x_snc_health_monit_patient_details action="INSERT_OR_UPDATE">
+        <address>1064 Rath Dam</address>
+        <city>Plymouth</city>
+        <covid_mortality_risk>13.2</covid_mortality_risk>
+        <drivers_license>S99948866</drivers_license>
+        <first_name>Analisa263</first_name>
+        <gender>F</gender>
+        <last_covid_test>Positive</last_covid_test>
+        <last_name>Kiehn525</last_name>
+        <name>Analisa263 Kiehn525</name>
+        <passport>X27851199X</passport>
+        <patiend_id>4f0cc2f3-8492-41c9-ad38-f01219739df0</patiend_id>
+        <race>white</race>
+        <risk_calculated/>
+        <risk_level>Medium</risk_level>
+        <ssn>999-60-3312</ssn>
+        <state>Massachusetts</state>
+        <sys_created_by>rlochan</sys_created_by>
+        <sys_created_on>2020-05-02 00:04:09</sys_created_on>
+        <sys_id>9eb433051b6450100cd4c91b1e4bcb1f</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>rlochan</sys_updated_by>
+        <sys_updated_on>2020-05-03 06:36:27</sys_updated_on>
+    </x_snc_health_monit_patient_details>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>mmoody</sys_created_by>
+        <sys_created_on>2020-05-04 23:57:56</sys_created_on>
+        <sys_id>a8109f4a1b2c14100cd4c91b1e4bcb4f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Analisa263</sys_name>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sys_metadata_link_a8109f4a1b2c14100cd4c91b1e4bcb4f</sys_update_name>
+        <sys_updated_by>mmoody</sys_updated_by>
+        <sys_updated_on>2020-05-04 23:57:56</sys_updated_on>
+        <tablename>x_snc_health_monit_patient_details</tablename>
+    </sys_metadata_link>
+</record_update>

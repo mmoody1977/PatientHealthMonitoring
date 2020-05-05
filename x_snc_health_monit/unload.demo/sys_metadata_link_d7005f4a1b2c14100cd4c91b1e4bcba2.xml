@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload.demo</directory>
+        <documentkey>08b4ffc11b6450100cd4c91b1e4bcb39</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_snc_health_monit_patient_details">
+    <x_snc_health_monit_patient_details action="INSERT_OR_UPDATE">
+        <address>647 Tromp Path Unit 6</address>
+        <city>Boston</city>
+        <covid_mortality_risk>25</covid_mortality_risk>
+        <drivers_license>S99932582</drivers_license>
+        <first_name>Bao544</first_name>
+        <gender>F</gender>
+        <last_covid_test>Positive</last_covid_test>
+        <last_name>Gutmann970</last_name>
+        <name>Bao544 Gutmann970</name>
+        <passport>X33965515X</passport>
+        <patiend_id>ba756dea-d446-44aa-a3cd-304fcb047bee</patiend_id>
+        <race>white</race>
+        <risk_calculated/>
+        <risk_level>High</risk_level>
+        <ssn>999-23-1775</ssn>
+        <state>Massachusetts</state>
+        <sys_created_by>rlochan</sys_created_by>
+        <sys_created_on>2020-05-02 00:04:00</sys_created_on>
+        <sys_id>08b4ffc11b6450100cd4c91b1e4bcb39</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_updated_by>rlochan</sys_updated_by>
+        <sys_updated_on>2020-05-04 00:27:11</sys_updated_on>
+    </x_snc_health_monit_patient_details>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>mmoody</sys_created_by>
+        <sys_created_on>2020-05-04 23:57:50</sys_created_on>
+        <sys_id>d7005f4a1b2c14100cd4c91b1e4bcba2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Bao544</sys_name>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sys_metadata_link_d7005f4a1b2c14100cd4c91b1e4bcba2</sys_update_name>
+        <sys_updated_by>mmoody</sys_updated_by>
+        <sys_updated_on>2020-05-04 23:57:50</sys_updated_on>
+        <tablename>x_snc_health_monit_patient_details</tablename>
+    </sys_metadata_link>
+</record_update>

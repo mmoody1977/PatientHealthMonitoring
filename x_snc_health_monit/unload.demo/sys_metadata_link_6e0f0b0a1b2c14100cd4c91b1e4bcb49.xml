@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload.demo</directory>
+        <documentkey>9c485aa91b60d0100cd4c91b1e4bcb90</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_snc_health_monit_covid_test_analysis">
+    <x_snc_health_monit_covid_test_analysis action="INSERT_OR_UPDATE">
+        <covid_result>Negative</covid_result>
+        <covid_stat_ref display_value="COVSTAT0001594">d9c239211bec90100cd4c91b1e4bcb3b</covid_stat_ref>
+        <encounter_id>COVTES0002704</encounter_id>
+        <sys_created_by>rlochan</sys_created_by>
+        <sys_created_on>2020-05-03 06:37:06</sys_created_on>
+        <sys_id>9c485aa91b60d0100cd4c91b1e4bcb90</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rlochan</sys_updated_by>
+        <sys_updated_on>2020-05-03 06:37:06</sys_updated_on>
+        <test_datetime>2020-04-28 06:37:06</test_datetime>
+    </x_snc_health_monit_covid_test_analysis>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>mmoody</sys_created_by>
+        <sys_created_on>2020-05-04 23:53:26</sys_created_on>
+        <sys_id>6e0f0b0a1b2c14100cd4c91b1e4bcb49</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Created 2020-05-02 23:37:06</sys_name>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sys_metadata_link_6e0f0b0a1b2c14100cd4c91b1e4bcb49</sys_update_name>
+        <sys_updated_by>mmoody</sys_updated_by>
+        <sys_updated_on>2020-05-04 23:53:26</sys_updated_on>
+        <tablename>x_snc_health_monit_covid_test_analysis</tablename>
+    </sys_metadata_link>
+</record_update>

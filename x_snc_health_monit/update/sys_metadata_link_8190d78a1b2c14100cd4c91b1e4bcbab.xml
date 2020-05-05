@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>4801d2911bec50100cd4c91b1e4bcbbd</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_snc_health_monit_observations">
+    <x_snc_health_monit_observations action="INSERT_OR_UPDATE">
+        <code display_value="787-2">7f9ee15d1be850100cd4c91b1e4bcbf0</code>
+        <description>MCV [Entitic volume] by Automated count</description>
+        <encounter_id>932ad3e6-e9c0-4dc8-9e94-751b5c8c5f7a</encounter_id>
+        <live>false</live>
+        <observation_date>2018-08-25 05:32:00</observation_date>
+        <patient display_value="Adam631">5b947fc11b6450100cd4c91b1e4bcb28</patient>
+        <sys_created_by>rlochan</sys_created_by>
+        <sys_created_on>2020-05-02 11:26:56</sys_created_on>
+        <sys_id>4801d2911bec50100cd4c91b1e4bcbbd</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>rlochan</sys_updated_by>
+        <sys_updated_on>2020-05-02 22:40:26</sys_updated_on>
+        <units>fL</units>
+        <value>82.5</value>
+    </x_snc_health_monit_observations>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>mmoody</sys_created_by>
+        <sys_created_on>2020-05-05 00:00:09</sys_created_on>
+        <sys_id>8190d78a1b2c14100cd4c91b1e4bcbab</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Created 2020-05-02 04:26:56</sys_name>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sys_metadata_link_8190d78a1b2c14100cd4c91b1e4bcbab</sys_update_name>
+        <sys_updated_by>mmoody</sys_updated_by>
+        <sys_updated_on>2020-05-05 00:00:09</sys_updated_on>
+        <tablename>x_snc_health_monit_observations</tablename>
+    </sys_metadata_link>
+</record_update>

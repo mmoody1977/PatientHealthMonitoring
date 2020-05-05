@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload.demo</directory>
+        <documentkey>f5b4ffc11b6450100cd4c91b1e4bcbe9</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_snc_health_monit_patient_details">
+    <x_snc_health_monit_patient_details action="INSERT_OR_UPDATE">
+        <address>781 Bergnaum Boulevard</address>
+        <city>Chelmsford</city>
+        <covid_mortality_risk>76.2</covid_mortality_risk>
+        <drivers_license>S99970403</drivers_license>
+        <first_name>Alphonso102</first_name>
+        <gender>M</gender>
+        <last_covid_test>Positive</last_covid_test>
+        <last_name>Zulauf375</last_name>
+        <name>Alphonso102 Zulauf375</name>
+        <passport>X14532657X</passport>
+        <patiend_id>e234ae17-7d4d-4d7f-8eb6-38edc1ebebc2</patiend_id>
+        <race>white</race>
+        <risk_calculated/>
+        <risk_level>Medium</risk_level>
+        <ssn>999-47-8656</ssn>
+        <state>Massachusetts</state>
+        <sys_created_by>rlochan</sys_created_by>
+        <sys_created_on>2020-05-02 00:04:07</sys_created_on>
+        <sys_id>f5b4ffc11b6450100cd4c91b1e4bcbe9</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_updated_by>rlochan</sys_updated_by>
+        <sys_updated_on>2020-05-03 06:36:46</sys_updated_on>
+    </x_snc_health_monit_patient_details>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>mmoody</sys_created_by>
+        <sys_created_on>2020-05-04 23:57:58</sys_created_on>
+        <sys_id>05109f4a1b2c14100cd4c91b1e4bcbad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Alphonso102</sys_name>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sys_metadata_link_05109f4a1b2c14100cd4c91b1e4bcbad</sys_update_name>
+        <sys_updated_by>mmoody</sys_updated_by>
+        <sys_updated_on>2020-05-04 23:57:58</sys_updated_on>
+        <tablename>x_snc_health_monit_patient_details</tablename>
+    </sys_metadata_link>
+</record_update>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload.demo</directory>
+        <documentkey>5ab433051b6450100cd4c91b1e4bcb1b</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_snc_health_monit_patient_details">
+    <x_snc_health_monit_patient_details action="INSERT_OR_UPDATE">
+        <address>514 Kunze Meadow</address>
+        <city>Wakefield</city>
+        <covid_mortality_risk>76.2</covid_mortality_risk>
+        <drivers_license>S99926516</drivers_license>
+        <first_name>Aleen595</first_name>
+        <gender>F</gender>
+        <last_covid_test>Positive</last_covid_test>
+        <last_name>Hand679</last_name>
+        <name>Aleen595 Hand679</name>
+        <passport>X53264359X</passport>
+        <patiend_id>b2023485-94da-4556-8903-8d413bca8cb8</patiend_id>
+        <race>white</race>
+        <risk_calculated/>
+        <risk_level>Medium</risk_level>
+        <ssn>999-17-8698</ssn>
+        <state>Massachusetts</state>
+        <sys_created_by>rlochan</sys_created_by>
+        <sys_created_on>2020-05-02 00:04:09</sys_created_on>
+        <sys_id>5ab433051b6450100cd4c91b1e4bcb1b</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>rlochan</sys_updated_by>
+        <sys_updated_on>2020-05-03 06:36:08</sys_updated_on>
+    </x_snc_health_monit_patient_details>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>mmoody</sys_created_by>
+        <sys_created_on>2020-05-04 23:57:54</sys_created_on>
+        <sys_id>cc109f4a1b2c14100cd4c91b1e4bcb0d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Aleen595</sys_name>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sys_metadata_link_cc109f4a1b2c14100cd4c91b1e4bcb0d</sys_update_name>
+        <sys_updated_by>mmoody</sys_updated_by>
+        <sys_updated_on>2020-05-04 23:57:54</sys_updated_on>
+        <tablename>x_snc_health_monit_patient_details</tablename>
+    </sys_metadata_link>
+</record_update>

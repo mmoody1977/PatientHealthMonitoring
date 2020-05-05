@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload.demo</directory>
+        <documentkey>b9532ce51b6890100cd4c91b1e4bcb33</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_snc_health_monit_risk_policies">
+    <x_snc_health_monit_risk_policies action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <conditions table="x_snc_health_monit_covid_stats">fever=true^cough=true^difficulty_breathing=true^EQ<item endquery="false" field="fever" goto="false" newquery="false" operator="=" or="false" value="true"/>
+            <item endquery="false" field="cough" goto="false" newquery="false" operator="=" or="false" value="true"/>
+            <item endquery="false" field="difficulty_breathing" goto="false" newquery="false" operator="=" or="false" value="true"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </conditions>
+        <name>Covid Risk Level</name>
+        <order>90</order>
+        <policy_type>COVID RISK</policy_type>
+        <risk_field>risk_level</risk_field>
+        <risk_value>High</risk_value>
+        <sys_created_by>rlochan</sys_created_by>
+        <sys_created_on>2020-05-02 22:07:14</sys_created_on>
+        <sys_id>b9532ce51b6890100cd4c91b1e4bcb33</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_updated_by>rlochan</sys_updated_by>
+        <sys_updated_on>2020-05-04 02:52:32</sys_updated_on>
+        <table>x_snc_health_monit_covid_stats</table>
+        <target_table>x_snc_health_monit_covid_stats</target_table>
+    </x_snc_health_monit_risk_policies>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>mmoody</sys_created_by>
+        <sys_created_on>2020-05-04 23:54:35</sys_created_on>
+        <sys_id>6f4f4f0a1b2c14100cd4c91b1e4bcbc4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Covid Risk Level</sys_name>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sys_metadata_link_6f4f4f0a1b2c14100cd4c91b1e4bcbc4</sys_update_name>
+        <sys_updated_by>mmoody</sys_updated_by>
+        <sys_updated_on>2020-05-04 23:54:35</sys_updated_on>
+        <tablename>x_snc_health_monit_risk_policies</tablename>
+    </sys_metadata_link>
+</record_update>

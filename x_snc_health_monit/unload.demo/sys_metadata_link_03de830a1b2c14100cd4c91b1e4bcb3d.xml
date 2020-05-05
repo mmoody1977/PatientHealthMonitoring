@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload.demo</directory>
+        <documentkey>9737e6d11be090100cd4c91b1e4bcbed</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_snc_health_monit_observations">
+    <x_snc_health_monit_observations action="INSERT_OR_UPDATE">
+        <code display_value="72514-3">ff9ee15d1be850100cd4c91b1e4bcbcb</code>
+        <description>Pain severity - 0-10 verbal numeric rating [Score] - Reported</description>
+        <encounter_id>528d489e-fcd6-4413-88cc-1f3ac2cfd0eb</encounter_id>
+        <live>false</live>
+        <observation_date>2019-02-04 00:42:00</observation_date>
+        <patient display_value="Abram53">73b433051b6450100cd4c91b1e4bcbdd</patient>
+        <sys_created_by>rlochan</sys_created_by>
+        <sys_created_on>2020-05-02 13:04:05</sys_created_on>
+        <sys_id>9737e6d11be090100cd4c91b1e4bcbed</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>rlochan</sys_updated_by>
+        <sys_updated_on>2020-05-02 23:44:59</sys_updated_on>
+        <units>{score}</units>
+        <value>6</value>
+    </x_snc_health_monit_observations>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>mmoody</sys_created_by>
+        <sys_created_on>2020-05-04 23:52:38</sys_created_on>
+        <sys_id>03de830a1b2c14100cd4c91b1e4bcb3d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Created 2020-05-02 06:04:05</sys_name>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sys_metadata_link_03de830a1b2c14100cd4c91b1e4bcb3d</sys_update_name>
+        <sys_updated_by>mmoody</sys_updated_by>
+        <sys_updated_on>2020-05-04 23:52:38</sys_updated_on>
+        <tablename>x_snc_health_monit_observations</tablename>
+    </sys_metadata_link>
+</record_update>

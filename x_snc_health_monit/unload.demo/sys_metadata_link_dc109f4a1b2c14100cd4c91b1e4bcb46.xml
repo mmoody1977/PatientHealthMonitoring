@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload.demo</directory>
+        <documentkey>8fa4bfc11b6450100cd4c91b1e4bcba3</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_snc_health_monit_patient_details">
+    <x_snc_health_monit_patient_details action="INSERT_OR_UPDATE">
+        <address>826 Hermann Run Suite 37</address>
+        <city>Fall River</city>
+        <covid_mortality_risk>76.2</covid_mortality_risk>
+        <drivers_license>S99935580</drivers_license>
+        <first_name>Amado512</first_name>
+        <gender>M</gender>
+        <last_covid_test>Negative</last_covid_test>
+        <last_name>Morar593</last_name>
+        <name>Amado512 Morar593</name>
+        <passport>X25506118X</passport>
+        <patiend_id>f77ee33d-ba6e-40f6-a0b5-74c22aedcb45</patiend_id>
+        <race>white</race>
+        <risk_calculated/>
+        <risk_level>Low</risk_level>
+        <ssn>999-29-2519</ssn>
+        <state>Massachusetts</state>
+        <sys_created_by>rlochan</sys_created_by>
+        <sys_created_on>2020-05-02 00:03:55</sys_created_on>
+        <sys_id>8fa4bfc11b6450100cd4c91b1e4bcba3</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>rlochan</sys_updated_by>
+        <sys_updated_on>2020-05-03 06:36:30</sys_updated_on>
+    </x_snc_health_monit_patient_details>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>mmoody</sys_created_by>
+        <sys_created_on>2020-05-04 23:57:55</sys_created_on>
+        <sys_id>dc109f4a1b2c14100cd4c91b1e4bcb46</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Amado512</sys_name>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sys_metadata_link_dc109f4a1b2c14100cd4c91b1e4bcb46</sys_update_name>
+        <sys_updated_by>mmoody</sys_updated_by>
+        <sys_updated_on>2020-05-04 23:57:55</sys_updated_on>
+        <tablename>x_snc_health_monit_patient_details</tablename>
+    </sys_metadata_link>
+</record_update>

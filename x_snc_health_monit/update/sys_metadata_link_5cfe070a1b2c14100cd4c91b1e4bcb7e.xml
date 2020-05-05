@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>ac99b9e51bec90100cd4c91b1e4bcbe7</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_snc_health_monit_covid_stats">
+    <x_snc_health_monit_covid_stats action="INSERT_OR_UPDATE">
+        <check_one>false</check_one>
+        <check_two>false</check_two>
+        <cough>true</cough>
+        <difficulty_breathing>true</difficulty_breathing>
+        <encounter_id>COVSTAT0003355</encounter_id>
+        <fever>true</fever>
+        <patient display_value="Alonso270">fba4ffc11b6450100cd4c91b1e4bcb18</patient>
+        <risk_level>High</risk_level>
+        <risk_policy display_value="Covid Risk Level">b9532ce51b6890100cd4c91b1e4bcb33</risk_policy>
+        <stat_date_time>2020-05-03 04:23:03</stat_date_time>
+        <sys_created_by>rlochan</sys_created_by>
+        <sys_created_on>2020-05-03 04:23:03</sys_created_on>
+        <sys_id>ac99b9e51bec90100cd4c91b1e4bcbe7</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>rlochan</sys_updated_by>
+        <sys_updated_on>2020-05-04 02:52:43</sys_updated_on>
+    </x_snc_health_monit_covid_stats>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>mmoody</sys_created_by>
+        <sys_created_on>2020-05-04 23:53:00</sys_created_on>
+        <sys_id>5cfe070a1b2c14100cd4c91b1e4bcb7e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>COVSTAT0003355</sys_name>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sys_metadata_link_5cfe070a1b2c14100cd4c91b1e4bcb7e</sys_update_name>
+        <sys_updated_by>mmoody</sys_updated_by>
+        <sys_updated_on>2020-05-04 23:53:00</sys_updated_on>
+        <tablename>x_snc_health_monit_covid_stats</tablename>
+    </sys_metadata_link>
+</record_update>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload.demo</directory>
+        <documentkey>f9b4ffc11b6450100cd4c91b1e4bcbe9</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_snc_health_monit_patient_details">
+    <x_snc_health_monit_patient_details action="INSERT_OR_UPDATE">
+        <address>746 Harvey Arcade Apt 63</address>
+        <city>Barnstable</city>
+        <covid_mortality_risk/>
+        <drivers_license>S99944440</drivers_license>
+        <first_name>Araceli695</first_name>
+        <gender>F</gender>
+        <last_covid_test>Negative</last_covid_test>
+        <last_name>Reichel38</last_name>
+        <name>Araceli695 Reichel38</name>
+        <passport>X985950X</passport>
+        <patiend_id>23365743-e8f2-4aba-8242-15463f81f81b</patiend_id>
+        <race>white</race>
+        <risk_calculated/>
+        <risk_level>Medium</risk_level>
+        <ssn>999-11-9928</ssn>
+        <state>Massachusetts</state>
+        <sys_created_by>rlochan</sys_created_by>
+        <sys_created_on>2020-05-02 00:04:07</sys_created_on>
+        <sys_id>f9b4ffc11b6450100cd4c91b1e4bcbe9</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>rlochan</sys_updated_by>
+        <sys_updated_on>2020-05-03 06:36:27</sys_updated_on>
+    </x_snc_health_monit_patient_details>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>mmoody</sys_created_by>
+        <sys_created_on>2020-05-04 23:57:58</sys_created_on>
+        <sys_id>45109f4a1b2c14100cd4c91b1e4bcbb1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Araceli695</sys_name>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sys_metadata_link_45109f4a1b2c14100cd4c91b1e4bcbb1</sys_update_name>
+        <sys_updated_by>mmoody</sys_updated_by>
+        <sys_updated_on>2020-05-04 23:57:58</sys_updated_on>
+        <tablename>x_snc_health_monit_patient_details</tablename>
+    </sys_metadata_link>
+</record_update>

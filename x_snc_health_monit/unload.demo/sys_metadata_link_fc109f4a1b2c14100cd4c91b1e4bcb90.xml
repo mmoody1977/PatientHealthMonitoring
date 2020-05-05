@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload.demo</directory>
+        <documentkey>dba4bfc11b6450100cd4c91b1e4bcbf7</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_snc_health_monit_patient_details">
+    <x_snc_health_monit_patient_details action="INSERT_OR_UPDATE">
+        <address>933 Kunze Highlands Unit 73</address>
+        <city>Wareham</city>
+        <covid_mortality_risk/>
+        <drivers_license/>
+        <first_name>Andre610</first_name>
+        <gender>M</gender>
+        <last_covid_test>Negative</last_covid_test>
+        <last_name>Tremblay80</last_name>
+        <name>Andre610 Tremblay80</name>
+        <passport/>
+        <patiend_id>bb05ba4c-bced-42c8-ae3d-9e732823fb44</patiend_id>
+        <race>white</race>
+        <risk_calculated/>
+        <risk_level>High</risk_level>
+        <ssn>999-29-4303</ssn>
+        <state>Massachusetts</state>
+        <sys_created_by>rlochan</sys_created_by>
+        <sys_created_on>2020-05-02 00:03:56</sys_created_on>
+        <sys_id>dba4bfc11b6450100cd4c91b1e4bcbf7</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_updated_by>rlochan</sys_updated_by>
+        <sys_updated_on>2020-05-04 00:27:06</sys_updated_on>
+    </x_snc_health_monit_patient_details>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>mmoody</sys_created_by>
+        <sys_created_on>2020-05-04 23:57:57</sys_created_on>
+        <sys_id>fc109f4a1b2c14100cd4c91b1e4bcb90</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Andre610</sys_name>
+        <sys_package display_value="Health Monitoring" source="x_snc_health_monit">214e27cd1b2450100cd4c91b1e4bcbb3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Monitoring">214e27cd1b2450100cd4c91b1e4bcbb3</sys_scope>
+        <sys_update_name>sys_metadata_link_fc109f4a1b2c14100cd4c91b1e4bcb90</sys_update_name>
+        <sys_updated_by>mmoody</sys_updated_by>
+        <sys_updated_on>2020-05-04 23:57:57</sys_updated_on>
+        <tablename>x_snc_health_monit_patient_details</tablename>
+    </sys_metadata_link>
+</record_update>
